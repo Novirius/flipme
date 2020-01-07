@@ -22,7 +22,7 @@ const TopNav = (props) => {
             <a className="active" href="#home">Search</a>
             <a href="#news">Browse</a>
             <a href="#contact">Create</a>
-            <a href="#about">{props.currentUser}</a>
+            <a href="#about">{props.currentUser.username}</a>
         </div>
     )
     return props.currentUser ? loggedIn() : loggedOut()
