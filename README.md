@@ -1,2 +1,3 @@
-# flipme
-Quizlet Clone
+# README
+
+FlipMe READme
