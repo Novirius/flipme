@@ -1,8 +1,12 @@
 import React from "react";
-
+import TopNav from './top_nav_bar/top_nav'
 const App = () => (
   <div>
-    <h1>Im from frontend/component/app.jsx</h1>
+    {/* <Modal /> */}
+    <header>
+      <TopNav />
+    </header>
+
   </div>
 );
 
