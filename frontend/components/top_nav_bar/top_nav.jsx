@@ -10,8 +10,8 @@ const TopNav = (props) => {
             <a className="active" href="#home">Search</a>
             <a href="#news">Browse</a>
             <a href="#contact">Create</a>
-            <Link to='/signup'>Sign Up</Link>
-            <Link to='/login'>Log In</Link>
+            <a href="" onClick={() => props.openModal('signup')}>Sign Up</a>
+            <a href="" onClick={() => props.openModal('login')}>Log In</a>
         </div>
     )
     const loggedIn = () => (
