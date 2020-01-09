@@ -7,24 +7,24 @@ const TopNav = (props) => {
             <div className="top-nav-container">
                 <div className="top-nav-logo-wrapper">
                     <div className="top-nav-logo">
-                    <i class="fab fa-buffer"></i>
+                    <i className="fab fa-buffer"></i>
                     </div>
                 </div>
                 <div className="top-nav-transition-container">
                     <div className="top-nav-links-container">
                         <div className="top-nav-search-wrapper">
                             <div className="top-nav-search">
-                                <button type="button"><i class="fas fa-search"></i>  Search</button>
+                                <button type="button"><i className="fas fa-search"></i>  Search</button>
                             </div>
                         </div>
                         <div className="top-nav-browse-wrapper">
                             <div className="top-nav-browse">
-                                <button type="button"><i class="fas fa-book"></i>  Browse</button>
+                                <button type="button"><i className="fas fa-book"></i>  Browse</button>
                             </div>
                         </div>
                         <div className="top-nav-create-wrapper">
                             <div className="top-nav-create">
-                                <button type="button"><i class="far fa-plus-square"></i>  Create</button>
+                                <button type="button"><i className="far fa-plus-square"></i>  Create</button>
                             </div>
                         </div>
                     </div>

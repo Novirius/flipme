@@ -14,11 +14,6 @@ const mapState = ({ errors }) => ({
 
 const mapDispatch = dispatch => ({
     processForm: (user) => dispatch(login(user)).then(() => dispatch(closeModal())),
-    otherForm: (
-      <button type="button" onClick={() => dispatch(openModal('signup'))}>
-        Signup
-      </button>
-    ),
     closeModal: () => dispatch(closeModal())
 })
 

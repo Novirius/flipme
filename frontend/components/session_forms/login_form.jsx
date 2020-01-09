@@ -42,11 +42,11 @@ class LoginForm extends React.Component {
         <div className="LoginModalBody">
           <div className="SocialMedia-ButtonsWrapper">
               <div onClick={this.handleDemo} className="SocialMedia-FirstButton">
-                <p>Log in with Demo</p>
+                <p><i className="fas fa-id-card-alt"></i>     Log in with Demo</p>
               </div>
               <div className="SocialMedia-SecondButton">
               {/* <img className="niceimg" src={window.dlmnice}/>  */}
-                <p>Log in with Google</p>
+              <p><i className="fab fa-google"></i>      Log in with Google</p>
               </div>
           </div>
           <form onSubmit={this.handleSubmit}>
