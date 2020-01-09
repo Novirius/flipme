@@ -27,14 +27,21 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack -w --mode=development",
     "postinstall": "webpack"
+<<<<<<< HEAD
   },
   "engines": {
     "node": "12.5.0",
     "npm": "6.9.0"
+=======
+>>>>>>> styling
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Novirius/flipme.git"
+  },
+  "engines": {
+    "node": "12.5.0",
+    "npm": "6.9.0"
   },
   "keywords": [],
   "author": "",

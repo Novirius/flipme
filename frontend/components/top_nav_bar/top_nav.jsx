@@ -3,15 +3,45 @@ import {Link} from 'react-router-dom';
 
 const TopNav = (props) => {
     const loggedOut = () => (
-        <div className="topnav">
-            <div>
-                <Link to="/">Home Page</Link>
+        <div className="top-nav">
+            <div className="top-nav-container">
+                <div className="top-nav-logo-wrapper">
+                    <div className="top-nav-logo">
+                    <i class="fab fa-buffer"></i>
+                    </div>
+                </div>
+                <div className="top-nav-transition-container">
+                    <div className="top-nav-links-container">
+                        <div className="top-nav-search-wrapper">
+                            <div className="top-nav-search">
+                                <button type="button"><i class="fas fa-search"></i>  Search</button>
+                            </div>
+                        </div>
+                        <div className="top-nav-browse-wrapper">
+                            <div className="top-nav-browse">
+                                <button type="button"><i class="fas fa-book"></i>  Browse</button>
+                            </div>
+                        </div>
+                        <div className="top-nav-create-wrapper">
+                            <div className="top-nav-create">
+                                <button type="button"><i class="far fa-plus-square"></i>  Create</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="top-nav-user-container">
+                        <div className="top-nav-signup-wrapper">
+                            <div className="top-nav-signup">
+                                <button type="button" onClick={() => props.openModal('signup')}>Sign Up</button>
+                            </div>
+                        </div>
+                        <div className="top-nav-login-wrapper">
+                            <div className="top-nav-login">
+                                <button type="button" onClick={() => props.openModal('login')}>Log In</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <a className="active" href="#home">Search</a>
-            <a href="#news">Browse</a>
-            <a href="#contact">Create</a>
-            <Link to='/signup'>Sign Up</Link>
-            <Link to='/login'>Log In</Link>
         </div>
     )
     const loggedIn = () => (
@@ -19,10 +49,11 @@ const TopNav = (props) => {
             <div>
                 <Link to="/">Home Page</Link>
             </div>
-            <a className="active" href="#home">Search</a>
-            <a href="#news">Browse</a>
-            <a href="#contact">Create</a>
-            <a href="#about">{props.currentUser.username}</a>
+            <button type="button">Search</button>
+            <button type="button">Browse</button>
+            <button type="button">Create</button>
+            <button type="button">{props.currentUser.username}</button>
+            <button type="button" onClick={() => props.logout()}>Log Out</button>
         </div>
     )
     return props.currentUser ? loggedIn() : loggedOut()
