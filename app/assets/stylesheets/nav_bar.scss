@@ -1,56 +1,125 @@
+.top-nav {
+  background: #4257b2;
+  color: #fff;
+  height: 5rem;
+  display: block;
+  font-family: 'Cabin', sans-serif;
+}
 
- /* Add a black background color to the top navigation */
- .topnav {
-    background: #4257b2;
-    color: #fff;
-    height: 5rem;
-    display: block;
-  }
+.top-nav-container {
+  display: block;
+}
+
+.top-nav-logo-wrapper {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding-left: 30px;
+  padding-top: 10px;
+  font-size: 300%;
+  line-height: 1.285714285714286;
+  font-weight: 600;
+  vertical-align: top;
+}
+
+.top-nav-transition-wrapper {
+  float: left;
+  padding-left: 40px;
+}
+
+.top-nav-transition {
+
+}
+
+
+.top-nav-links-container {
+
+}
+
+.top-nav-search-wrapper {
+
+}
+
+
+.top-nav-search {
+
+}
+
+.top-nav-browse-wrapper {
+
+}
+
+.top-nav-create-wrapper {
+
+}
+
+
+.top-nav-user-container {
+
+}
+
+.top-nav-signup-wrapper {
+
+}
+
+.top-nav-login-wrapper {
+
+}
+
+
+//  /* Add a black background color to the top navigation */
+//  .top-nav {
+//     background: #4257b2;
+//     color: #fff;
+//     height: 5rem;
+//     display: block;
+//     font-family: 'Cabin', sans-serif;
+//   }
   
   /* Style the links inside the navigation bar */
-  .topnav a {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 30px 16px;
-    text-decoration: none;
-    font-family: hurme_no3-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
-    font-size: 100%;
-    line-height: 1.285714285714286;
-    font-weight: 600;
-  }
+  // .top-nav a {
+  //   float: left;
+  //   color: #f2f2f2;
+  //   text-align: center;
+  //   padding: 30px 16px;
+  //   text-decoration: none;
+  //   font-family: hurme_no3-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
+  //   font-size: 100%;
+  //   line-height: 1.285714285714286;
+  //   font-weight: 600;
+  // }
   
-  /* Change the color of links on hover */
-  .topnav a:hover {
-    color: #d9d9d9;
-  }
+//   /* Change the color of links on hover */
+//   .topnav a:hover {
+//     color: #d9d9d9;
+//   }
   
-  /* Add a color to the active/current link */
-  .topnav a.active {
-    background-color: #4CAF50;
-    color: white;
-  }
+//   /* Add a color to the active/current link */
+//   .topnav a.active {
+//     background-color: #4CAF50;
+//     color: white;
+//   }
 
-  /* Style the buttons inside the navigation bar */
-  .topnav button {
-    float: left;
-    color: #f2f2f2;
-    text-align: center;
-    padding: 30px 16px;
-    text-decoration: none;
-    font-family: hurme_no3-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
-    font-size: 100%;
-    line-height: 1.285714285714286;
-    font-weight: 600;
-  }
+//   /* Style the buttons inside the navigation bar */
+//   .topnav button {
+//     float: left;
+//     color: #f2f2f2;
+//     text-align: center;
+//     padding: 30px 16px;
+//     text-decoration: none;
+//     font-family: hurme_no3-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
+//     font-size: 100%;
+//     line-height: 1.285714285714286;
+//     font-weight: 600;
+//   }
   
-  /* Change the color of links on hover */
-  .topnav button:hover {
-    color: #d9d9d9;
-  }
+//   /* Change the color of links on hover */
+//   .topnav button:hover {
+//     color: #d9d9d9;
+//   }
   
-  /* Add a color to the active/current link */
-  .topnav button.active {
-    background-color: #4CAF50;
-    color: white;
-  }
+//   /* Add a color to the active/current link */
+//   .topnav button.active {
+//     background-color: #4CAF50;
+//     color: white;
+//   }
