@@ -27,16 +27,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack -w --mode=development",
     "postinstall": "webpack"
-<<<<<<< HEAD
-<<<<<<< HEAD
   },
   "engines": {
     "node": "12.5.0",
     "npm": "6.9.0"
-=======
->>>>>>> styling
-=======
->>>>>>> styling
   },
   "repository": {
     "type": "git",
