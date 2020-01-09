@@ -45,9 +45,8 @@ class LoginForm extends React.Component {
                 <p>Log in with Demo</p>
               </div>
               <div className="SocialMedia-SecondButton">
-                {/* <span class="Centerer"></span> */}
-                <img className="niceimg" src={window.dlmnice}/> 
-                {/* <p>Log in with Google</p> */}
+              {/* <img className="niceimg" src={window.dlmnice}/>  */}
+                <p>Log in with Google</p>
               </div>
           </div>
           <form onSubmit={this.handleSubmit}>

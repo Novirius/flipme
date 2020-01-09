@@ -1,71 +1,121 @@
+$yellow: rgb(255,191,0);
+$bright-blue: rgb(60, 207, 207);
+
 .top-nav {
   background: #4257b2;
   color: #fff;
   height: 5rem;
-  display: block;
+  display: flex;
   font-family: 'Cabin', sans-serif;
+  justify-content: center;
+  width: 100%;
 }
 
 .top-nav-container {
-  display: block;
+  display: flex;
+  align-items: center;
+  // display:grid;
+  max-width: 90rem;
+  width: 100%;
 }
 
 .top-nav-logo-wrapper {
   float: left;
   color: #f2f2f2;
   text-align: center;
-  padding-left: 30px;
   padding-top: 10px;
   font-size: 300%;
-  line-height: 1.285714285714286;
   font-weight: 600;
   vertical-align: top;
+  width: 25%;
+  max-width: 300px;
 }
 
-.top-nav-transition-wrapper {
-  float: left;
-  padding-left: 40px;
-}
-
-.top-nav-transition {
-
+.top-nav-transition-container {
+  display: flex;
+  justify-content: space-between;
+  // align-content: space-between;
+  // border: 1px solid;
+  width: 100%;
 }
 
 
 .top-nav-links-container {
-
+  display: flex;
+  // justify-content: space-evenly;
+  width: 40%;
+  align-items: center;
+  align-content: flex-start;
+  // border: 1px red solid;
+  
 }
 
 .top-nav-search-wrapper {
-
+  
 }
 
 
 .top-nav-search {
-
+  font-size: 16px;
 }
 
 .top-nav-browse-wrapper {
+  padding-left: 20px;
+}
 
+.top-nav-browse {
+ 
 }
 
 .top-nav-create-wrapper {
-
+  padding-left: 20px;
 }
 
 
 .top-nav-user-container {
-
+  display: flex;
+  // justify-content: space-evenly;
+  align-content: flex-end;
+  width: 30%;
+  // align-items: right;
 }
 
 .top-nav-signup-wrapper {
+  padding-left: 40px;
+}
 
+.top-nav-signup {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  width: 100%;
+  text-align: center;
 }
 
 .top-nav-login-wrapper {
+  padding-left: 20px;
 
+  // display: flex;
+  // justify-content: center;
+  // width: 10%
+  
 }
 
+.top-nav-login {
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: $bright-blue;
+  border-radius: 3px;
+  width: 100%;
+  text-align: center;
+}
+
+.top-nav-login:hover {
+  background-color: $yellow;
+}
 
 //  /* Add a black background color to the top navigation */
 //  .top-nav {

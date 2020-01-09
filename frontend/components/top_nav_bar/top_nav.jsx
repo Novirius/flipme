@@ -7,38 +7,36 @@ const TopNav = (props) => {
             <div className="top-nav-container">
                 <div className="top-nav-logo-wrapper">
                     <div className="top-nav-logo">
-                    <button>FLIP.me</button>
+                    <i class="fab fa-buffer"></i>
                     </div>
                 </div>
-                <div className="top-nav-transition-wrapper">
-                    <div className="top-nav-transition">
-                        <div className="top-nav-links-container">
-                            <div className="top-nav-search-wrapper">
-                                <div className="top-nav-search">
-                                    <span>Search</span>
-                                </div>
-                            </div>
-                            <div className="top-nav-browse-wrapper">
-                                <div className="top-nav-browse">
-                                    <span>Browse</span>
-                                </div>
-                            </div>
-                            <div className="top-nav-create-wrapper">
-                                <div className="top-nav-create">
-                                    <span>Create</span>
-                                </div>
+                <div className="top-nav-transition-container">
+                    <div className="top-nav-links-container">
+                        <div className="top-nav-search-wrapper">
+                            <div className="top-nav-search">
+                                <button type="button"><i class="fas fa-search"></i>  Search</button>
                             </div>
                         </div>
-                        <div className="top-nav-user-container">
-                            <div className="top-nav-signup-wrapper">
-                                <div className="top-nav-signup">
-                                    <span>Sign Up</span>
-                                </div>
+                        <div className="top-nav-browse-wrapper">
+                            <div className="top-nav-browse">
+                                <button type="button"><i class="fas fa-book"></i>  Browse</button>
                             </div>
-                            <div className="top-nav-login-wrapper">
-                                <div className="top-nav-login">
-                                    <span>Log In</span>
-                                </div>
+                        </div>
+                        <div className="top-nav-create-wrapper">
+                            <div className="top-nav-create">
+                                <button type="button"><i class="far fa-plus-square"></i>  Create</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="top-nav-user-container">
+                        <div className="top-nav-signup-wrapper">
+                            <div className="top-nav-signup">
+                                <button type="button" onClick={() => props.openModal('signup')}>Sign Up</button>
+                            </div>
+                        </div>
+                        <div className="top-nav-login-wrapper">
+                            <div className="top-nav-login">
+                                <button type="button" onClick={() => props.openModal('login')}>Log In</button>
                             </div>
                         </div>
                     </div>
