@@ -7,11 +7,11 @@ const TopNav = (props) => {
             <div>
                 <Link to="/">Home Page</Link>
             </div>
-            <a className="active" href="#home">Search</a>
-            <a href="#news">Browse</a>
-            <a href="#contact">Create</a>
-            <a href="" onClick={() => props.openModal('signup')}>Sign Up</a>
-            <a href="" onClick={() => props.openModal('login')}>Log In</a>
+            <button type="button">Search</button>
+            <button type="button">Browse</button>
+            <button type="button">Create</button>
+            <button type="button" onClick={() => props.openModal('signup')}>Sign Up</button>
+            <button type="button" onClick={() => props.openModal('login')}>Log In</button>
         </div>
     )
     const loggedIn = () => (
@@ -19,10 +19,11 @@ const TopNav = (props) => {
             <div>
                 <Link to="/">Home Page</Link>
             </div>
-            <a className="active" href="#home">Search</a>
-            <a href="#news">Browse</a>
-            <a href="#contact">Create</a>
-            <a href="#about">{props.currentUser.username}</a>
+            <button type="button">Search</button>
+            <button type="button">Browse</button>
+            <button type="button">Create</button>
+            <button type="button">{props.currentUser.username}</button>
+            <button type="button" onClick={() => props.logout()}>Log Out</button>
         </div>
     )
     return props.currentUser ? loggedIn() : loggedOut()

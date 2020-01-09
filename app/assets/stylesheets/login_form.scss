@@ -1,0 +1,499 @@
+
+  .LoginModalHeader {
+
+    background-color: #4257b2;
+    color: #fff;
+
+  }
+  
+  .LoginModalHeader-HeadingWrapper {
+    box-sizing:border-box;
+    color:rgb(255, 255, 255);
+    display: flex;
+    font-family: 'Cabin', sans-serif;
+    font-feature-settings:"kern", "liga", "clig", "calt";
+    font-kerning:normal;
+    font-size:16px;
+    font-variant-ligatures:common-ligatures contextual;
+    line-height:26px;
+    position:relative;
+    width:502px;
+    -webkit-font-smoothing:antialiased;
+    height: 100px;
+    /* padding-bottom: 1rem; */
+  }
+  
+  .LoginModalHeader-Heading {
+    box-sizing:border-box;
+    color:rgb(255, 255, 255);
+    font-family: 'Cabin', sans-serif;
+    font-feature-settings:"kern", "liga", "clig", "calt";
+    font-kerning:normal;
+    font-size:30px;
+    font-variant-ligatures:common-ligatures contextual;
+    font-weight:700;
+    height:38px;
+    line-height:38px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-bottom:0px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-left:0px;
+    margin-right:0px;
+    margin-top:0px;
+    padding-bottom:0px;
+    padding-left:50px;
+    padding-right:0px;
+    padding-top:30px;
+    width:496px;
+    -webkit-font-smoothing:antialiased;
+  
+  }
+  
+  .LoginModalBody {
+    background-color:rgb(255, 255, 255);
+    box-sizing:border-box;
+    color:rgb(69, 83, 88);
+    display:block;
+    font-family: 'Cabin', sans-serif;
+    font-feature-settings:"kern", "liga", "clig", "calt";
+    font-kerning:normal;
+    font-size:16px;
+    font-variant-ligatures:common-ligatures contextual;
+    height:500px;
+    line-height:26px;
+    padding-bottom:32px;
+    padding-left:32px;
+    padding-right:32px;
+    padding-top:32px;
+    position:relative;
+    width:600px;
+    -webkit-font-smoothing:antialiased;
+  }
+  
+  .SocialMedia-ButtonsWrapper {
+    box-sizing:border-box;
+    color:rgb(69, 83, 88);
+    display:block;
+    font-family: 'Cabin', sans-serif;
+    font-feature-settings:"kern", "liga", "clig", "calt";
+    font-kerning:normal;
+    font-size:16px;
+    font-variant-ligatures:common-ligatures contextual;
+    height:226px;
+    width:100%;
+    -webkit-font-smoothing:antialiased;
+    text-align: center;
+  }
+
+
+  .SocialMedia-FirstButton {
+    background-color:rgb(255, 255, 255);
+    border-bottom-color:rgb(218, 222, 224);
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+    border-bottom-style:solid;
+    border-bottom-width:2px;
+    border-image-outset:0px;
+    border-image-repeat:stretch;
+    border-image-slice:100%;
+    border-image-source:none;
+    border-image-width:1;
+    border-left-color:rgb(218, 222, 224);
+    border-left-style:solid;
+    border-left-width:2px;
+    border-right-color:rgb(218, 222, 224);
+    border-right-style:solid;
+    border-right-width:2px;
+    border-top-color:rgb(218, 222, 224);
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    border-top-style:solid;
+    border-top-width:2px;
+    box-sizing:border-box;
+    color:rgb(69, 83, 88);
+    cursor:pointer;
+    display:inline-block;
+    font-family: 'Cabin', sans-serif;
+    font-feature-settings:"kern", "liga", "clig", "calt";
+    font-kerning:normal;
+    font-size:17px;
+    font-stretch:100%;
+    font-style:normal;
+    font-variant-caps:normal;
+    font-variant-east-asian:normal;
+    font-variant-ligatures:common-ligatures contextual;
+    font-variant-numeric:normal;
+    font-weight:700;
+    height:82px;
+    letter-spacing:1px;
+    max-width:100%;
+    padding-bottom:20px;
+    padding-left:20px;
+    padding-right:20px;
+    padding-top:20px;
+    text-decoration-color:rgb(69, 83, 88);
+    text-decoration-line:none;
+    text-decoration-style:solid;
+    transition-delay:0s;
+    transition-duration:0.12s;
+    transition-property:all;
+    transition-timing-function:cubic-bezier(0.47, 0, 0.745, 0.715);
+    /* width:600px; */
+    -webkit-appearance:none;
+    -webkit-font-smoothing:antialiased;
+    text-align: center;
+    vertical-align: middle;
+    width: 100%;
+  }
+
+  .SocialMedia-FirstButton:hover {
+    border-color: rgb(235, 238, 240);
+  }
+
+  .SocialMedia-SecondButton:hover {
+    border-color: rgb(235, 238, 240);
+  }
+  
+  .SocialMedia-SecondButton {
+    margin-top:24px;
+    background-color:rgb(255, 255, 255);
+    border-bottom-color:rgb(218, 222, 224);
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+    border-bottom-style:solid;
+    border-bottom-width:2px;
+    border-image-outset:0px;
+    border-image-repeat:stretch;
+    border-image-slice:100%;
+    border-image-source:none;
+    border-image-width:1;
+    border-left-color:rgb(218, 222, 224);
+    border-left-style:solid;
+    border-left-width:2px;
+    border-right-color:rgb(218, 222, 224);
+    border-right-style:solid;
+    border-right-width:2px;
+    border-top-color:rgb(218, 222, 224);
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+    border-top-style:solid;
+    border-top-width:2px;
+    box-sizing:border-box;
+    color:rgb(69, 83, 88);
+    cursor:pointer;
+    display:inline-block;
+    font-family: 'Cabin', sans-serif;
+    font-feature-settings:"kern", "liga", "clig", "calt";
+    font-kerning:normal;
+    font-size:17px;
+    font-stretch:100%;
+    font-style:normal;
+    font-variant-caps:normal;
+    font-variant-east-asian:normal;
+    font-variant-ligatures:common-ligatures contextual;
+    font-variant-numeric:normal;
+    font-weight:700;
+    height:82px;
+    letter-spacing:1px;
+    max-width:100%;
+    padding: 20px;
+    text-decoration-color:rgb(69, 83, 88);
+    text-decoration-line:none;
+    text-decoration-style:solid;
+    transition-delay:0s;
+    transition-duration:0.12s;
+    transition-property:all;
+    transition-timing-function:cubic-bezier(0.47, 0, 0.745, 0.715);
+    width: 100%;
+    -webkit-appearance:none;
+    -webkit-font-smoothing:antialiased;
+    text-align: center;
+    vertical-align: middle;
+  }
+  
+  // .Centerer {
+  //   vertical-align: middle;
+  //   display: inline-block;
+  // }
+
+  .LoginInput {
+  box-sizing:border-box;
+  color:rgb(69, 83, 88);
+  cursor:pointer;
+  display:block;
+  font-family: 'Cabin', sans-serif;
+  font-feature-settings:"kern", "liga", "clig", "calt";
+  font-kerning:normal;
+  font-size:16px;
+  font-variant-ligatures:common-ligatures contextual;
+  font-weight:400;
+  height:47px;
+  line-height:19px;
+  width:100%;
+  -webkit-font-smoothing:antialiased;
+  }
+  
+  .LoginInput-Content {
+    align-items:flex-start;
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px;
+  border-top-left-radius:4px;
+  border-top-right-radius:4px;
+  box-sizing:border-box;
+  color:rgb(69, 83, 88);
+  cursor:pointer;
+  display:flex;
+  flex-direction:row;
+  flex-wrap:wrap;
+  font-family: 'Cabin', sans-serif;
+  font-feature-settings:"kern", "liga", "clig", "calt";
+  font-kerning:normal;
+  font-size:16px;
+  font-variant-ligatures:common-ligatures contextual;
+  font-weight:400;
+  height:24px;
+  line-height:19px;
+  position:relative;
+  width:100%;
+  -webkit-font-smoothing:antialiased;
+  }
+ 
+  .LoginInput-Input {
+    background-color:rgba(0, 0, 0, 0);
+  border-bottom-color:rgb(45, 54, 57);
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px;
+  border-bottom-style:none;
+  border-bottom-width:0px;
+  border-image-outset:0px;
+  border-image-repeat:stretch;
+  border-image-slice:100%;
+  border-image-source:none;
+  border-image-width:1;
+  border-left-color:rgb(45, 54, 57);
+  border-left-style:none;
+  border-left-width:0px;
+  border-right-color:rgb(45, 54, 57);
+  border-right-style:none;
+  border-right-width:0px;
+  border-top-color:rgb(45, 54, 57);
+  border-top-left-radius:4px;
+  border-top-right-radius:4px;
+  border-top-style:none;
+  border-top-width:0px;
+  box-shadow:none;
+  box-sizing:border-box;
+  color:rgb(45, 54, 57);
+  cursor:text;
+  display:block;
+  flex-basis:auto;
+  flex-grow:1;
+  flex-shrink:1;
+  font-family: 'Cabin', sans-serif;
+  font-feature-settings:"kern", "liga", "clig", "calt";
+  font-kerning:normal;
+  font-size:16px;
+  font-stretch:100%;
+  font-style:normal;
+  font-variant-caps:normal;
+  font-variant-east-asian:normal;
+  font-variant-ligatures:common-ligatures contextual;
+  font-variant-numeric:normal;
+  font-weight:400;
+  height:20px;
+  letter-spacing:normal;
+  line-height:19px;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:0px;
+  outline-color:rgb(45, 54, 57);
+  outline-style:none;
+  outline-width:0px;
+  padding-bottom:1px;
+  padding-left:0px;
+  padding-right:0px;
+  padding-top:0px;
+  text-align:start;
+  text-indent:0px;
+  text-rendering:auto;
+  text-shadow:none;
+  text-transform:none;
+  white-space:pre-wrap;
+  width:241px;
+  word-break:break-word;
+  word-spacing:0px;
+  writing-mode:horizontal-tb;
+  -webkit-appearance:none;
+  -webkit-font-smoothing:antialiased;
+  -webkit-rtl-ordering:logical;
+  }
+  
+  .LoginInput-Border {
+  align-self:flex-end;
+  box-shadow:rgb(69, 83, 88) 0px 2px 0px 0px;
+  box-sizing:border-box;
+  color:rgb(69, 83, 88);
+  cursor:pointer;
+  display:block;
+  font-family: 'Cabin', sans-serif;
+  font-feature-settings:"kern", "liga", "clig", "calt";
+  font-kerning:normal;
+  font-size:16px;
+  font-variant-ligatures:common-ligatures contextual;
+  font-weight:400;
+  height:4px;
+  line-height:19px;
+  transition-delay:0s;
+  transition-duration:0.12s;
+  transition-property:all;
+  transition-timing-function:cubic-bezier(0.47, 0, 0.745, 0.715);
+  width:600px;
+  -webkit-font-smoothing:antialiased;
+  }
+
+
+  .LoginInput-label {
+    box-sizing:border-box;
+  color:rgb(151, 165, 170);
+  cursor:pointer;
+  display:block;
+  font-family: 'Cabin', sans-serif;
+  font-feature-settings:"kern", "liga", "clig", "calt";
+  font-kerning:normal;
+  font-size:10px;
+  font-variant-ligatures:common-ligatures contextual;
+  font-weight:600;
+  height:13px;
+  letter-spacing:1px;
+  line-height:13px;
+  margin-top:10px;
+  text-align:start;
+  text-transform:uppercase;
+  user-select:none;
+  /* width:241px; */
+  -webkit-font-smoothing:antialiased;
+  }
+  
+  .LoginButton {
+  align-items:flex-start;
+  background-color:rgb(60, 207, 207);
+  border-bottom-color:rgb(255, 255, 255);
+  border-bottom-left-radius:4px;
+  border-bottom-right-radius:4px;
+  border-bottom-style:none;
+  border-bottom-width:0px;
+  border-image-outset:0px;
+  border-image-repeat:stretch;
+  border-image-slice:100%;
+  border-image-source:none;
+  border-image-width:1;
+  border-left-color:rgb(255, 255, 255);
+  border-left-style:none;
+  border-left-width:0px;
+  border-right-color:rgb(255, 255, 255);
+  border-right-style:none;
+  border-right-width:0px;
+  border-top-color:rgb(255, 255, 255);
+  border-top-left-radius:4px;
+  border-top-right-radius:4px;
+  border-top-style:none;
+  border-top-width:0px;
+  box-sizing:border-box;
+  color:rgb(255, 255, 255);
+  cursor:pointer;
+  display:flex;
+  font-family: 'Cabin', sans-serif;
+  font-feature-settings:"kern", "liga", "clig", "calt";
+  font-kerning:normal;
+  font-size:16px;
+  font-stretch:100%;
+  font-style:normal;
+  font-variant-caps:normal;
+  font-variant-east-asian:normal;
+  font-variant-ligatures:common-ligatures contextual;
+  font-variant-numeric:normal;
+  font-weight:700;
+  height:59px;
+  letter-spacing:1px;
+  line-height:19px;
+  margin-bottom:0px;
+  margin-left:0px;
+  margin-right:0px;
+  margin-top:24px;
+  max-width:100%;
+  padding-bottom:20px;
+  padding-left:20px;
+  padding-right:20px;
+  padding-top:20px;
+  text-align:center;
+  text-indent:0px;
+  text-rendering:auto;
+  text-shadow:none;
+  text-transform:none;
+  transition-delay:0s;
+  transition-duration:0.12s;
+  transition-property:all;
+  transition-timing-function:cubic-bezier(0.47, 0, 0.745, 0.715);
+  width:100%;
+  word-spacing:0px;
+  writing-mode:horizontal-tb;
+  -webkit-appearance:none;
+  -webkit-font-smoothing:antialiased;
+  -webkit-border-image:none;
+  }
+
+  .LoginButton:hover {
+    background-color: rgb(255,191,0);
+  }
+  
+  .LoginButton-Wrapper {
+    align-items:center;
+    box-sizing:border-box;
+    color:rgb(255, 255, 255);
+    cursor:pointer;
+    display:flex;
+    font-family: 'Cabin', sans-serif;
+    font-feature-settings:"kern", "liga", "clig", "calt";
+    font-kerning:normal;
+    font-size:16px;
+    font-stretch:100%;
+    font-style:normal;
+    font-variant-caps:normal;
+    font-variant-east-asian:normal;
+    font-variant-ligatures:common-ligatures contextual;
+    font-variant-numeric:normal;
+    font-weight:700;
+    height:19px;
+    justify-content:center;
+    letter-spacing:1px;
+    line-height:19px;
+    text-align:center;
+    text-indent:0px;
+    text-rendering:auto;
+    text-shadow:none;
+    text-transform:none;
+    width:100%;
+    word-spacing:0px;
+    writing-mode:horizontal-tb;
+    -webkit-font-smoothing:antialiased;
+  }
+  
+  
+  .LoginButton-Content {
+   
+  }
+
+  .niceimg {
+    height: 56px;
+    width: 56px;
+    margin: auto;
+  }
+
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+    color: rgb(187, 190, 190);
+  }

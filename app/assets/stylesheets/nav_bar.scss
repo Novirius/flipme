@@ -1,0 +1,56 @@
+
+ /* Add a black background color to the top navigation */
+ .topnav {
+    background: #4257b2;
+    color: #fff;
+    height: 5rem;
+    display: block;
+  }
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+    font-family: hurme_no3-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size: 100%;
+    line-height: 1.285714285714286;
+    font-weight: 600;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav a:hover {
+    color: #d9d9d9;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: #4CAF50;
+    color: white;
+  }
+
+  /* Style the buttons inside the navigation bar */
+  .topnav button {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+    font-family: hurme_no3-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
+    font-size: 100%;
+    line-height: 1.285714285714286;
+    font-weight: 600;
+  }
+  
+  /* Change the color of links on hover */
+  .topnav button:hover {
+    color: #d9d9d9;
+  }
+  
+  /* Add a color to the active/current link */
+  .topnav button.active {
+    background-color: #4CAF50;
+    color: white;
+  }
