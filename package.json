@@ -36,6 +36,10 @@
     "type": "git",
     "url": "git+https://github.com/Novirius/flipme.git"
   },
+  "engines": {
+    "node": "12.5.0",
+    "npm": "6.9.0"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
