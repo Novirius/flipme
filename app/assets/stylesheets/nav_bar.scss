@@ -8,7 +8,8 @@
   font-family: 'Cabin', sans-serif;
   justify-content: center;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
+  position: relative;
 }
 
 .top-nav-container {
@@ -59,8 +60,16 @@
   font-size: 16px;
 }
 
+.top-nav-search:hover {
+  color: $font-hover;
+}
+
 .top-nav-browse-wrapper {
   padding-left: 20px;
+}
+
+.top-nav-browse:hover {
+  color: $font-hover;
 }
 
 .top-nav-browse {
@@ -71,6 +80,9 @@
   padding-left: 20px;
 }
 
+.top-nav-create:hover {
+  color: $font-hover;
+}
 
 .top-nav-user-container {
   display: flex;
@@ -84,7 +96,9 @@
 
 .top-nav-signup-wrapper {
   // padding-left: 60px;
-  margin-right: -50px;
+  // margin-right: -50px;
+  display: flex;
+  justify-content: left;
 }
 
 .top-nav-signup {
@@ -95,6 +109,14 @@
   width: 100%;
   text-align: center;
   vertical-align: middle;
+}
+
+.top-nav-signup:hover {
+  color: $button-hover;
+}
+
+.top-nav-signup > a {
+
 }
 
 .top-nav-login-wrapper {
@@ -123,59 +145,35 @@
   color: $font-dark;
 }
 
-//  /* Add a black background color to the top navigation */
-//  .top-nav {
-//     background: #4257b2;
-//     color: #fff;
-//     height: 5rem;
-//     display: block;
-//     font-family: 'Cabin', sans-serif;
-//   }
-  
-  /* Style the links inside the navigation bar */
-  // .top-nav a {
-  //   float: left;
-  //   color: #f2f2f2;
-  //   text-align: center;
-  //   padding: 30px 16px;
-  //   text-decoration: none;
-  //   font-family: hurme_no3-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
-  //   font-size: 100%;
-  //   line-height: 1.285714285714286;
-  //   font-weight: 600;
-  // }
-  
-//   /* Change the color of links on hover */
-//   .topnav a:hover {
-//     color: #d9d9d9;
-//   }
-  
-//   /* Add a color to the active/current link */
-//   .topnav a.active {
-//     background-color: #4CAF50;
-//     color: white;
-//   }
+.top-nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 56%;
+  background-color: white;
+  color: $font-dark;
+  filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
+  width: 300px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 2;
+}
 
-//   /* Style the buttons inside the navigation bar */
-//   .topnav button {
-//     float: left;
-//     color: #f2f2f2;
-//     text-align: center;
-//     padding: 30px 16px;
-//     text-decoration: none;
-//     font-family: hurme_no3-webfont,-apple-system,BlinkMacSystemFont,sans-serif;
-//     font-size: 100%;
-//     line-height: 1.285714285714286;
-//     font-weight: 600;
-//   }
+.top-nav-dropdown > li {
+  padding: 15px;
+}
+
+.top-nav-dropdown > li:hover {
+  background-color: $button-hover;
   
-//   /* Change the color of links on hover */
-//   .topnav button:hover {
-//     color: #d9d9d9;
-//   }
+}
+
+.hide {
+  display: none;
+}
+
+.show {
+  display: block;
   
-//   /* Add a color to the active/current link */
-//   .topnav button.active {
-//     background-color: #4CAF50;
-//     color: white;
-//   }
+}
