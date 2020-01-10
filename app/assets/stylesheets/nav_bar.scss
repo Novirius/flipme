@@ -8,6 +8,7 @@
   font-family: 'Cabin', sans-serif;
   justify-content: center;
   width: 100%;
+  overflow: hidden;
 }
 
 .top-nav-container {
@@ -35,14 +36,14 @@
   justify-content: space-between;
   // align-content: space-between;
   // border: 1px solid;
-  width: 100%;
+  width: 65%;
 }
 
 
 .top-nav-links-container {
   display: flex;
   // justify-content: space-evenly;
-  width: 40%;
+  width: 30%;
   align-items: center;
   align-content: flex-start;
   // border: 1px red solid;
@@ -73,14 +74,17 @@
 
 .top-nav-user-container {
   display: flex;
-  // justify-content: space-evenly;
-  align-content: flex-end;
+  justify-content: flex-start;
+  align-content: flex-start;
+  align-items: flex-start;
   width: 30%;
   // align-items: right;
+  // border: 1px solid black;
 }
 
 .top-nav-signup-wrapper {
-  padding-left: 40px;
+  // padding-left: 60px;
+  margin-right: -50px;
 }
 
 .top-nav-signup {
@@ -90,11 +94,13 @@
   padding-bottom: 10px;
   width: 100%;
   text-align: center;
+  vertical-align: middle;
 }
 
 .top-nav-login-wrapper {
-  padding-left: 20px;
-
+  padding-left: 0px;
+  width: 140px;
+  height: 42px;
   // display: flex;
   // justify-content: center;
   // width: 10%
@@ -102,8 +108,8 @@
 }
 
 .top-nav-login {
-  padding-left: 10px;
-  padding-right: 10px;
+  // padding-left: 5px;
+  // padding-right: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
   background-color: $button;

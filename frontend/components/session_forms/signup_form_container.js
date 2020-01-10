@@ -3,7 +3,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { signup } from '../../actions/session_actions';
 import SignupForm from './signup_form';
-import {openModal} from '../../actions/modal_actions'
+import {openModal, closeModal} from '../../actions/modal_actions'
 
 
 const mapState = ({ errors }) => ({
@@ -13,12 +13,7 @@ const mapState = ({ errors }) => ({
 })
 
 const mapDispatch = dispatch =>  ({
-    processForm: (user) => dispatch(signup(user)),
-    otherForm: (
-      <button type="button" onClick={() => dispatch(openModal('login'))}>
-        Log In
-      </button>
-    ),
+    processForm: (user) => dispatch(signup(user)).then(() => dispatch(closeModal())),
     closeModal: () => dispatch(closeModal())
 })
 

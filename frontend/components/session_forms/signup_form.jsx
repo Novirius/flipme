@@ -5,7 +5,8 @@ class SignupForm extends React.Component {
     super(props);
     this.state = {
       username: '',
-      password: ''
+      password: '',
+      email: '',
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
@@ -32,18 +33,17 @@ class SignupForm extends React.Component {
 
   render() {
     return (
-      <div className="signup">
         <div className="signup-container">
             <div className="signup-sm-container">
-                <div className="signup-sm-google-wrapper">
-                    <button className="signup-sm-google">
-                        Sign up with Google
-                    </button>
+                <div className="signup-sm-wrapper">
+                    <a className="signup-sm">
+                    <i className="fab fa-google"></i> Sign up with Google
+                    </a>
                 </div>
-                <div className="signup-sm-facebook-wrapper">
-                    <button className="signup-sm-facebook">
-                        Sign up with Facebook
-                    </button>
+                <div className="signup-sm-wrapper">
+                    <a className="signup-sm">
+                    <i className="fab fa-facebook-square"></i> Sign up with Facebook
+                    </a>
                 </div>
             </div>
             <div className="signup-divider-container">
@@ -51,13 +51,13 @@ class SignupForm extends React.Component {
                     <hr className="signup-divider-line" /> 
                 </div>
                 <div className="signup-divider-label-wrapper">
-                    <span>OR EMAIL</span>
+                    <p>OR EMAIL</p>
                 </div>
                 <div className="signup-divider-border">
                     <hr className="signup-divider-line" /> 
                 </div>
             </div>
-            <form className="signup-form">
+            <form onSubmit={this.handleSubmit} className="signup-form">
                 <label className="signup-form-birthday-container" htmlFor="">
                     <legend className="signup-form-birthday-label">
                         <span>
@@ -65,9 +65,9 @@ class SignupForm extends React.Component {
                         </span>
                     </legend>
                     <div className="signup-birthday-dropdown-container">
-                        <div className="signup-birthday-dropdown-month-wrapper">
+                        {/* <div className="signup-birthday-dropdown-month-wrapper"> */}
                             <select className="signup-birthday-dropdown-month">
-                                <option value="-1" defaultValue disabled>Month</option>
+                                <option defaultValue disabled>Month</option>
                                 <option value="january">January</option>
                                 <option value="february">February</option>
                                 <option value="march">March</option>
@@ -81,8 +81,8 @@ class SignupForm extends React.Component {
                                 <option value="november">November</option>
                                 <option value="december">December</option>
                             </select>
-                        </div>
-                        <div className="signup-birthday-dropdown-day-wrapper">
+                        {/* </div> */}
+                        {/* <div className="signup-birthday-dropdown-day-wrapper"> */}
                             <select className="signup-birthday-dropdown-day">
                                 <option value="-1" defaultValue disabled>Day</option>
                                 <option value="1">1</option>
@@ -117,8 +117,8 @@ class SignupForm extends React.Component {
                                 <option value="30">30</option>
                                 <option value="31">31</option>
                             </select>
-                        </div>
-                        <div className="signup-birthday-dropdown-year-wrapper">
+                        {/* </div> */}
+                        {/* <div className="signup-birthday-dropdown-year-wrapper"> */}
                             <select className="signup-birthday-dropdown-year">
                                 <option value="-1" defaultValue disabled>Year</option>
                                 <option>2020</option>
@@ -252,7 +252,7 @@ class SignupForm extends React.Component {
                                 <option>1892</option>
                                 <option>1891</option>
                             </select>
-                        </div>
+                        {/* </div> */}
                     </div>
                 </label>
                 <div className="signup-form-field-container">
@@ -262,7 +262,13 @@ class SignupForm extends React.Component {
                         </span>
                     </legend>
                     <div className="signup-form-input-wrapper">
-                        <input className="signup-form-input" type="text" />
+                        <input 
+                          className="signup-form-input" 
+                          type="text"
+                          placeholder="david123"
+                          value={this.state.username}
+                          onChange={this.update('username')}
+                        />
                     </div>
                 </div>
                 <div className="signup-form-field-container">
@@ -272,7 +278,13 @@ class SignupForm extends React.Component {
                         </span>
                     </legend>
                     <div className="signup-form-input-wrapper">
-                        <input className="signup-form-input" type="text" />
+                        <input 
+                          className="signup-form-input" 
+                          type="text"
+                          placeholder="callmeback@gmail.com"
+                          value={this.state.email}
+                          onChange={this.update('email')} 
+                    />
                     </div>
                 </div>
                 <div className="signup-form-field-container">
@@ -282,15 +294,20 @@ class SignupForm extends React.Component {
                         </span>
                     </legend>
                     <div className="signup-form-input-wrapper">
-                        <input className="signup-form-input" type="password" />
+                        <input 
+                          className="signup-form-input" 
+                          type="password"
+                          placeholder="●●●●●●●●●●"
+                          value={this.state.password}
+                          onChange={this.update('password')}
+                    />
                     </div>
                 </div>
                 <div className="signup-form-submit">
-                    <button type="submit" value="Sign up" />
+                    <button id="signup-submit" type="submit" value="Sign up">Sign up</button>
                 </div>
             </form>
         </div>
-  </div>
     );
   }
 }

@@ -59,7 +59,7 @@ class LoginForm extends React.Component {
                   placeholder="Type your username"
                   value={this.state.username}
                   onChange={this.update('username')} />
-                <span className="LoginInput-Border"></span>
+                {/* <span className="LoginInput-Border"></span> */}
               </div>
               <span className="LoginInput-label">
                 <span>
@@ -76,7 +76,7 @@ class LoginForm extends React.Component {
                   placeholder="Type your password"
                   value={this.state.password}
                   onChange={this.update('password')} />
-                <span className="LoginInput-Border"></span>
+                {/* <span className="LoginInput-Border"></span> */}
               </div>
               <span className="LoginInput-label">
                 <span>
@@ -84,7 +84,7 @@ class LoginForm extends React.Component {
                 </span>
               </span>
             </label>
-            <button className="LoginButton">
+            <button type="submit" className="LoginButton">
               <span className="LoginButton-Wrapper">
                   <div className="LoginButton-Content">
                     <span>Log In</span>

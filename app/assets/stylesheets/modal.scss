@@ -9,6 +9,7 @@
     left: 0;
     background: rgba(0, 0, 0, 0.7);
     z-index: 10;
+    margin: auto;
   }
   
   .modal-child {
@@ -16,8 +17,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: white;
+    // background: white;
+    width: initial;
+    height: initial;
     animation-fill-mode: forwards;
     animation-name: my-move;
     animation-duration: 1s;
+    // margin: auto;
   }

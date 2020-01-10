@@ -18,6 +18,15 @@ class User < ApplicationRecord
         self.password_digest = BCrypt::Password.create(password)
     end
 
+    def self.username_is_taken?(username)
+        user = User.find_by(username: username)
+        if user 
+            return ["sorry name is taken"]
+        else
+            return ["#{username} is available"]
+        end
+    end
+
     def is_password?(password)
         BCrypt::Password.new(self.password_digest).is_password?(password)
     end

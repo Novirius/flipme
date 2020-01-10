@@ -2,3 +2,21 @@ $button-hover: rgb(255,191,0);
 $button: rgb(60, 207, 207);
 $font-dark: rgb(69, 83, 88);
 $placeholder: rgb(187, 190, 190);
+$font-label: #97a5aa;
+$social-media-border: rgb(235, 238, 240);
+$button-border: #455358;
+
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    opacity: 1; /* Firefox */
+    color: rgb(187, 190, 190);
+    font-size: 18px;
+    // padding-bottom: 80rem;
+    // padding-left: 10px;
+  }
+
+  button:hover {
+      background-color: $button-hover;
+      color: $font-dark;
+  }
+
