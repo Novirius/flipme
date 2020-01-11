@@ -1,0 +1,1 @@
+json.extract! @folder, :id, :title, :description, :author_id

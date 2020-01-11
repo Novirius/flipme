@@ -7,6 +7,10 @@ class User < ApplicationRecord
 
     after_initialize :ensure_session_token
 
+    has_many :folders,
+    foreign_key: :author_id,
+    class_name: :Folder
+
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         return nil unless user
