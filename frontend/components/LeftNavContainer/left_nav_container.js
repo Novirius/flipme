@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import LeftNav from './left_nav'
 
-const mapState = ({ entities, errors, session: { id } }) => ({
+const mapState = ({ entities}) => ({
     folders: entities.folders,
     foldersCount: Object.keys(entities.folders).length,
     sets: entities.sets,
