@@ -48,11 +48,13 @@ class TopNav extends React.Component {
                                 <a><i className="fas fa-search"></i>  Search</a>
                             </div>
                         </div>
+                        <div className="top-nav-vertical-divide" />
                         <div className="top-nav-browse-wrapper">
                             <div className="top-nav-browse">
                                 <a><i className="fas fa-book"></i>  Browse</a>
                             </div>
                         </div>
+                        <div className="top-nav-vertical-divide" />
                         <div className="top-nav-create-wrapper">
                             <div className="top-nav-create">
                                 <a><i className="far fa-plus-square"></i>  Create</a>
@@ -90,11 +92,13 @@ class TopNav extends React.Component {
                                 <a><i className="fas fa-search"></i>  Search</a>
                             </div>
                         </div>
+                        <div className="top-nav-vertical-divide" />
                         <div className="top-nav-browse-wrapper">
                             <div className="top-nav-browse">
                                 <a><i className="fas fa-book"></i>  Browse</a>
                             </div>
                         </div>
+                        <div className="top-nav-vertical-divide" />
                         <div className="top-nav-create-wrapper">
                             <div className="top-nav-create">
                                 <a><i className="far fa-plus-square"></i>  Create</a>
@@ -102,8 +106,8 @@ class TopNav extends React.Component {
                         </div>
                     </div>
                     <div className="top-nav-user-container">
-                        <div className="top-nav-signup-wrapper">
-                            <div className="top-nav-signup">
+                        <div className="top-nav-logout-wrapper">
+                            <div className="top-nav-logout">
                                 <a onClick={this.handleProfile}>{this.props.currentUser.username} <i class="fa fa-caret-down"></i></a>
                             </div>
                         </div>

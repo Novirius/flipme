@@ -1,5 +1,7 @@
 /* PHASE 0: Reset */
 
+@import './variables';
+
 html, body, header, nav, h1, a,
 ul, li, strong, main, button, i,
 section, img, div, h2, p, form,
@@ -50,15 +52,6 @@ input[type="submit"] {
   cursor: pointer;
 }
 
-body {
-  font-family: 'Cabin', sans-serif;
-  color: #d9d9d9;
-}
 
-.fa, .fab, .fad, .fal, .far, .fas {
-  display: inline !important;
-}
 
-a {
-  cursor:pointer;
-}
+

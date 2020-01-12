@@ -6,7 +6,8 @@ import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LeftNavContainer from '../components/LeftNavContainer/left_nav_container'
 
 const App = () => (
-  <div>
+  <div className="site-wrapper">
+    <div className="site-container">
     <Modal />
     <header>
       <TopNavContainer />
@@ -19,7 +20,7 @@ const App = () => (
       <AuthRoute exact path="/login" component={LogInFormContainer} />
       <AuthRoute exact path="/signup" component={SignUpFormContainer} />
     </Switch> */}
-    
+        </div>
   </div>
 );
 

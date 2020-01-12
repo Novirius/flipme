@@ -1,0 +1,44 @@
+@import './variables';
+
+.side-nav {
+    width: 17rem;
+    display: flex;
+    position: absolute;
+    filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
+}
+
+.side-nav-container {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding-top: 20px;
+}
+
+.side-nav-item-link-container {
+    background-color: white;
+    height: 52px;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+}
+
+.side-nav-item-link-container:hover {
+    background-color: $button-hover;
+}
+
+.side-nav-item-link-icon {
+    align-self: center;
+    width: auto;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    filter: drop-shadow(rgba(226, 225, 225, 0.459) 0 .125rem .625rem);
+
+}
+
+
+.side-nav-divider {
+    width: 100%;
+    border: 0.5px solid lightgray;
+    opacity: 0.3;
+}

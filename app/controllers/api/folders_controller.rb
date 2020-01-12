@@ -1,6 +1,7 @@
 class Api::FoldersController < ApplicationController
     def index
         @folders = current_user.folders.all
+        render 'api/folders/index'
     end
 
     def create

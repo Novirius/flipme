@@ -7,3 +7,5 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 user1 = User.create(username: "chris", email: "chris@gmail.com", password:"chris123")
+
+folder1 = Folder.create(title: "first title", description:"this is from first title description", author_id: 1)
