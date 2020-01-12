@@ -32,7 +32,6 @@
     width: auto;
     margin-right: 1rem;
     margin-left: 1rem;
-    filter: drop-shadow(rgba(226, 225, 225, 0.459) 0 .125rem .625rem);
 
 }
 
@@ -41,4 +40,95 @@
     width: 100%;
     border: 0.5px solid lightgray;
     opacity: 0.3;
+}
+
+//Small Folders
+.side-nav-folder-link-container {
+    background-color: white;
+    height: 30px;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    font-size: 1rem;
+}
+
+.side-nav-folder-link-container:hover {
+    background-color: $button-hover;
+}
+
+.side-nav-folder-link-title {
+    width: auto;
+    margin-left: 3rem;
+}
+
+//Create Folders
+.side-nav-create-link-container {
+    background-color: white;
+    height: 30px;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.9rem;
+    color: $button;
+}
+
+.side-nav-create-link-container:hover {
+    color: $button-hover;
+}
+
+.side-nav-create-link-title {
+    width: auto;
+}
+
+.side-nav-create-link-icon {
+    align-self: center;
+    width: auto;
+    margin-right: 1rem;
+    margin-left: 3rem;
+}
+
+//Small Folders
+.side-nav-footer-link-container {
+    background-color: white;
+    height: 30px;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: $button;
+}
+
+.side-nav-footer-link-container:hover {
+    color: $button-hover;
+}
+
+.side-nav-footer-link-title {
+    width: auto;
+    margin-left: 1rem;
+}
+
+//Contact Links
+.side-nav-contact-container {
+    background-color: white;
+    height: 30px;
+    display: flex;
+    justify-content: left;
+    flex-direction: row;
+    align-items: center;
+    font-size: 0.85rem;
+    font-weight: 500;
+    width: min-content;
+}
+
+.side-nav-contact-container > a > .fab, .far{
+    margin-left: 1rem;
+    margin-right: 0.5rem;
+}
+
+.infinite-scroll {
+    height: fit-content;
 }

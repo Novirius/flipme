@@ -9,3 +9,5 @@
 user1 = User.create(username: "chris", email: "chris@gmail.com", password:"chris123")
 
 folder1 = Folder.create(title: "first title", description:"this is from first title description", author_id: 1)
+folder2 = Folder.create(title: "second title", description:"this is from second title description", author_id: 1)
+folder3 = Folder.create(title: "third title", description:"this is from third title description", author_id: 1)

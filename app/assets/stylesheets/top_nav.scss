@@ -170,13 +170,13 @@
   z-index: 2;
 }
 
-.top-nav-dropdown > li {
+.top-nav-dropdown-item {
   padding-top: 15px;
   padding-bottom: 15px;
   padding-left: 20px;
 }
 
-.top-nav-dropdown > li:hover {
+.top-nav-dropdown-item:hover {
   background-color: $button-hover;
   
 }

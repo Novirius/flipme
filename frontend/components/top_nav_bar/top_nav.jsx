@@ -108,16 +108,16 @@ class TopNav extends React.Component {
                     <div className="top-nav-user-container">
                         <div className="top-nav-logout-wrapper">
                             <div className="top-nav-logout">
-                                <a onClick={this.handleProfile}>{this.props.currentUser.username} <i class="fa fa-caret-down"></i></a>
+                                <a onClick={this.handleProfile}>{this.props.currentUser.username} <i className="fa fa-caret-down"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <ul className={`top-nav-dropdown ${this.state.hidden}`}>
-                <li><a>Your Study Sets</a></li>
-                <li><a>Settings</a></li>
-                <li onClick={this.handleLogout}><a>Log Out</a></li>
+                <a><li className="top-nav-dropdown-item">Your Study Sets</li></a>
+                <a><li className="top-nav-dropdown-item">Settings</li></a>
+                <a><li className="top-nav-dropdown-item" onClick={this.handleLogout}>Log Out</li></a>
             </ul>                       
         </div>
     )
