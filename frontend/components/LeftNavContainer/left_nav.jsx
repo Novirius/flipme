@@ -35,7 +35,7 @@ class LeftNav extends React.Component {
                         this.props.folders.map(folder => <LeftNavFoldersIndexItem route={`/folders/${folder.id}`} key={folder.id} title={folder.title} id={folder.id} />)
                     }
                     <div className="side-nav-create">
-                        <a className="side-nav-create-link">
+                        <a className="side-nav-create-link" onClick={() => this.props.openModal('folder')}>
                             <div className="side-nav-create-link-container">
                             <span className="side-nav-create-link-icon">
                                 <i className="fas fa-folder-plus"></i>

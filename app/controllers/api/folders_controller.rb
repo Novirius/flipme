@@ -6,6 +6,7 @@ class Api::FoldersController < ApplicationController
 
     def create
         @folder = Folder.new(folder_params)
+        @folder.author_id = current_user.id
         if @folder.save
             render 'api/folders/show'
         else

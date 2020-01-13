@@ -1,0 +1,21 @@
+@import './variables';
+
+.folder-form-container {
+    width: 600px;
+    height: 430px;
+    background: white;
+}
+
+legend.folder-form-title {
+    background-color: $header-color;
+    height:100px;
+}
+
+.folder-form-title-container {
+    // width: auto;
+    // height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import {fetchFolders} from '../../actions/folder_actions'
-import DashboardBody from './dashboard_body'
+import DashboardHeader from './dashboard_header'
 
 const mapState = ({ entities}) => ({
     folders: Object.values(entities.folders),
@@ -10,8 +10,10 @@ const mapState = ({ entities}) => ({
     // setsCount: Object.keys(entities.sets).length,
 })
 
-const mapDispatch = dispatch => ({
-    fetchFolders: () => dispatch(fetchFolders())
-})
+const mapDispatch = dispatch => {
+    return {
+        fetchFolders: () => dispatch(fetchFolders())
+    }
+}
 
-export default connect(mapState, mapDispatch)(DashboardBody);
+export default connect(mapState, mapDispatch)(DashboardHeader);

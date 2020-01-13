@@ -8,10 +8,9 @@ class DashboardBody extends React.Component {
 
     }
 
-    // componentDidMount () {
-    //     const {fetchFolders} = this.props.fetchFolders
-    //     fetchFolders();
-    // }
+    componentDidMount () {
+        this.props.fetchFolders();
+    }
 
     render () {
         return (
@@ -35,9 +34,9 @@ class DashboardBody extends React.Component {
                             </div>
                         </div>
                         <div className="dashboard-body-feed">
-                            {/* {
-                                this.props.folders.map(folder => <DashboardFeedItem title={folder.title}/>)
-                            } */}
+                            {
+                                this.props.folders.map(folder => <DashboardFeedItem key={folder.id} title={folder.title}/>)
+                            }
                         </div>
                 </div>
                 <div className="dashboard-body-ads-container">

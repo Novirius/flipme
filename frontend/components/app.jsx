@@ -4,8 +4,8 @@ import Modal from './modal/modal'
 import TopNavContainer from './top_nav_bar/top_nav_container';
 import { AuthRoute, ProtectedRoute } from '../util/route_util';
 import LeftNavContainer from '../components/LeftNavContainer/left_nav_container';
-import DashboardHeader from './dashboard/dashboard_header';
-import DashboardBody from './dashboard/dashboard_body';
+import DashboardHeaderContainer from './dashboard/dashboard_header_container';
+import DashboardBodyContainer from './dashboard/dashboard_body_container';
 
 
 const App = () => (
@@ -16,8 +16,8 @@ const App = () => (
           <TopNavContainer />
         </header>
         <LeftNavContainer />
-        <DashboardHeader />
-        <DashboardBody />
+        <DashboardHeaderContainer />
+        <DashboardBodyContainer />
       </div>
   </div>
 );

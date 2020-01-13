@@ -1,8 +1,9 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import LeftNav from './left_nav'
-import {fetchFolders} from '../../actions/folder_actions'
+import LeftNav from './left_nav';
+import {fetchFolders} from '../../actions/folder_actions';
+import {openModal, closeModal} from '../../actions/modal_actions';
 
 const mapState = ({ entities}) => {
     return {
@@ -17,7 +18,8 @@ const mapState = ({ entities}) => {
 }
 
 const mapDispatch = dispatch => ({
-    fetchFolders: () => dispatch(fetchFolders())
+    fetchFolders: () => dispatch(fetchFolders()),
+    openModal: modaltype => dispatch(openModal(modaltype))
 })
 
 export default connect(mapState, mapDispatch)(LeftNav);
