@@ -5,7 +5,6 @@ import LeftNav from './left_nav'
 import {fetchFolders} from '../../actions/folder_actions'
 
 const mapState = ({ entities}) => {
-    console.log(entities); 
     return {
         folders: Object.values(entities.folders),
         foldersCount: Object.keys(entities.folders).length,

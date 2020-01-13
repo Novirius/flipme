@@ -5,6 +5,7 @@
     display: flex;
     position: absolute;
     filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
+    
 }
 
 .side-nav-container {
@@ -12,6 +13,7 @@
     flex-direction: column;
     background: white;
     padding-top: 20px;
+    height: 92.5vh;
 }
 
 .side-nav-item-link-container {

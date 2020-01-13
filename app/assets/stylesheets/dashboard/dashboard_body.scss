@@ -1,0 +1,124 @@
+@import './variables';
+
+.dashboard-body-container {
+    width: 100%;
+    max-width: 1028px;
+    // background: red;
+    margin-left: 273px;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin-top: 40px;
+    padding: 40px;
+}
+
+
+.dashboard-body-ads-container {
+    // background-color: blue;
+    width: 26%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-body-content-container {
+    // background-color: orange;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dashboard-body-controls-container {
+    // background-color: pink;
+    display: flex;
+    flex-direction: row;
+}
+
+.dashboard-body-controls-sort-container {
+    // background-color: green;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 150%;
+}
+
+.dashboard-body-controls-sort-label {
+    // background-color: lightslategrey;
+    width: auto;
+    margin-right: 20px;
+    
+}
+
+.dashboard-body-controls-sort-dropdown {
+    // background-color: maroon;
+    width: auto;
+}
+
+.dashboard-body-controls-sort-dropdown > select {
+    width: auto;
+    border-right: 2px solid;
+    padding: 8px 16px;
+    border-color:#dcdddf;
+    color: $button;
+    font-weight: 700px;
+    font-size: 15px;
+}
+
+
+.dashboard-body-controls-filter {
+    // background-color: midnightblue;
+    display: flex;
+    align-items: center;
+
+}
+
+.dashboard-body-controls-filter > input {
+    border-bottom: 3px solid $font-dark;
+    line-height: 2rem;
+}
+
+input::placeholder {
+    padding-bottom: 10px;
+
+}
+
+
+
+
+
+.dashboard-body-feed {
+    margin-top: 50px
+}
+
+
+.dashboard-body-feed-item {
+    background-color: white;
+    border-bottom: 5px solid white;
+    height: 75px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.dashboard-body-feed-item:hover {
+    border-bottom: 5px solid $button-hover;
+}
+
+.dashboard-body-feed-item-small {
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.dashboard-body-feed-item-large {
+    display: flex;
+    flex-direction: row;
+    box-sizing: border-box;
+    padding: 0rem 2rem;
+    align-items: center;
+}
+
+.dashboard-body-feed-item-large > span {
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 1.25rem;
+}

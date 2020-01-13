@@ -1,20 +1,20 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+
 import LeftNavItem from './left_nav_item';
 import LeftNavFoldersIndexItem from './left_nav_folders_index_item'
 
 class LeftNav extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            open: false,
-            foldersCount: 0
-        }
+        // this.state = {
+        //     open: false,
+        //     foldersCount: 0
+        // }
     }
 
     componentDidMount () {
         this.props.fetchFolders()
-            .then(() => this.setState({foldersCount: this.props.foldersCount}));
+            // .then(() => this.setState({foldersCount: this.props.foldersCount}));
     }
 
     render () {
@@ -29,7 +29,7 @@ class LeftNav extends React.Component {
                     {/* Site nav End */}
                     {/* User stuff Start */}
                     <LeftNavItem route={'/sets'} icon={<i className="fas fa-clone"></i>} title={'Sets'} />
-                    <LeftNavItem route={'/folders'} icon={<i className="fas fa-folder"></i>} title={`Folders (${this.state.foldersCount})`} />
+                    <LeftNavItem route={'/folders'} icon={<i className="fas fa-folder"></i>} title={`Folders (${this.props.foldersCount})`} />
                     {/* User stuff End */}
                     {
                         this.props.folders.map(folder => <LeftNavFoldersIndexItem route={`/folders/${folder.id}`} key={folder.id} title={folder.title} id={folder.id} />)

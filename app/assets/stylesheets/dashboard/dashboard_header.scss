@@ -1,0 +1,52 @@
+@import './variables';
+
+.dashboard-header-container {
+    background-color: white;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.fa-user-circle {
+    width: auto;
+    margin-left: 21rem;
+}
+
+.dashboard-header-profile-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 5rem;
+}
+
+.dashboard-header-profile-toggle-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border:2px solid black;
+    border-radius: 3px;
+    width: fit-content;
+    border-color:#dcdddf;
+}
+
+.dashboard-header-profile-toggle-container > button {
+    width: auto;
+    border-right: 2px solid;
+    padding: 8px 16px;
+    border-color:#dcdddf;
+    color: $button;
+    font-weight: 700px;
+    font-size: 15px;
+}
+
+.dashboard-header-profile-container > span {
+    font-size: xx-large;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.dashboard-header-profile-toggle-container > button:nth-last-child(1) {
+    width: auto;
+    border-right: 0px;
+}
+

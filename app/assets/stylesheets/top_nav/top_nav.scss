@@ -34,7 +34,7 @@
   justify-content: space-between;
   // align-content: space-between;
   // border: 1px solid;
-  width: 77%;
+  width: 83%;
 }
 
 
@@ -62,7 +62,7 @@
 }
 
 .top-nav-browse-wrapper {
-  padding-left: 10px;
+  padding-left: 20px;
 }
 
 .top-nav-browse:hover {
@@ -158,7 +158,7 @@
 .top-nav-dropdown {
   position: absolute;
   top: 100%;
-  left: 62%;
+  left: 67%;
   background-color: white;
   color: $font-dark;
   filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);

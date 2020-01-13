@@ -3,10 +3,12 @@
 body {
     font-family: 'Cabin', sans-serif;
     color: $font-dark;
+    background-color: #f0f0f0;
   }
 
   .fa, .fab, .fad, .fal, .far, .fas {
     display: inline !important;
+    width: auto;
   }
   
   a {
@@ -28,4 +30,26 @@ body {
     width: 100%;
     max-width: 81.25em;
     position: relative;
+    
+}
+
+
+.button-default {
+  color: white;
+  background-color: $button;
+}
+
+.button-default:hover {
+  color: $font-dark;
+  background-color: $button-hover;
+}
+
+.url-default {
+  color: $button;
+  background-color: white;
+}
+
+.url-default:hover {
+  color: $button-hover;
+  background-color: white;
 }
