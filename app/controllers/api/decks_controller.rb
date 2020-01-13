@@ -1,9 +1,18 @@
 class Api::DecksController < ApplicationController
   def index
-    #decks by user
-    #decks by category
-    #decks by folder
-
+    if params[:user_id]
+      user = User.find(params[:user_id])
+      @decks = user.decks
+      render :index
+    elsif params[:category_id]
+      category = Category.find(params[:category_id])
+      @decks = category.decks
+      render :index
+    elsif params[:sub_category_id]
+      sub_category = SubCategory.find(params[:sub_category_id])
+      @decks = sub_category.decks
+      render :index
+    end
   end
 
   def show
@@ -35,6 +44,8 @@ class Api::DecksController < ApplicationController
   end
 
   def destroy
+    @deck = current_user.decks.find(params[:id])
+    @deck.destroy
   end
 
   def deck_params

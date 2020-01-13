@@ -1,13 +1,13 @@
 export const fetchFolders = () => (
     $.ajax({
         method: 'GET',
-        url: '/api/folders'
+        url: `/api/folders`
     })
 )
 
-export const fetchFolder = (id) => (
+export const fetchFolder = (folderId) => (
     $.ajax({
-        url: '/api/folders',
+        url: `/api/folders/${folderId}`,
         method:'GET'
     })
 )

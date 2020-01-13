@@ -9,6 +9,7 @@ const mapState = ({ entities}) => {
     return {
         folders: Object.values(entities.folders),
         foldersCount: Object.keys(entities.folders).length,
+
         // sets: entities.sets,
         // setsCount: Object.keys(entities.sets).length,
         homeLink: <Link to="/"><i className="fas fa-home"></i> Home</Link>,

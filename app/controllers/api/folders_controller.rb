@@ -15,7 +15,7 @@ class Api::FoldersController < ApplicationController
 
     def create
         @folder = Folder.new(folder_params)
-        @folder.author_id = current_user.id
+        @folder.author_id = crurrent_user.id
         if @folder.save
             render 'api/folders/show'
         else
@@ -33,7 +33,7 @@ class Api::FoldersController < ApplicationController
     end
 
     def destroy
-        @folder = Folder.find(params[:id])
+        @folder = current_user.folders.find(params[:id])
         @folder.destroy
     end
 
