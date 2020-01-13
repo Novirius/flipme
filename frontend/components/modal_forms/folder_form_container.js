@@ -2,7 +2,7 @@ import { connect } from 'react-redux';
 import React from 'react';
 import FolderForm from './folder_form';
 import {openModal, closeModal} from '../../actions/modal_actions'
-
+import {createFolder} from '../../actions/folder_actions'
 
 const mapState = ({ errors }) => ({
     

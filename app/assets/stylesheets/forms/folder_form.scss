@@ -7,6 +7,7 @@
 }
 
 legend.folder-form-title {
+    box-sizing: border-box;
     background-color: $header-color;
     height:100px;
 }
@@ -14,8 +15,67 @@ legend.folder-form-title {
 .folder-form-title-container {
     // width: auto;
     // height: auto;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
+.folder-form-title-container > span {
+    color: white;
+    margin-left: 2rem;
+    font-size: xx-large;
+    align-self: center;
+}
+
+.folder-form-title-container > a {
+    width: auto;
+    margin-right: 1rem;
+}
+
+.fa-times-circle {
+    color:white;
+    
+}
+
+.folder-form-body {
+    box-sizing: border-box;
+    width: 600px;
+    height: 330px;
+    background-color: white;
+    padding: 2rem;
+}
+
+.folder-form-body-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.folder-form-body-label > input {
+    border-bottom: 2px solid $font-dark;
+    line-height: 39px;
+}
+
+.folder-form-body-label > span {
+    margin-top: 5px;
+    color: $font-label;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.folder-form-body > button {
+    align-self: flex-end;
+    border-radius: 5px;
+    margin-top: 75px;
+    box-sizing: border-box;
+    max-width: 536px;
+    padding: 24px;
+    background-color: $button;
+    text-align: center;
+    color: white;
+}
+
+button[type=submit][disabled] {
+    background-color: $font-label !important;
+  }

@@ -4,6 +4,15 @@ class Api::FoldersController < ApplicationController
         render 'api/folders/index'
     end
 
+    def show
+        @folder = Folder.find(params[:id])
+        if @folder
+            render 'api/folders/show'
+        else
+            render json: @folder.errors.full_messages, status: 422
+        end
+    end
+
     def create
         @folder = Folder.new(folder_params)
         @folder.author_id = current_user.id
@@ -19,7 +28,7 @@ class Api::FoldersController < ApplicationController
         if @folder.update_attributes(folder_params)
             render '/api/folders/show'
         else
-            render json: @user.errors.full_messages, status: 422
+            render json: @folder.errors.full_messages, status: 422
         end
     end
 

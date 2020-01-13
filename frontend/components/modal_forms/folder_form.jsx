@@ -5,15 +5,19 @@ class FolderForm extends React.Component {
         super(props);
         this.state = {
             title: '',
-            description: ''
+            description: '',
+            buttonStatus: null
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     update(field) {
+        
         return e => this.setState({
-          [field]: e.currentTarget.value
+          [field]: e.currentTarget.value,
+          buttonStatus: e.currentTarget.value
         });
+        
     }
 
 
@@ -29,10 +33,10 @@ class FolderForm extends React.Component {
                 <legend className="folder-form-title">
                     <div className="folder-form-title-container">
                         <span>Create a Folder</span>
-                        <i className="far fa-times-circle fa-1x"></i>
+                        <a onClick={() => this.props.closeModal()}><i className="far fa-times-circle fa-2x"></i></a>
                     </div>
                 </legend>
-                <form className="folder-form-body">
+                <form className="folder-form-body" onSubmit={this.handleSubmit}>
                     <label className="folder-form-body-label" htmlFor="title">
                         <input 
                             className="folder-form-body-input" 
@@ -41,8 +45,9 @@ class FolderForm extends React.Component {
                             value={this.state.title}
                             onChange={this.update('title')} 
                         />
+                        <span>Title</span>
                     </label>
-                    <label className="folder-form-body-input" htmlFor="description">
+                    <label className="folder-form-body-label" htmlFor="description">
                         <input 
                             className="folder-form-body-input" 
                             type="text"
@@ -50,8 +55,9 @@ class FolderForm extends React.Component {
                             value={this.state.description}
                             onChange={this.update('description')} 
                         />
+                        <span>Description</span>
                     </label>
-                    <button type="submit" value="Create Folder">Create Folder</button>
+                    <button type="submit" value="Create Folder" disabled={!this.state.buttonStatus} >Create Folder</button>
                 </form>
 
             </div>

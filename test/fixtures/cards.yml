@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  front_text: MyString
+  back_text: MyString
+  front_image: MyString
+  back_image: MyString
+  deck_id: 1
+  author_id: 1
+
+two:
+  front_text: MyString
+  back_text: MyString
+  front_image: MyString
+  back_image: MyString
+  deck_id: 1
+  author_id: 1

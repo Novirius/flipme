@@ -11,6 +11,16 @@ class User < ApplicationRecord
     foreign_key: :author_id,
     class_name: :Folder
 
+    has_many :decks,
+    foreign_key: :author_id,
+    class_name: :Deck
+
+    has_many :cards,
+    foreign_key: :author_id,
+    class_name: :Card
+
+
+
     def self.find_by_credentials(username, password)
         user = User.find_by(username: username)
         return nil unless user
