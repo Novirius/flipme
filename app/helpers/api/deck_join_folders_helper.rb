@@ -1,0 +1,2 @@
+module Api::DeckJoinFoldersHelper
+end

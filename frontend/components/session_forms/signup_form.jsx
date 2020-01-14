@@ -281,7 +281,7 @@ class SignupForm extends React.Component {
                         <input 
                           className="signup-form-input" 
                           type="text"
-                          placeholder="callmeback@gmail.com"
+                          placeholder="coolemail@gmail.com"
                           value={this.state.email}
                           onChange={this.update('email')} 
                     />

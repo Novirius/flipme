@@ -1,0 +1,40 @@
+@import './variables';
+
+.splash-image {
+    background-image: image-url('splash1.jpg'); 
+    // background-color: red;
+    height: 800px;
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    
+}
+
+.splash-top-container {
+    width: 500px;
+    height: 320px;
+    padding-left: 21%;
+    padding-top: 14%;
+    display:flex;
+    flex-direction: column;
+    // align-items: center;
+    // justify-content: center;
+    // align-content: center;
+    button {
+        margin-top: 30px;
+        padding: 20px;
+        align-self: center;
+        text-align: center;
+        background-color: $button;
+        color: white;
+        border-radius: 5px;
+    }
+}
+
+
+
+h1 {
+    font-size: xx-large;
+    font-weight: 700px;
+    
+}

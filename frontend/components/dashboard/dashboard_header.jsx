@@ -10,7 +10,7 @@ class DashboardHeader extends React.Component {
             <div className="dashboard-header-container">
                 <i className="fas fa-user-circle fa-10x"></i>
                 <div className="dashboard-header-profile-container">
-                    <span>chris</span>
+                    <span>{this.props.currentUser.username}</span>
                     <div className="dashboard-header-profile-toggle-container">
                         <button type="button">Recent</button>
                         <button type="button">Created</button>

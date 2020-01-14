@@ -19,17 +19,17 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: #4257b2;
     color: #fff;
-    height: 5rem;
     font-family: $website-font;
     color: $font-dark;
+    height: 100%;
 }
 
 .site-container {
     width: 100%;
     max-width: 81.25em;
     position: relative;
+    height: 100%;
     
 }
 
@@ -53,3 +53,15 @@ body {
   color: $button-hover;
   background-color: white;
 }
+
+.header-wrapper {
+  width: 100%;
+  background-color: #4257b2;
+  display: flex;
+  justify-content: center;
+  height: 5rem;
+  header {
+    max-width: 81.25em;
+  }
+}
+

@@ -11,3 +11,14 @@ user1 = User.create(username: "chris", email: "chris@gmail.com", password:"chris
 folder1 = Folder.create(title: "first title", description:"this is from first title description", author_id: 1)
 folder2 = Folder.create(title: "second title", description:"this is from second title description", author_id: 1)
 folder3 = Folder.create(title: "third title", description:"this is from third title description", author_id: 1)
+
+deck1 = Deck.create(title: "myseconddeck", author_id: 1, sub_category_id: 1)
+
+card2 = Card.create(  
+    front_text: "front of card2",
+    back_text: "back of card2",
+    front_image: "front image2",
+    back_image: "back image2",
+    deck_id: 1,
+    author_id: 1
+    )

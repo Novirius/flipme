@@ -6,8 +6,12 @@ class Folder < ApplicationRecord
     class_name: :User,
     foreign_key: :author_id
 
-    has_many :deck_join_folders, foreign_key: :folder_id, class_name: :DeckJoinFolder
+    has_many :deck_join_folders, 
+        foreign_key: :folder_id,
+        class_name: :DeckJoinFolder
 
-    has_many :decks, through: :deck_join_folders, source: :deck
+    has_many :decks, 
+        through: :deck_join_folders, 
+        source: :deck
 
 end

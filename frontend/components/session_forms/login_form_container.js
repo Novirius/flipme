@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { login } from '../../actions/session_actions';
 import LoginForm from './login_form';
 import {openModal, closeModal} from '../../actions/modal_actions'
@@ -17,4 +17,4 @@ const mapDispatch = dispatch => ({
     closeModal: () => dispatch(closeModal())
 })
 
-export default connect(mapState, mapDispatch)(LoginForm);
+export default withRouter(connect(mapState, mapDispatch)(LoginForm));

@@ -13,7 +13,9 @@ class LeftNav extends React.Component {
     }
 
     componentDidMount () {
-        this.props.fetchFolders()
+        this.props.fetchFolders();
+        // debugger;
+        this.props.fetchUserDecks(this.props.currentUser.id);
             // .then(() => this.setState({foldersCount: this.props.foldersCount}));
     }
 
@@ -28,8 +30,8 @@ class LeftNav extends React.Component {
                     <hr className="side-nav-divider"/>
                     {/* Site nav End */}
                     {/* User stuff Start */}
-                    <LeftNavItem route={'/sets'} icon={<i className="fas fa-clone"></i>} title={'Sets'} />
-                    <LeftNavItem route={'/folders'} icon={<i className="fas fa-folder"></i>} title={`Folders (${this.props.foldersCount})`} />
+                    <LeftNavItem route={`/users/${this.props.currentUser.id}/decks`} icon={<i className="fas fa-clone"></i>} title={`Decks (${this.props.decksCount})`} />
+                    <LeftNavItem route={`/users/${this.props.currentUser.id}/folders`} icon={<i className="fas fa-folder"></i>} title={`Folders (${this.props.foldersCount})`} />
                     {/* User stuff End */}
                     {
                         this.props.folders.map(folder => <LeftNavFoldersIndexItem route={`/folders/${folder.id}`} key={folder.id} title={folder.title} id={folder.id} />)
@@ -46,9 +48,7 @@ class LeftNav extends React.Component {
                             </div>
                         </a>
                     </div>
-                    <hr className="side-nav-divider"/>
                     <img className="birdo-img" src={window.birdo}/>
-                    <hr className="side-nav-divider"/>
                     <div className="side-nav-folder">
                         <a className="side-nav-footer-link" onClick={()=>alert("About as helpful as real Customer Service")}>
                             <div className="side-nav-footer-link-container">
@@ -76,7 +76,6 @@ class LeftNav extends React.Component {
                             </div>
                         </a>
                     </div>
-                    <br />
                     <div className="side-nav-contact">
                         <div className="side-nav-contact-container">
                             <a href="https://github.com/novirius"><i className="fab fa-github fa-lg"></i></a>
@@ -84,7 +83,6 @@ class LeftNav extends React.Component {
                             <a href="https://pastebin.com/u/Yugl"><i className="far fa-file-code fa-lg"></i></a>
                         </div>
                     </div>
-                    <br />
                     <div className="infinite-scroll" />
                 </div>
             </section>

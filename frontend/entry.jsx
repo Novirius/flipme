@@ -3,7 +3,9 @@ import ReactDOM from 'react-dom'
 import configureStore from './store/store';
 import Root from './components/root';
 
-import {signup, login, logout} from './actions/session_actions'
+import {signup, login, logout} from './actions/session_actions';
+import {fetchDeck} from './actions/deck_actions';
+import {fetchCard} from './actions/card_actions';
 
 document.addEventListener("DOMContentLoaded", () => {
     const root = document.getElementById("root");
@@ -30,7 +32,9 @@ document.addEventListener("DOMContentLoaded", () => {
     window.login = login;
     window.logout = logout;
     window.dispatch = store.dispatch;
-    window.getState = store.getState
+    window.getState = store.getState;
+    window.fetchDeck = fetchDeck;
+    window.fetchCard = fetchCard;
     //TEST
   
     ReactDOM.render(<Root store={store} />, root);

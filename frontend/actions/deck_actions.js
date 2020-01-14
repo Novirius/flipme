@@ -25,13 +25,41 @@ export const deckErrors = errors => ({
     errors: errors
 })
 
-export const fetchDecks = () => dispatch => (
-    APIUtil.fetchDecks()
+
+
+
+
+
+
+
+export const fetchUserDecks = (userid) => dispatch => (
+    APIUtil.fetchUserDecks(userid)
     .then(
         decks => dispatch(receiveDecks(decks)),
         errors => dispatch(deckErrors(errors))
     )
 );
+
+export const fetchCategoryDecks = (categoryId) => dispatch => (
+    APIUtil.fetchCategoryDecks(categoryId)
+    .then(
+        decks => dispatch(receiveDecks(decks)),
+        errors => dispatch(deckErrors(errors))
+    )
+);
+
+export const fetchSubCategoryDecks = (subCategoryId) => dispatch => (
+    APIUtil.fetchSubCategoryDecks(subCategoryId)
+    .then(
+        decks => dispatch(receiveDecks(decks)),
+        errors => dispatch(deckErrors(errors))
+    )
+);
+
+
+
+
+
 
 export const fetchDeck = id => dispatch => (
     APIUtil.fetchDeck(id)
