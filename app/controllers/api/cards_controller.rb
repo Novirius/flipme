@@ -27,6 +27,7 @@ class Api::CardsController < ApplicationController
 
   def destroy
     @card = current_user.cards.find(params[:id])
+    @card.destroy
   end
 
   def card_params

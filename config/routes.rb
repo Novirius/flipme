@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root_to 'static_pages#root'
+  root "static_pages#root"
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create] do
       resources :decks, only:[:index]
