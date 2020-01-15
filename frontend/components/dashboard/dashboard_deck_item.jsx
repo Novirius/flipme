@@ -14,10 +14,10 @@ class DashboardDeckItem extends React.Component {
         return (
             <Link to='/'>
                 <div className="dashboard-body-feed-item">
-                    <span className="dashboard-body-feed-item-small">{this.props.cardCount} sets</span>
+                    <span className="dashboard-body-feed-item-small">{this.props.cardCount} terms</span>
                     <div className="dashboard-body-feed-item-large">
-                        <i className="fas fa-folder fa-2x"></i>
-                        <span>{props.title}</span>
+                        <i className="fas fa-clone"></i>
+                        <span>{this.props.title}</span>
                     </div>
                 </div>
             </Link>
@@ -26,3 +26,5 @@ class DashboardDeckItem extends React.Component {
 }
 
 export default DashboardDeckItem;
+
+

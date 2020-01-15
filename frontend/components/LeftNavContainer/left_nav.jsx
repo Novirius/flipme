@@ -27,7 +27,7 @@ class LeftNav extends React.Component {
                     {/* Site Nav Start */}
                     <LeftNavItem route={'/'} icon={<i className="fas fa-home"></i>} title={'Home'} />
                     <LeftNavItem route={'/settings'} icon={<i className="fas fa-cog"></i>} title={'Settings'} />
-                    <hr className="side-nav-divider"/>
+                    <div className="side-nav-divider"/>
                     {/* Site nav End */}
                     {/* User stuff Start */}
                     <LeftNavItem route={`/users/${this.props.currentUser.id}/decks`} icon={<i className="fas fa-clone"></i>} title={`Decks (${this.props.decksCount})`} />

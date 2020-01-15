@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_01_13_181308) do
+ActiveRecord::Schema.define(version: 2020_01_14_201648) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2020_01_13_181308) do
     t.integer "folder_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["deck_id"], name: "index_deck_join_folders_on_deck_id"
+    t.index ["deck_id", "folder_id"], name: "index_deck_join_folders_on_deck_id_and_folder_id", unique: true
     t.index ["folder_id"], name: "index_deck_join_folders_on_folder_id"
   end
 

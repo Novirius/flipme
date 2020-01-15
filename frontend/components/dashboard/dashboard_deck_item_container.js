@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {fetchCards} from '../actions/card_actions'
-import DashboardDeckItem from './dashboard/dashboard_deck_item';
+import {fetchCards} from '../../actions/card_actions'
+import DashboardDeckItem from './dashboard_deck_item';
 
 const mapState = ({ entities, session}) => ({
     decks: Object.values(entities.decks),

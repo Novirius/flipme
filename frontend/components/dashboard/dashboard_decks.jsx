@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DashboardDeckItem from './dashboard_feed_item'
+import DashboardDeckItemContainer from './dashboard_deck_item_container'
 
 class DashboardDecks extends React.Component {
     constructor(props){
@@ -35,7 +35,7 @@ class DashboardDecks extends React.Component {
                         </div>
                         <div className="dashboard-body-feed">
                             {
-                                this.props.decks.map(deck => <DashboardDeckItem key={deck.id} title={deck.title}/>)
+                                this.props.decks.map(deck => <DashboardDeckItemContainer key={deck.id} title={deck.title}/>)
                             }
                         </div>
                 </div>

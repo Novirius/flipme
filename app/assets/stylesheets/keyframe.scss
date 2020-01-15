@@ -13,5 +13,23 @@
 
 @keyframes my-move {
     0%   {top: 0%; opacity: 0;}
-    100% {top: 47%; opacity: 1;}
+    100% {top: 50%; opacity: 1;}
+}
+
+@keyframes twist {
+    0% {
+        transform: rotateX(90deg) translateZ(1em)
+    }
+    100% {
+        transform: rotateX(0deg) translateZ(1em)
+    }
+}
+
+@keyframes twist-hover {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }

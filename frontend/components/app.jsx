@@ -8,6 +8,7 @@ import DashboardHeaderContainer from './dashboard/dashboard_header_container';
 import DashboardBodyContainer from './dashboard/dashboard_body_container';
 import DashboardDecksContainer from './dashboard/dashboard_decks_container';
 import SplashPage from './splash_page';
+import LatestContainer from './latest/latest_container';
 
 const App = () => (
 <div>
@@ -22,11 +23,15 @@ const App = () => (
   <div className="site-wrapper">
     <div className="site-container">
         <Modal />
+        {/* LeftNav */}
         <ProtectedRoute exact path="/latest" component={LeftNavContainer} />
         <ProtectedRoute path="/users/:user_id" component={LeftNavContainer} />
+        {/* Header */}
         <ProtectedRoute exact path="/users/:user_id" component={DashboardHeaderContainer} />
         <ProtectedRoute exact path="/users/:user_id/folders" component={DashboardHeaderContainer} />
         <ProtectedRoute exact path="/users/:user_id/decks" component={DashboardHeaderContainer} />
+        {/* Body */}
+        <ProtectedRoute exact path="/latest" component={LatestContainer} />
         <ProtectedRoute exact path="/users/:user_id/folders" component={DashboardBodyContainer} />
         <ProtectedRoute exact path="/users/:user_id/decks" component={DashboardDecksContainer} />
     </div>

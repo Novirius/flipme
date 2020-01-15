@@ -1,0 +1,101 @@
+@import './variables';
+
+.latest-container {
+    margin-left: 300px;
+    display: flex;
+    flex-direction: column;
+    width: 728px;
+    padding: 40px;
+    // background-color: blue;
+    height: 400px;
+}
+
+.latest-header {
+    display: flex;
+    height: 26px;
+    align-items: center;
+    // background-color: red;
+}
+
+.latest-header-label {
+    font-size: 18px;
+    text-transform: uppercase;
+}
+
+.latest-header-viewall {
+    font-size: 14px;
+    width: 100px;
+    margin-right: 50px;
+    color: $button;
+}
+
+.latest-header-viewall:hover {
+    color: $button-hover;
+}
+// .latest-body {
+//     background-color: purple;
+//     height: 100%;
+//     margin-top: 20px;
+// }
+
+.latest-body-decks {
+    flex-wrap: wrap;
+    height: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.deck-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: white;
+    margin: 10px;
+    max-width: 320px;
+    max-height: 160px;
+    border-radius: 5px;
+    border-bottom: 4px solid white;
+    filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
+    animation-name: twist;
+    animation-duration: 1s;
+    transition : border 500ms ease-out;
+    // top: 0px;
+    // transition: top ease 0.5s;
+}
+
+.deck-container:hover {
+    border-bottom: 4px solid $button-hover;
+    // animation-name: twist-hover;
+    // animation-duration: 2s;
+    // // top: 5px;
+    
+}
+
+.deck-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+   
+}
+
+.deck-details-top {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.deck-details-title {
+    margin-bottom: 1rem;
+}
+
+.deck-image {
+    height: 56px;
+    width: 56px;
+    margin-right: 1rem;
+}
