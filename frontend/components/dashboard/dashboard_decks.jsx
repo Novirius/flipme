@@ -35,7 +35,7 @@ class DashboardDecks extends React.Component {
                         </div>
                         <div className="dashboard-body-feed">
                             {
-                                this.props.decks.map(deck => <DashboardDeckItemContainer key={deck.id} title={deck.title}/>)
+                                this.props.decks.map(deck => <DashboardDeckItemContainer key={deck.id} deck={deck}/>)
                             }
                         </div>
                 </div>

@@ -1,0 +1,55 @@
+@import './variables';
+
+.testing-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.testing {
+    height: 514px;
+    width: 814px;
+    padding: 40px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.flashcard-show-title {
+    display: block;
+    font-size: 1.875rem;
+    margin-bottom: 40px;
+}
+
+.flashcard-show-dashboard {
+    display: flex;
+    flex-direction: row;
+}
+
+.flashcard-show-dashboard-menu {
+    width: 20%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    span {
+        text-transform: uppercase;
+        color: $font-label;
+        font-size: 12px;
+    }
+}
+
+.flashcard-show-dashboard-menu-item {
+    padding: 8px 10px;
+    font-size: 14px;
+    border-bottom: 3px solid transparent;
+    &:hover {
+        border-bottom: 3px solid $font-hover;
+        color: $font-hover;
+    }
+}
+
+.flashcard-show-dashboard-display {
+    display: flex;
+    flex-direction: column;
+}

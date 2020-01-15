@@ -14,18 +14,18 @@ class Deck extends React.Component {
     render () {
         if (!this.props.cardsCount) return null;
         return (
-            <div className="deck-container">
-            <div className="deck-details">
+            <Link className="deck-container" to={`decks/${this.props.deck.id}`}>
+                <div className="deck-details">
                     <div className="deck-details-top">
                         <span className="deck-details-title">{this.props.deck.title}</span>
-                        <span className="deck-details-count">{this.props.cardsCount}</span>
+                        <span className="deck-details-count">{this.props.deck.card_ids.length} terms</span>
                     </div>
                     <span className="deck-details-author">{this.props.users[this.props.deck.author_id].username}</span>
                 </div>
                 <div className="deck-image">
                     <img className="niceimg" src={window.dlmnice}/>
                 </div>
-            </div>
+            </Link>
         )
     }
 }

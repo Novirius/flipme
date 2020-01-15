@@ -6,6 +6,11 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+User.destroy_all!
+Folder.destroy_all!
+Deck.destroy_all!
+Card.destroy_all!
+
 user1 = User.create(username: "chris", email: "chris@gmail.com", password:"chris123")
 
 folder1 = Folder.create(title: "first title", description:"this is from first title description", author_id: 1)

@@ -41,7 +41,13 @@ body {
 
 .button-default:hover {
   color: $font-dark;
-  background-color: $button-hover;
+  background: linear-gradient(170deg, #abf9f3, #fb9ef7);
+  background-size: 400% 400%;
+
+  -webkit-animation: colormation 1s ease infinite;
+  -moz-animation: colormation 1s ease infinite;
+  -o-animation: colormation 1s ease infinite;
+  animation: colormation 1s ease infinite;
 }
 
 .url-default {
@@ -56,7 +62,7 @@ body {
 
 .header-wrapper {
   width: 100%;
-  background-color: #4257b2;
+  background-color: $header-color;
   display: flex;
   justify-content: center;
   height: 5rem;

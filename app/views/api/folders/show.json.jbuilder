@@ -1,1 +1,1 @@
-json.extract! @folder, :id, :title, :description, :author_id
+json.extract! @folder, :id, :title, :description, :author_id, :deck_ids

@@ -1,7 +1,7 @@
 @import './variables';
 
 .top-nav {
-  background: #4257b2;
+  background: $header-color;
   color: #fff;
   height: 5rem;
   display: flex;
@@ -151,7 +151,13 @@
 }
 
 .top-nav-login:hover {
-  background-color: $button-hover;
+  background: linear-gradient(170deg, #abf9f3, #fb9ef7);
+  background-size: 400% 400%;
+
+  -webkit-animation: colormation 1s ease infinite;
+  -moz-animation: colormation 1s ease infinite;
+  -o-animation: colormation 1s ease infinite;
+  animation: colormation 1s ease infinite;
   color: $font-dark;
 }
 
@@ -177,7 +183,13 @@
 }
 
 .top-nav-dropdown-item:hover {
-  background-color: $button-hover;
+  background: linear-gradient(170deg, #abf9f3, #fb9ef7);
+  background-size: 400% 400%;
+
+  -webkit-animation: colormation 1s ease infinite;
+  -moz-animation: colormation 1s ease infinite;
+  -o-animation: colormation 1s ease infinite;
+  animation: colormation 1s ease infinite;
   
 }
 
@@ -196,3 +208,13 @@
   width: 1px;
   opacity: 0.3;
 }
+
+// .fa-buffer {
+//   background: linear-gradient(170deg, #abf9f3, #fb9ef7);
+//   background-size: 400% 400%;
+
+//   -webkit-animation: colormation 3s ease infinite;
+//   -moz-animation: colormation 3s ease infinite;
+//   -o-animation: colormation 3s ease infinite;
+//   animation: colormation 3s ease infinite;
+// }

@@ -7,17 +7,17 @@ class DashboardDeckItem extends React.Component {
     }
 
     componentDidMount () {
-        this.props.fetchCards(1)
+        this.props.fetchCards(this.props.id)
     }
 
     render () {
         return (
             <Link to='/'>
                 <div className="dashboard-body-feed-item">
-                    <span className="dashboard-body-feed-item-small">{this.props.cardCount} terms</span>
+                    <span className="dashboard-body-feed-item-small">{this.props.deck.card_ids.length} terms</span>
                     <div className="dashboard-body-feed-item-large">
                         <i className="fas fa-clone"></i>
-                        <span>{this.props.title}</span>
+                        <span>{this.props.deck.title}</span>
                     </div>
                 </div>
             </Link>

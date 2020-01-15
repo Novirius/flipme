@@ -7,7 +7,7 @@ import Deck from './deck';
 
 const mapState = ({entities}) => ({
     cardsCount: Object.keys(entities.cards).length,
-    users: Object.values(entities.users)
+    users: entities.users
 })
 
 const mapDispatch = dispatch => ({

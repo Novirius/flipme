@@ -26,7 +26,13 @@
 }
 
 .side-nav-item-link-container:hover {
-    background-color: $button-hover;
+    background: linear-gradient(170deg, #abf9f3, #fb9ef7);
+    background-size: 400% 400%;
+  
+    -webkit-animation: colormation 1s ease infinite;
+    -moz-animation: colormation 1s ease infinite;
+    -o-animation: colormation 1s ease infinite;
+    animation: colormation 1s ease infinite;
 }
 
 .side-nav-item-link-icon {
@@ -57,7 +63,13 @@
 }
 
 .side-nav-folder-link-container:hover {
-    background-color: $button-hover;
+    background: linear-gradient(170deg, #abf9f3, #fb9ef7);
+    background-size: 400% 400%;
+  
+    -webkit-animation: colormation 1s ease infinite;
+    -moz-animation: colormation 1s ease infinite;
+    -o-animation: colormation 1s ease infinite;
+    animation: colormation 1s ease infinite;
 }
 
 .side-nav-folder-link-title {
@@ -124,7 +136,7 @@
     align-items: center;
     font-size: 0.85rem;
     font-weight: 500;
-    width: min-content;
+    width: 120px;
     padding-right: 56%;
 }
 

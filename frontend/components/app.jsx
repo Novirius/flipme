@@ -9,6 +9,8 @@ import DashboardBodyContainer from './dashboard/dashboard_body_container';
 import DashboardDecksContainer from './dashboard/dashboard_decks_container';
 import SplashPage from './splash_page';
 import LatestContainer from './latest/latest_container';
+import FlashcardContainer from './flashcard/flashcard_container';
+import FlashcardShowContainer from './flashcard/flashcard_show_container';
 
 const App = () => (
 <div>
@@ -25,17 +27,19 @@ const App = () => (
         <Modal />
         {/* LeftNav */}
         <ProtectedRoute exact path="/latest" component={LeftNavContainer} />
-        <ProtectedRoute path="/users/:user_id" component={LeftNavContainer} />
+        <ProtectedRoute path="/users/:userId" component={LeftNavContainer} />
         {/* Header */}
-        <ProtectedRoute exact path="/users/:user_id" component={DashboardHeaderContainer} />
-        <ProtectedRoute exact path="/users/:user_id/folders" component={DashboardHeaderContainer} />
-        <ProtectedRoute exact path="/users/:user_id/decks" component={DashboardHeaderContainer} />
+        <ProtectedRoute exact path="/users/:userId" component={DashboardHeaderContainer} />
+        <ProtectedRoute exact path="/users/:userId/folders" component={DashboardHeaderContainer} />
+        <ProtectedRoute exact path="/users/:userId/decks" component={DashboardHeaderContainer} />
         {/* Body */}
         <ProtectedRoute exact path="/latest" component={LatestContainer} />
-        <ProtectedRoute exact path="/users/:user_id/folders" component={DashboardBodyContainer} />
-        <ProtectedRoute exact path="/users/:user_id/decks" component={DashboardDecksContainer} />
+        <ProtectedRoute exact path="/users/:userId/folders" component={DashboardBodyContainer} />
+        <ProtectedRoute exact path="/users/:userId/decks" component={DashboardDecksContainer} />
     </div>
   </div>
+  <ProtectedRoute exact path="/decks/:deckId/flashcard" component={FlashcardShowContainer} />
+  {/* <ProtectedRoute exact path="/decks/:deckId" component={FlashcardContainer} /> */}
 
 
 

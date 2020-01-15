@@ -1,0 +1,69 @@
+
+@import './variables';
+
+
+.deck-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background: white;
+    margin: 10px;
+    max-width: 320px;
+    max-height: 160px;
+    border-radius: 5px;
+    border-bottom: 4px solid white;
+    filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
+    animation: twist 1s 1;
+    animation-fill-mode: forwards;
+    // animation-duration: 1s;
+    // transition : border 500ms ease-out;
+    // top: 0px;
+    // transition: top ease 0.5s;
+
+}
+
+.deck-container:hover {
+    border-bottom: 4px solid $button-hover;
+
+    // background: linear-gradient(170deg, #abf9f3, #fb9ef7);
+    // background-size: 400% 400%;
+  
+    // -webkit-animation: colormation 1s ease infinite;
+    // -moz-animation: colormation 1s ease infinite;
+    // -o-animation: colormation 1s ease infinite;
+    // animation: colormation 1s ease infinite;
+    
+    
+}
+
+.deck-details {
+    display: flex;
+    flex-direction: column;
+    margin-left: 1rem;
+    align-content: center;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+   
+}
+
+.deck-details-top {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.deck-details-title {
+    margin-bottom: 1rem;
+}
+
+.deck-details-author {
+    margin-bottom: 1rem;
+}
+
+.deck-image {
+    height: 56px;
+    width: 56px;
+    margin-right: 1rem;
+    border-radius: 3px;
+}

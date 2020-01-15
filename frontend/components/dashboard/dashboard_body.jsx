@@ -35,7 +35,7 @@ class DashboardBody extends React.Component {
                         </div>
                         <div className="dashboard-body-feed">
                             {
-                                this.props.folders.map(folder => <DashboardFeedItem key={folder.id} title={folder.title}/>)
+                                this.props.folders.map(folder => <DashboardFeedItem key={folder.id} folder={folder}/>)
                             }
                         </div>
                 </div>
