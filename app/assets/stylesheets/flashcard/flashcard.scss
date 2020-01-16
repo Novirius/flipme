@@ -121,6 +121,7 @@
   text-align: center;
   transition: transform 1s;
   transform-style: preserve-3d;
+  
   // padding: 2rem;
   // &:hover {
   //   animation: jump-fade 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s 1 forwards;
@@ -152,6 +153,16 @@
   border-radius: 5px;
   transform: rotateX(0deg);
   border: 3px solid rgb(255,191,0);
+  display: flex;
+  img {
+    width: 200px;
+    margin: auto;
+    border-radius: 5px;  
+  }
+  p {
+    text-align: left;
+    word-wrap: break-word;
+  }
   // &:hover {
   //   animation: jump-fade 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s 1 forwards;
   // }
@@ -175,8 +186,25 @@
 
 }
 
-.move-left {
-  animation: jump-fade 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s 1 forwards;
+.move-left-front {
+  animation: jump-left-front 1s cubic-bezier(0.1,0.25,0.1,1) 0s 1 backwards;
+  background: transparent;
+}
+
+.move-left-back {
+  animation: jump-left-back 1s cubic-bezier(0.1,0.25,0.1,1) 0s 1 backwards;
+  // background: transparent;
+}
+
+.move-right-front {
+  animation: jump-right-front 1s cubic-bezier(0.1,0.25,0.1,1) 0s 1 backwards;
+  background: transparent;
+
+}
+
+.move-right-back {
+  animation: jump-right-back 1s cubic-bezier(0.1,0.25,0.1,1) 0s 1 backwards;
+  // background: transparent;
 }
 
 .flashcard-show-dashboard-display-controls {
@@ -196,4 +224,14 @@
   span {
     width: auto;
   }
+}
+
+
+//images
+
+.flip-card-front-image {
+  width: 200px;
+  margin: auto;
+  border-radius: 5px;
+  
 }

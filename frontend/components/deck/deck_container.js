@@ -6,6 +6,7 @@ import {withRouter} from 'react-router-dom';
 import Deck from './deck';
 
 const mapState = ({entities}) => ({
+    cards: entities.cards,
     cardsCount: Object.keys(entities.cards).length,
     users: entities.users
 })

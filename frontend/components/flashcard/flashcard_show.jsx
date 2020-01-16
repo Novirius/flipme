@@ -14,8 +14,8 @@ class FlashcardShow extends React.Component {
 
     render () {
         return (
-            <div className="testing-wrapper">
-                <div className="testing">
+            <div className="flashcard-show-wrapper">
+                <div className="flashcard-show">
                     <div className="flashcard-show-title">
                         <span>Title</span>
                     </div>
@@ -30,9 +30,6 @@ class FlashcardShow extends React.Component {
                         </section>
                         <div className="flashcard-show-dashboard-display">
                             <FlashcardContainer />
-                            {/* <div className="flashcard-show-dashboard-display-controls">
-                                <i className="fas fa-arrow-circle-left fa-2x"></i><span>3/3</span><i className="fas fa-arrow-circle-right fa-2x"></i>
-                            </div> */}
                         </div>
                     </div>
                 </div>

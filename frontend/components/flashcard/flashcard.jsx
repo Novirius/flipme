@@ -5,33 +5,39 @@ class Flashcard extends React.Component {
         super(props)
         this.state = {
             cardNumber: 1,
-            flip: ''
+            flip: '',
+            move: ''
         }
         this.handleFlip = this.handleFlip.bind(this);
         this.handleIncrement = this.handleIncrement.bind(this);
         this.handleDecrement = this.handleDecrement.bind(this);
+        this.handleMoveLeft = this.handleMoveLeft.bind(this);
     }
 
     componentDidMount () {
-        this.props.fetchCards(1);
-        this.props.fetchDeck(1);
+        this.props.fetchCards(this.props.match.params.deckId);
+        this.props.fetchDeck(this.props.match.params.deckId);
     }
 
-    handleIncrement () {
-        if (this.state.cardNumber < this.props.deckLength) {
-            const nextNumber = (this.state.cardNumber) + 1
+    handleIncrement (e) {
+        e.stopPropagation();
+        if (this.state.cardNumber < this.props.deck.card_ids.length) {
+            let nextNumber = (this.state.cardNumber) + 1
             this.setState ({
                 cardNumber: nextNumber
             })
+            this.handleMoveLeft();
         }
     }
 
-    handleDecrement () {
+    handleDecrement (e) {
+        e.stopPropagation();
         if (this.state.cardNumber > 1) {
-            const previousNumber = (this.state.cardNumber) - 1
+            let previousNumber = (this.state.cardNumber) - 1
             this.setState ({
                 cardNumber: previousNumber
             })
+            this.handleMoveRight();
         }
     }
 
@@ -47,20 +53,55 @@ class Flashcard extends React.Component {
         }
     }
 
+    handleMoveLeft () {
+        if (this.state.flip === 'flip') {
+            this.setState({
+                move: 'move-left-back'
+            })
+        }
+        else {
+            this.setState({
+                move: 'move-left-front'
+            }) 
+        }
+        setTimeout(() => this.setState({
+            move: ''
+        }),300)
+    }
+
+    handleMoveRight () {
+        if (this.state.flip === 'flip') {
+            this.setState({
+                move: 'move-right-back'
+            })
+        }
+        else {
+            this.setState({
+                move: 'move-right-front'
+            }) 
+        }
+
+        setTimeout(() => this.setState({
+            move: ''
+        }),300)
+    }
+
     render () {
       if (!this.props.deck) return null;
-        const cardIdsArray = this.props.deck.card_ids;
-        const currentCardId = cardIdsArray[this.state.cardNumber-1];
-        const currentCard = this.props.cards[currentCardId];
+        let cardIdsArray = this.props.deck.card_ids;
+        let currentCardId = cardIdsArray[this.state.cardNumber-1];
+        let currentCard = this.props.cards[currentCardId];
 
         return (
             <div className="flip-card-body">
                 <div className={`flip-card`}  >
-                    <div className={`flip-card-inner ${this.state.test}`} onClick={this.handleFlip}>
-                        <div className="flip-card-front">
+                    <div className={`flip-card-inner ${this.state.flip} ${this.state.move}`} onClick={this.handleFlip}>
+                        <div className={`flip-card-front ${this.state.move}`}>
                             <p>{currentCard.front_text}</p>
+                            <img className="flip-card-front-image" src={`${currentCard.front_image}`} alt=""/>
                         </div>
-                        <div className="flip-card-back">
+                        <div className={`flip-card-back ${this.state.move}`}>
+                            <img src={`${currentCard.back_image}`} alt=""/>
                             <p>{currentCard.back_text}</p>
                         </div>
                     </div>
@@ -79,6 +120,4 @@ class Flashcard extends React.Component {
 
 export default Flashcard;
 
-// z
-
-// ${this.state.test}
+// this.handleDecrement

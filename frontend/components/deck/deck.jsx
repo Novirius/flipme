@@ -12,9 +12,11 @@ class Deck extends React.Component {
     }
 
     render () {
-        if (!this.props.cardsCount) return null;
+        if (!this.props.cards) return null;
+        let firstCardId = this.props.deck.card_ids[0];
+        let firstCard = this.props.cards[firstCardId];
         return (
-            <Link className="deck-container" to={`decks/${this.props.deck.id}`}>
+            <Link className="deck-container" to={`decks/${this.props.deck.id}/flashcard`}>
                 <div className="deck-details">
                     <div className="deck-details-top">
                         <span className="deck-details-title">{this.props.deck.title}</span>
@@ -23,7 +25,7 @@ class Deck extends React.Component {
                     <span className="deck-details-author">{this.props.users[this.props.deck.author_id].username}</span>
                 </div>
                 <div className="deck-image">
-                    <img className="niceimg" src={window.dlmnice}/>
+                    <img className="niceimg" src={firstCard ? firstCard.front_image : null}/>
                 </div>
             </Link>
         )

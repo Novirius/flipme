@@ -12,7 +12,7 @@ class DashboardDeckItem extends React.Component {
 
     render () {
         return (
-            <Link to='/'>
+            <Link to={`/decks/${this.props.deck.id}/flashcard`}>
                 <div className="dashboard-body-feed-item">
                     <span className="dashboard-body-feed-item-small">{this.props.deck.card_ids.length} terms</span>
                     <div className="dashboard-body-feed-item-large">
