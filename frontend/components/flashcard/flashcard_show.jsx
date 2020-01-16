@@ -9,15 +9,17 @@ class FlashcardShow extends React.Component {
     }
 
     componentDidMount () {
-
+        this.props.fetchDeck(this.props.deckId);
+        this.props.fetchCards(this.props.deckId);
     }
 
     render () {
+        if (!this.props.deck) return null;
         return (
             <div className="flashcard-show-wrapper">
                 <div className="flashcard-show">
                     <div className="flashcard-show-title">
-                        <span>Title</span>
+                        <span>{this.props.deck.title}</span>
                     </div>
                     <div className="flashcard-show-dashboard">
                         <section className="flashcard-show-dashboard-menu">
@@ -29,7 +31,7 @@ class FlashcardShow extends React.Component {
                             <Link className="flashcard-show-dashboard-menu-item" to='/'><i className="fas fa-grin-beam-sweat"></i> Test</Link>
                         </section>
                         <div className="flashcard-show-dashboard-display">
-                            <FlashcardContainer />
+                            <FlashcardContainer deck={this.props.deck} />
                         </div>
                     </div>
                 </div>

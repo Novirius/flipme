@@ -15,8 +15,8 @@ class Flashcard extends React.Component {
     }
 
     componentDidMount () {
-        this.props.fetchCards(this.props.match.params.deckId);
         this.props.fetchDeck(this.props.match.params.deckId);
+        this.props.fetchCards(this.props.deck.id);
     }
 
     handleIncrement (e) {
@@ -24,7 +24,8 @@ class Flashcard extends React.Component {
         if (this.state.cardNumber < this.props.deck.card_ids.length) {
             let nextNumber = (this.state.cardNumber) + 1
             this.setState ({
-                cardNumber: nextNumber
+                cardNumber: nextNumber,
+                flip: ''
             })
             this.handleMoveLeft();
         }
@@ -35,7 +36,8 @@ class Flashcard extends React.Component {
         if (this.state.cardNumber > 1) {
             let previousNumber = (this.state.cardNumber) - 1
             this.setState ({
-                cardNumber: previousNumber
+                cardNumber: previousNumber,
+                flip: ''
             })
             this.handleMoveRight();
         }
@@ -87,6 +89,7 @@ class Flashcard extends React.Component {
     }
 
     render () {
+    
       if (!this.props.deck) return null;
         let cardIdsArray = this.props.deck.card_ids;
         let currentCardId = cardIdsArray[this.state.cardNumber-1];
@@ -98,7 +101,6 @@ class Flashcard extends React.Component {
                     <div className={`flip-card-inner ${this.state.flip} ${this.state.move}`} onClick={this.handleFlip}>
                         <div className={`flip-card-front ${this.state.move}`}>
                             <p>{currentCard.front_text}</p>
-                            <img className="flip-card-front-image" src={`${currentCard.front_image}`} alt=""/>
                         </div>
                         <div className={`flip-card-back ${this.state.move}`}>
                             <img src={`${currentCard.back_image}`} alt=""/>
@@ -120,4 +122,4 @@ class Flashcard extends React.Component {
 
 export default Flashcard;
 
-// this.handleDecrement
+ {/* <img className="flip-card-front-image" src={`${currentCard.front_image}`} alt=""/> */}

@@ -1,5 +1,6 @@
 class Api::CardsController < ApplicationController
   def index
+    
     @deck = Deck.find(params[:deck_id])
     @cards = @deck.cards
     render :index
@@ -8,6 +9,8 @@ class Api::CardsController < ApplicationController
   def show
     @card = current_user.cards.find(params[:id])
   end
+
+
   def create
     @card = Card.new(card_params)
     @card.author_id = current_user.id

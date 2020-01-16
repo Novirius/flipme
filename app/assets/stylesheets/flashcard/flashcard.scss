@@ -1,94 +1,5 @@
 @import './variables';
 
-// /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
-// .flip-card {
-//   // background-color: transparent;
-//   width: 300px;
-//   height: 200px;
-//   border: 1px solid #f1f1f1;
-//   perspective: 1000px; /* Remove this if you don't want the 3D effect */
-// }
-
-// /* This container is needed to position the front and back side */
-// .flip-card-inner {
-//   position: relative;
-//   width: 100%;
-//   height: 100%;
-//   text-align: center;
-//   transition: transform 0.8s;
-//   transform-style: preserve-3d;
-// }
-
-// /* Do an horizontal flip when you move the mouse over the flip box container */
-// .flip-card:hover .flip-card-inner {
-//   transform: rotateY(180deg);
-// }
-
-// /* Position the front and back side */
-// .flip-card-front, .flip-card-back {
-//   position: absolute;
-//   width: 100%;
-//   height: 100%;
-//   backface-visibility: hidden;
-// }
-
-// /* Style the front side (fallback if image is missing) */
-// .flip-card-front {
-//   background-color: red;
-//   color: black;
-//   filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
-// }
-
-// /* Style the back side */
-// .flip-card-back {
-//   background-color: dodgerblue;
-//   color: white;
-//   transform: rotateY(180deg);
-//   filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .flip-card-body {
   display: flex;
   flex-direction: column;
@@ -100,9 +11,6 @@
 
 /* The flip card container - set the width and height to whatever you want. We have added the border property to demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-card {
-  // left: 50%;
-  // top: 50%;
-  // position: absolute;
   background-color: transparent;
   width: 534px;
   height: 300px;
@@ -121,19 +29,7 @@
   text-align: center;
   transition: transform 1s;
   transform-style: preserve-3d;
-  
-  // padding: 2rem;
-  // &:hover {
-  //   animation: jump-fade 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s 1 forwards;
-  // }
 }
-
-
-/* Do an horizontal flip when you move the mouse over the flip box container */
-// .flip-card:active .flip-card-inner {
-//   transform: rotateY(200deg);
-//   // animation-fill-mode: forwards;
-// }
 
 /* Position the front and back side */
 .flip-card-front, .flip-card-back {
@@ -147,25 +43,25 @@
 
 /* Style the front side (fallback if image is missing) */
 .flip-card-front {
-  background-color: white;
-  color: #343434;
+  background-color: #343434;
+  color: white;
   filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
   border-radius: 5px;
-  transform: rotateX(0deg);
-  border: 3px solid rgb(255,191,0);
+  border-bottom: 3px solid #EC407A;
   display: flex;
+  flex-direction: column;
+  align-content: space-evenly;
+  justify-content: space-between;
   img {
     width: 200px;
-    margin: auto;
-    border-radius: 5px;  
+    margin: 0;
+    border-radius: 5px;
+    align-self: flex-end;
   }
   p {
     text-align: left;
     word-wrap: break-word;
   }
-  // &:hover {
-  //   animation: jump-fade 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s 1 forwards;
-  // }
 }
 
 /* Style the back side */
@@ -174,37 +70,53 @@
   color: white;
   filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
   border-radius: 5px;
-  transform: rotateX(180deg);
-  border: 3px solid rgb(255,191,0);
-  // &:hover {
-  //   animation: jump-fade 0.5s cubic-bezier(0.1,0.25,0.1,1) 0s 1 forwards;
-  // }
+  transform: rotateY(180deg);
+  border-bottom: 3px solid #4DB6AC;
+  display: flex;
+  flex-direction: column;
+  align-content: space-evenly;
+  justify-content: space-between;
+  img {
+    width: 200px;
+    margin: 0;
+    border-radius: 5px;
+    align-self: flex-start;
+  }
+  p {
+    text-align: left;
+    word-wrap: break-word;
+  }
 }
 
 .flip {
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
 
 }
 
 .move-left-front {
-  animation: jump-left-front 1s cubic-bezier(0.1,0.25,0.1,1) 0s 1 backwards;
-  background: transparent;
+  animation: bouncing 2s cubic-bezier(0.1,0.25,0.1,1) 0s 1 both;
+  // background: transparent;
+  transition: border-width 0px;
+  color:transparent;
 }
 
 .move-left-back {
-  animation: jump-left-back 1s cubic-bezier(0.1,0.25,0.1,1) 0s 1 backwards;
+  animation: bouncing 2s cubic-bezier(0.1,0.25,0.1,1) 0s 1 both;
   // background: transparent;
+  color:transparent;
 }
 
 .move-right-front {
-  animation: jump-right-front 1s cubic-bezier(0.1,0.25,0.1,1) 0s 1 backwards;
-  background: transparent;
+  animation: bouncing 2s cubic-bezier(0.1,0.25,0.1,1) 0s 1 both;
+  // background: transparent;
+  color:transparent;
 
 }
 
 .move-right-back {
-  animation: jump-right-back 1s cubic-bezier(0.1,0.25,0.1,1) 0s 1 backwards;
+  animation: bouncing 2s cubic-bezier(0.1,0.25,0.1,1) 0s 1 both;
   // background: transparent;
+  color:transparent;
 }
 
 .flashcard-show-dashboard-display-controls {

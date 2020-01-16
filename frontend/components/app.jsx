@@ -11,7 +11,7 @@ import SplashPage from './splash_page';
 import LatestContainer from './latest/latest_container';
 import FlashcardContainer from './flashcard/flashcard_container';
 import FlashcardShowContainer from './flashcard/flashcard_show_container';
-
+import CreateCardFormContainer from './card_form/create_card_form_container';
 const App = () => (
 <div>
   <div className="header-wrapper">
@@ -39,6 +39,7 @@ const App = () => (
     </div>
   </div>
   <ProtectedRoute exact path="/decks/:deckId/flashcard" component={FlashcardShowContainer} />
+  <ProtectedRoute exact path="/create" component={CreateCardFormContainer} />
   {/* <ProtectedRoute exact path="/decks/:deckId" component={FlashcardContainer} /> */}
 
 

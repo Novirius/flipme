@@ -6,7 +6,6 @@ import {fetchCards} from '../../actions/card_actions';
 import {fetchDeck} from '../../actions/deck_actions';
 
 const mapState = ({entities}, ownProps) => {
-    // debugger;
     return {
         deckId: ownProps.match.params.deckId,
         deck: entities.decks[ownProps.match.params.deckId],

@@ -9,6 +9,9 @@ body {
   .fa, .fab, .fad, .fal, .far, .fas {
     display: inline !important;
     width: auto;
+    &:hover {
+      cursor: pointer;
+    }
   }
   
   a {

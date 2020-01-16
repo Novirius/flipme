@@ -1,0 +1,55 @@
+@import './variables';
+
+.deck-edit-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+}
+
+.deck-edit {
+    height: 514px;
+    width: 814px;
+    padding: 40px;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.deck-edit-title {
+    display: block;
+    font-size: 1.875rem;
+    margin-bottom: 40px;
+}
+
+.deck-edit-dashboard {
+    display: flex;
+    flex-direction: row;
+}
+
+.deck-edit-dashboard-menu {
+    width: 20%;
+    height: 320px;
+    display: flex;
+    flex-direction: column;
+    span {
+        text-transform: uppercase;
+        color: $font-label;
+        font-size: 12px;
+    }
+}
+
+.deck-edit-dashboard-menu-item {
+    padding: 8px 10px;
+    font-size: 14px;
+    border-bottom: 3px solid transparent;
+    &:hover {
+        border-bottom: 3px solid $font-hover;
+        color: $font-hover;
+    }
+}
+
+.deck-edit-dashboard-display {
+    display: flex;
+    flex-direction: column;
+}

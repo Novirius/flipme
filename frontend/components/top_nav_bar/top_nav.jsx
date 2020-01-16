@@ -10,9 +10,11 @@ class TopNav extends React.Component {
         }
         this.handleProfile = this.handleProfile.bind(this)
         this.handleLogout = this.handleLogout.bind(this)
+        this.closeProfile = this.closeProfile.bind(this)
     }
 
-    handleProfile () {
+    handleProfile (e) {
+        e.stopPropagation();
         if (this.state.hidden === 'hide') {
             this.setState({
                 hidden: 'show'
@@ -23,6 +25,13 @@ class TopNav extends React.Component {
                 hidden: 'hide'
             })
         }
+    }
+
+    closeProfile(e) {
+        e.stopPropagation();
+        this.setState({
+            hidden: 'hide'
+        })
     }
 
     handleLogout() {
@@ -105,7 +114,7 @@ class TopNav extends React.Component {
                         <div className="top-nav-vertical-divide" />
                         <div className="top-nav-create-wrapper">
                             <div className="top-nav-create">
-                                <a><i className="far fa-plus-square"></i>  Create</a>
+                                <Link to="/create"><i className="far fa-plus-square"></i>  Create</Link>
                             </div>
                         </div>
                     </div>
@@ -118,8 +127,8 @@ class TopNav extends React.Component {
                     </div>
                 </div>
             </div>
-            <ul className={`top-nav-dropdown ${this.state.hidden}`}>
-                <a><li className="top-nav-dropdown-item">Your Study Sets</li></a>
+            <ul onBlur={this.closeProfile} className={`top-nav-dropdown ${this.state.hidden}`}>
+                <Link onClick={this.handleProfile} to={`/users/${this.props.currentUser.id}/decks`}><li className="top-nav-dropdown-item">Your Study Sets</li></Link>
                 <a><li className="top-nav-dropdown-item">Settings</li></a>
                 <a><li className="top-nav-dropdown-item" onClick={this.handleLogout}>Log Out</li></a>
             </ul>                       
