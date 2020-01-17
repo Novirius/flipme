@@ -22,8 +22,8 @@
   color: #f2f2f2;
   text-align: center;
   padding-top: 10px;
-  font-size: 300%;
-  font-weight: 600;
+  // font-size: 300%;
+  // font-weight: 600;
   vertical-align: top;
   width: 17%;
   max-width: 300px;
@@ -151,14 +151,16 @@
 }
 
 .top-nav-login:hover {
-  background: linear-gradient(170deg, #abf9f3, #fb9ef7);
-  background-size: 400% 400%;
+  background-color: $font-hover;
+  color: white;
+  // background: linear-gradient(170deg, #abf9f3, #fb9ef7);
+  // background-size: 400% 400%;
 
-  -webkit-animation: colormation 1s ease infinite;
-  -moz-animation: colormation 1s ease infinite;
-  -o-animation: colormation 1s ease infinite;
-  animation: colormation 1s ease infinite;
-  color: $font-dark;
+  // -webkit-animation: colormation 1s ease infinite;
+  // -moz-animation: colormation 1s ease infinite;
+  // -o-animation: colormation 1s ease infinite;
+  // animation: colormation 1s ease infinite;
+  // color: $font-dark;
 }
 
 .top-nav-dropdown {
@@ -208,4 +210,32 @@
   border-left: 1px solid white;
   width: 1px;
   opacity: 0.3;
+}
+
+
+
+//TESTING THIS OUT
+// CREDITS TO THIS GUY: https://stackoverflow.com/questions/54702124/rainbow-text-animation-using-only-css
+#shadowBox {
+  background-color: rgb(0, 0, 0);
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* Black w/opacity/see-through */
+  border: 3px solid;
+}
+
+.rainbow {
+  text-align: center;
+  text-decoration: underline;
+  font-size: 32px;
+  font-family: monospace;
+  letter-spacing: 5px;
+}
+.rainbow_text_animated {
+  background: linear-gradient(to right, #6666ff, #0099ff , #00ff00, #ff3399, #6666ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: rainbow_animation 6s ease-in-out infinite;
+  background-size: 400% 100%;
 }

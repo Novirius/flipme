@@ -28,6 +28,9 @@
         background-color: $button;
         color: white;
         border-radius: 5px;
+        &:hover {
+            background-color: $font-hover;
+        }
     }
 }
 

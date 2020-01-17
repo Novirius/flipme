@@ -48,7 +48,7 @@ class TopNav extends React.Component {
                 <div className="top-nav-logo-wrapper">
                     <div className="top-nav-logo">
                         <Link to='/'>
-                            <i className="fab fa-buffer"></i>
+                            <i class="fab fa-connectdevelop"></i>
                         </Link>
                     </div>
                 </div>
@@ -94,7 +94,7 @@ class TopNav extends React.Component {
                 <div className="top-nav-logo-wrapper">
                     <div className="top-nav-logo">
                         <Link to='/'>
-                            <i className="fab fa-buffer"></i>
+                            <i id="shadowBox" className="fab fa-connectdevelop fa-3x rainbow rainbow_text_animated"></i>
                         </Link>
                     </div>
                 </div>

@@ -5,7 +5,7 @@
     justify-content: center;
     
     margin: 0;
-    background-color:black;
+    // background-color:black;
     // height: 95vh;
 }
 
@@ -18,5 +18,5 @@
 .deck-show-title {
     font-size: 3rem;
     text-align: center;
-    color: white;
+    color: $font-dark;
 }

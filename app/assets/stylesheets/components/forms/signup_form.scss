@@ -126,13 +126,14 @@
 }
 
 .signup-form-submit:hover {
-    background: linear-gradient(170deg, #abf9f3, #fb9ef7);
-    background-size: 400% 400%;
+    background-color: $font-hover;
+    // background: linear-gradient(170deg, #abf9f3, #fb9ef7);
+    // background-size: 400% 400%;
   
-    -webkit-animation: colormation 1s ease infinite;
-    -moz-animation: colormation 1s ease infinite;
-    -o-animation: colormation 1s ease infinite;
-    animation: colormation 1s ease infinite;
+    // -webkit-animation: colormation 1s ease infinite;
+    // -moz-animation: colormation 1s ease infinite;
+    // -o-animation: colormation 1s ease infinite;
+    // animation: colormation 1s ease infinite;
 }
 
 .signup-form-submit button {

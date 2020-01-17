@@ -25,7 +25,7 @@ class CardIndexItem extends React.Component {
             <div className="card-form">
                 <div className={`card-form-header`}>
                     <div className="card-form-header-label">
-                        <i className="fab fa-flipboard fa-2x"></i>
+                        {/* <i className="fab fa-flipboard fa-2x"></i> */}
                     </div>
                     <div className="card-form-header-options">
                         <i onClick={this.handleSave} className="fas fa-save fa-lg"></i>
@@ -33,7 +33,7 @@ class CardIndexItem extends React.Component {
                     </div>
                 </div>
                 <div className={`card-form-body`}>
-                    <hr width="100%" size="1"style={{opacity: 0.5}} />
+                    <hr width="100%" size="1"style={{opacity: 0.3}} />
                     <div className="card-form-input">
                         <label className="card-form-input-label" htmlFor="front_text">                        
                         <input 
