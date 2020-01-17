@@ -3,12 +3,24 @@ import React from 'react'
 class CardForm extends React.Component {
     constructor(props) {
         super(props);
-        let temp = {
+        // let temp = {
+        //     hidden: 'hide',
+        //     createSymbol: 'plus',
+        //     deck_id: this.props.deckId
+        // }
+        this.state = {
+            front_text: '',
+            back_text: '',
+            front_image: '',
+            back_image: '',
+            deck_id: this.props.match.params.deckId,
             hidden: 'hide',
-            createSymbol: 'plus'
+            createSymbol: 'plus',
         }
-        this.state = Object.assign(temp, this.props.card);
+        // this.state = Object.assign(temp, this.props.card);
         this.displayElement = this.displayElement.bind(this);
+        this.handleSave = this.handleSave.bind(this);
+        this.update = this.update.bind(this);
     }
 
     componentDidMount () {
@@ -37,6 +49,26 @@ class CardForm extends React.Component {
 
     }
 
+    handleSave (e) {
+        e.preventDefault();
+
+        let temporal = {
+            front_text: this.state.front_text,
+            back_text: this.state.back_text,
+            front_image: this.state.front_image,
+            back_image: this.state.back_image,
+            deck_id: this.props.match.params.deckId
+        }
+        const card = Object.assign({}, temporal);
+        this.props.processForm(this.props.match.params.deckId, card)
+            .then(this.setState({
+                front_text: '',
+                back_text: '',
+                front_image: '',
+                back_image: '',
+            }))
+    }
+
     render () {
         return (
             <div className="card-form">
@@ -47,12 +79,12 @@ class CardForm extends React.Component {
                         <i className={`fas fa-${this.state.createSymbol}`}></i> {this.props.formType}
                     </button>
                 </div>
-                <div className={`card-form-header ${this.state.hidden}`}>
+                <div  className={`card-form-header ${this.state.hidden}`}>
                     <div className="card-form-header-label">
                         <i className="fab fa-flipboard fa-2x"></i>
                     </div>
                     <div className="card-form-header-options">
-                        <i className="fas fa-save fa-lg"></i>
+                        <i onClick={this.handleSave} className="fas fa-save fa-lg"></i>
                         <i className="fas fa-trash-alt fa-lg"></i>
                     </div>
                 </div>

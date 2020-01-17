@@ -13,7 +13,7 @@ const mapState = ({entities}, ownProps) => ({
 })
 
 const mapDispatch = dispatch => ({
-    processForm: card => dispatch(createCard(card)),
+    processForm: (deckId, card) => dispatch(createCard(deckId, card)),
 
 
 })

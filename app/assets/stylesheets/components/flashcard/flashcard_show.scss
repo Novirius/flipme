@@ -1,5 +1,12 @@
 @import './00variables';
 
+.flashcard-show-container {
+    hr {
+        width: 814px;
+        opacity: 0.5;
+    }
+}
+
 .flashcard-show-wrapper {
     display: flex;
     align-items: center;
@@ -8,7 +15,7 @@
 }
 
 .flashcard-show {
-    height: 514px;
+    height: 435px;
     width: 814px;
     padding: 40px;
     overflow: auto;
@@ -52,4 +59,34 @@
 .flashcard-show-dashboard-display {
     display: flex;
     flex-direction: column;
+}
+
+
+.flashcard-profile {
+    width: 814px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    .flashcard-profile-user {
+        font-size: 2rem;
+        width: 200px;
+        // display: flex;
+        // justify-content: flex-start;
+        // align-items: center;
+        width: auto;
+        .flashcard-profile-user-icon {
+            margin: 0;
+            width: 0;
+        }
+        .flashcard-profile-user-name {
+            width: auto;
+            margin: 0;
+        }
+    }
+    .flashcard-profile-customization {
+        width: auto;
+    }
 }

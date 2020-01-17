@@ -96,6 +96,7 @@ class Flashcard extends React.Component {
         let currentCardId = cardIdsArray[this.state.cardNumber-1];
         let currentCard = this.props.cards[currentCardId];
         
+        if(!currentCard) return null;
         // debugger;
 
         return (

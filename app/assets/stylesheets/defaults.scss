@@ -8,6 +8,7 @@ body {
 
   .fa, .fab, .fad, .fal, .far, .fas {
     display: inline !important;
+    margin: 0;
     width: auto;
     &:hover {
       cursor: pointer;

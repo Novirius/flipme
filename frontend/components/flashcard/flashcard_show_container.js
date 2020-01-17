@@ -5,7 +5,8 @@ import FlashcardShow from './flashcard_show';
 import {fetchDeck} from '../../actions/deck_actions';
 import {fetchCards} from '../../actions/card_actions';
 
-const mapState = ({entities}, ownProps) => ({
+const mapState = ({entities, session}, ownProps) => ({
+    currentUser: entities.users[session.id],
     deckId: ownProps.match.params.deckId,
     deck: entities.decks[ownProps.match.params.deckId]
 })

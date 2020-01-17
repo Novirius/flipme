@@ -6,12 +6,13 @@
     display: flex;
     align-items: center;
     flex-direction: row;
+    .fa-user-circle {
+        width: auto;
+        margin-left: 21rem;
+    }
 }
 
-.fa-user-circle {
-    width: auto;
-    margin-left: 21rem;
-}
+
 
 .dashboard-header-profile-container {
     display: flex;
