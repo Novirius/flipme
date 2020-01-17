@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom'
 
 class DashboardHeader extends React.Component {
     constructor(props){
@@ -6,16 +7,18 @@ class DashboardHeader extends React.Component {
     }
 
     render () {
+        if (!this.props.currentUser) return null;
         return (
             <div className="dashboard-header-container">
                 <i className="fas fa-user-circle fa-10x"></i>
                 <div className="dashboard-header-profile-container">
                     <span>{this.props.currentUser.username}</span>
                     <div className="dashboard-header-profile-toggle-container">
-                        <button type="button">Recent</button>
-                        <button type="button">Created</button>
-                        <button type="button">Studied</button>
-                        <button type="button">Folders</button>
+                        <button type="button"><Link to='/latest'>Recent</Link></button>
+                        
+                        <button type="button"><Link to={`/users/${this.props.currentUser.id}/decks`}>Created</Link></button>
+                        <button type="button"><Link to={`/users/${this.props.currentUser.id}/decks`}>Studied</Link></button>
+                        <button type="button"><Link to={`/users/${this.props.currentUser.id}/folders`}>Folders</Link></button>
                     </div>
                 </div>
             </div>
