@@ -1,4 +1,4 @@
-@import './variables';
+@import './00variables';
 
 .top-nav {
   background: $header-color;
@@ -195,6 +195,7 @@
 
 .hide {
   display: none;
+
 }
 
 .show {
@@ -208,13 +209,3 @@
   width: 1px;
   opacity: 0.3;
 }
-
-// .fa-buffer {
-//   background: linear-gradient(170deg, #abf9f3, #fb9ef7);
-//   background-size: 400% 400%;
-
-//   -webkit-animation: colormation 3s ease infinite;
-//   -moz-animation: colormation 3s ease infinite;
-//   -o-animation: colormation 3s ease infinite;
-//   animation: colormation 3s ease infinite;
-// }

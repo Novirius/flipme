@@ -89,11 +89,14 @@ class Flashcard extends React.Component {
     }
 
     render () {
-    
-      if (!this.props.deck) return null;
+        // 
+        if (Object.keys(this.props.cards).length === 0) return null;
+
         let cardIdsArray = this.props.deck.card_ids;
         let currentCardId = cardIdsArray[this.state.cardNumber-1];
         let currentCard = this.props.cards[currentCardId];
+        
+        // debugger;
 
         return (
             <div className="flip-card-body">

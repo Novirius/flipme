@@ -1,0 +1,81 @@
+@import './00variables';
+
+.deck-form-container {
+    width: 600px;
+    height: 430px;
+    background: white;
+}
+
+legend.deck-form-title {
+    box-sizing: border-box;
+    background-color: $header-color;
+    height:100px;
+}
+
+.deck-form-title-container {
+    // width: auto;
+    // height: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.deck-form-title-container > span {
+    color: white;
+    margin-left: 2rem;
+    font-size: xx-large;
+    align-self: center;
+}
+
+.deck-form-title-container > a {
+    width: auto;
+    margin-right: 1rem;
+}
+
+.fa-times-circle {
+    color:white;
+    
+}
+
+.deck-form-body {
+    box-sizing: border-box;
+    width: 600px;
+    height: 330px;
+    background-color: white;
+    padding: 2rem;
+}
+
+.deck-form-body-label {
+    display: flex;
+    flex-direction: column;
+}
+
+.deck-form-body-label > input {
+    border-bottom: 2px solid $font-dark;
+    line-height: 39px;
+}
+
+.deck-form-body-label > span {
+    margin-top: 5px;
+    color: $font-label;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.deck-form-body > button {
+    align-self: flex-end;
+    border-radius: 5px;
+    margin-top: 75px;
+    box-sizing: border-box;
+    max-width: 536px;
+    padding: 24px;
+    background-color: $button;
+    text-align: center;
+    color: white;
+}
+
+button[type=submit][disabled] {
+    background-color: $font-label !important;
+  }

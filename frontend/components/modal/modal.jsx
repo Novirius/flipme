@@ -4,6 +4,7 @@ import { connect } from 'react-redux';
 import LoginFormContainer from '../session_forms/login_form_container';
 import SignupFormContainer from '../session_forms/signup_form_container';
 import FolderFormContainer from '../modal_forms/folder_form_container';
+import DeckFormContainer from '../deck_form/deck_form_container';
 
 const Modal = ({modal, closeModal}) => {
   if (!modal) {
@@ -20,6 +21,9 @@ const Modal = ({modal, closeModal}) => {
     case 'folder':
       component = <FolderFormContainer />;
       break;
+    case 'deck':
+        component = <DeckFormContainer />;
+        break;
     default:
       return null;
   }

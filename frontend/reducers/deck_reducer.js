@@ -1,4 +1,5 @@
-import {RECEIVE_ALL_DECKS, RECEIVE_DECK, REMOVE_DECK } from '../actions/deck_actions'
+import {RECEIVE_ALL_DECKS, RECEIVE_DECK, REMOVE_DECK} from '../actions/deck_actions'
+import {RECEIVE_CURRENT_USER} from '../actions/session_actions'
 
 const decksReducer = (state={}, action) => {
     Object.freeze(state);
@@ -14,6 +15,8 @@ const decksReducer = (state={}, action) => {
         case REMOVE_DECK:
             delete newState[action.deckId]
             return newState
+        case RECEIVE_CURRENT_USER:
+            return {}
         default:
             return state;
     }

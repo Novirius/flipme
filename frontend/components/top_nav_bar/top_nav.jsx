@@ -114,7 +114,7 @@ class TopNav extends React.Component {
                         <div className="top-nav-vertical-divide" />
                         <div className="top-nav-create-wrapper">
                             <div className="top-nav-create">
-                                <Link to="/create"><i className="far fa-plus-square"></i>  Create</Link>
+                                <Link onClick={() => this.props.openModal('deck')} to={`/users/${this.props.currentUser.id}/decks`}><i className="far fa-plus-square"></i>  Create</Link>
                             </div>
                         </div>
                     </div>

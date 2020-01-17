@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import {withRouter} from 'react-router-dom';
 import CardForm from './card_form';
+import {createCard} from '../../actions/card_actions';
 
 const mapState = ({entities}, ownProps) => ({
     formType: 'Create Card',
@@ -12,7 +13,7 @@ const mapState = ({entities}, ownProps) => ({
 })
 
 const mapDispatch = dispatch => ({
-    processForm: card => dispatch(updateCard(card)),
+    processForm: card => dispatch(createCard(card)),
 
 
 })

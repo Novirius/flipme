@@ -4,7 +4,8 @@ class CardForm extends React.Component {
     constructor(props) {
         super(props);
         let temp = {
-            hidden: 'hide'
+            hidden: 'hide',
+            createSymbol: 'plus'
         }
         this.state = Object.assign(temp, this.props.card);
         this.displayElement = this.displayElement.bind(this);
@@ -21,14 +22,16 @@ class CardForm extends React.Component {
     }
 
     displayElement () {
-        if (this.state.hidden === 'hide') {
+        if (this.state.hidden === 'hide' || this.state.hidden === 'undisplay') {
             this.setState({
-                hidden: 'display'
+                hidden: 'display',
+                createSymbol: 'minus'
             })
         }
         else {
             this.setState({
-                hidden: 'hide'
+                hidden: 'undisplay',
+                createSymbol: 'plus'
             })
         }
 
@@ -41,7 +44,7 @@ class CardForm extends React.Component {
                     <button onClick={this.displayElement} id="card-submit" 
                     type="button" 
                     value={this.props.formType}>
-                        <i className="fas fa-plus"></i> {this.props.formType}
+                        <i className={`fas fa-${this.state.createSymbol}`}></i> {this.props.formType}
                     </button>
                 </div>
                 <div className={`card-form-header ${this.state.hidden}`}>

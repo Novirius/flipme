@@ -1,13 +1,13 @@
-@import './variables';
+@import './00variables';
 
-.deck-edit-wrapper {
+.flashcard-show-wrapper {
     display: flex;
     align-items: center;
     justify-content: center;
     overflow: auto;
 }
 
-.deck-edit {
+.flashcard-show {
     height: 514px;
     width: 814px;
     padding: 40px;
@@ -16,18 +16,18 @@
     flex-direction: column;
 }
 
-.deck-edit-title {
+.flashcard-show-title {
     display: block;
     font-size: 1.875rem;
     margin-bottom: 40px;
 }
 
-.deck-edit-dashboard {
+.flashcard-show-dashboard {
     display: flex;
     flex-direction: row;
 }
 
-.deck-edit-dashboard-menu {
+.flashcard-show-dashboard-menu {
     width: 20%;
     height: 320px;
     display: flex;
@@ -39,7 +39,7 @@
     }
 }
 
-.deck-edit-dashboard-menu-item {
+.flashcard-show-dashboard-menu-item {
     padding: 8px 10px;
     font-size: 14px;
     border-bottom: 3px solid transparent;
@@ -49,7 +49,7 @@
     }
 }
 
-.deck-edit-dashboard-display {
+.flashcard-show-dashboard-display {
     display: flex;
     flex-direction: column;
 }

@@ -15,10 +15,11 @@ class Latest extends React.Component {
 
     render () {
         if(this.props.decks.length === 0) return null;
-        const decksArray = [];
-        for (let i = 0; (i < this.props.decks.length) || (i < 4);i++) {
-            decksArray.push(this.props.decks[i])
-        }
+        // const decksArray = [];
+        // for (let i = 0; (i < this.props.decks.length) && (i < 4);i++) {
+        //     decksArray.push(this.props.decks[i])
+        // }
+        let decksArray = this.props.decks.reverse().slice(0,4);
         return (
                 <div className="latest-container">
                     <div className="latest-header">

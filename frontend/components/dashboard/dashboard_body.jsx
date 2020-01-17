@@ -5,6 +5,10 @@ import DashboardFeedItem from './dashboard_feed_item'
 class DashboardBody extends React.Component {
     constructor(props){
         super(props);
+        this.state = ({
+            sort: 'Recent'
+        })
+        this.sortMethod = this.sortMethod.bind(this)
 
     }
 
@@ -12,7 +16,32 @@ class DashboardBody extends React.Component {
         this.props.fetchFolders();
     }
 
+    sortMethod (e) {
+        this.setState({
+            sort: e.currentTarget.value
+        })
+    }
+
     render () {
+        // const compareDate = (a, b) => {
+        //     const idA = a.id
+        //     const idB = b.id
+
+        //     let comparison = 0;
+        //     idA > idB ? comparison = -1 : comparison = 1;
+        //     return comparison;
+        // }
+        // const compareName = (a, b) => {
+        //     const titleA = a.title.toUpperCase();
+        //     const titleB = b.title.toUpperCase();
+
+        //     let comparison = 0;
+        //     titleA > titleB ? comparison = 1 : comparison = -1;
+        //     return comparison;
+        // }
+        // const unsortedFolders = this.props.folders.sort(compareDate);
+        // const sortedFolders = this.props.folders.sort(compareName);
+        // let selectedFolders = (this.state.sort === 'Alphabetically') ? this.props.folders : this.props.folders;
         return (
             <div className="dashboard-body-container">
                 <div className="dashboard-body-content-container">
@@ -23,9 +52,9 @@ class DashboardBody extends React.Component {
                                     <span>Sort</span>
                                 </div>
                                 <div className="dashboard-body-controls-sort-dropdown">
-                                    <select>
-                                        <option value="recent">Recent</option>
-                                        <option value="alphabetically">Alphabetically</option>
+                                    <select onChange={this.sortMethod}>
+                                        <option value="Recent">Recent</option>
+                                        <option value="Alphabetically">Alphabetically</option>
                                     </select>
                                 </div>
                             </div>

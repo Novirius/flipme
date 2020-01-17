@@ -1,4 +1,4 @@
-@import './variables';
+@import './00variables';
 
 .flip-card-body {
   display: flex;
@@ -71,7 +71,7 @@
   filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
   border-radius: 5px;
   transform: rotateY(180deg);
-  border-bottom: 3px solid #4DB6AC;
+  border-bottom: 3px solid #05FFD2;
   display: flex;
   flex-direction: column;
   align-content: space-evenly;

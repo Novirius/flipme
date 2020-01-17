@@ -28,6 +28,9 @@ class Api::DecksController < ApplicationController
     @deck = Deck.new(deck_params)
     @deck.author_id = current_user.id
     if @deck.save
+      @card1 = Card.new()
+      @card1.author_id = current_user.id
+      @card1.deck_id = @deck.id
       render 'api/decks/show'
     else
       render json: @deck.errors.full_messages, status: 422

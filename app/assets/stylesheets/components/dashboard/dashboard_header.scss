@@ -1,4 +1,4 @@
-@import './variables';
+@import './00variables';
 
 .dashboard-header-container {
     background-color: white;
@@ -37,6 +37,10 @@
     color: $button;
     font-weight: 700px;
     font-size: 15px;
+    &:hover {
+        background-color: $button-hover;
+        color: white;
+    }
 }
 
 .dashboard-header-profile-container > span {

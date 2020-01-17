@@ -1,4 +1,5 @@
 import {RECEIVE_ALL_FOLDERS, RECEIVE_FOLDER, REMOVE_FOLDER } from '../actions/folder_actions'
+import {RECEIVE_CURRENT_USER} from '../actions/session_actions'
 
 const foldersReducer = (state={}, action) => {
     Object.freeze(state);
@@ -14,6 +15,8 @@ const foldersReducer = (state={}, action) => {
         case REMOVE_FOLDER:
             delete newState[action.folderId]
             return newState
+        case RECEIVE_CURRENT_USER:
+            return {}
         default:
             return state;
     }

@@ -1,5 +1,5 @@
 
-@import './variables';
+@import './00variables';
 
 
 .card-form {
@@ -36,7 +36,7 @@
     .fa-save {
         margin-right: 10px;
         &:hover {
-            color: #35d381;
+            color: #05FFD2;
         }
     }
     .fa-trash-alt {
@@ -52,11 +52,15 @@
     align-items: center;
     justify-content: center;
     align-content: center;
+    hr {
+        margin-top: 15px;
+    }
     .card-form-input {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
+        margin-top: 50px;
         .card-form-input-label {
             display: flex;
             flex-direction: column;
@@ -88,6 +92,9 @@
     .fa-plus {
         color: #05FFD2;
     }
+    .fa-minus {
+        color: #d83e50;
+    }
     align-self: center;
 }
 
@@ -95,3 +102,11 @@
     animation-name: my-move;
     animation-duration: 2s;
 }
+
+
+.undisplay {
+    // display: none;
+    animation-name: fade-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
