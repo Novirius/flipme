@@ -17,7 +17,14 @@ folder1 = Folder.create(title: "first title", description:"this is from first ti
 folder2 = Folder.create(title: "second title", description:"this is from second title description", author_id: user1.id)
 folder3 = Folder.create(title: "third title", description:"this is from third title description", author_id: user1.id)
 
-deck1 = Deck.create(title: "myseconddeck", author_id: user1.id, sub_category_id: 1)
+category1 = Category.create(name: "Science")
+subcategory1 = SubCategory.create(name: "Biology", category_id: category1.id)
+
+deck1 = Deck.create(title: "myseconddeck", author_id: user1.id, sub_category_id: subcategory1.id)
+
+
+
+
 
 card1 = Card.create(  
     front_text: "front of card1",
@@ -38,7 +45,7 @@ card2 = Card.create(
 card3 = Card.create(  
     front_text: "front of card3",
     back_text: "back of card3",
-    front_image: "front image3",
+    front_image: "https://cdn.discordapp.com/emojis/580596678462013450.gif?v=1",
     back_image: "back image3",
     deck_id: deck1.id,
     author_id: user1.id
