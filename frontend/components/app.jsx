@@ -29,10 +29,12 @@ const App = () => (
         {/* LeftNav */}
         <ProtectedRoute exact path="/latest" component={LeftNavContainer} />
         <ProtectedRoute path="/users/:userId" component={LeftNavContainer} />
+        <ProtectedRoute path="/folders/:folderId" component={LeftNavContainer} />
         {/* Header */}
         <ProtectedRoute exact path="/users/:userId" component={DashboardHeaderContainer} />
         <ProtectedRoute exact path="/users/:userId/folders" component={DashboardHeaderContainer} />
         <ProtectedRoute exact path="/users/:userId/decks" component={DashboardHeaderContainer} />
+        <ProtectedRoute exact path="/folders/:folderId" component={DashboardHeaderContainer} />
         {/* Body */}
         <ProtectedRoute exact path="/latest" component={LatestContainer} />
         <ProtectedRoute exact path="/users/:userId/folders" component={DashboardBodyContainer} />

@@ -16,89 +16,273 @@ user1 = User.create(username: "chris", email: "chris@gmail.com", password:"chris
 user2 = User.create(username: "carol", email: "carol@gmail.com", password:"carol123")
 
 
-folder1 = Folder.create(title: "first title", description:"this is from first title description", author_id: user1.id)
-folder2 = Folder.create(title: "second title", description:"this is from second title description", author_id: user1.id)
-folder3 = Folder.create(title: "third title", description:"this is from third title description", author_id: user1.id)
+folder1 = Folder.create(title: "My first folder", description:"this is from first title description", author_id: user1.id)
+folder2 = Folder.create(title: "My second folder", description:"this is from second title description", author_id: user1.id)
+# folder3 = Folder.create(title: "third title", description:"this is from third title description", author_id: user1.id)
 
 category1 = Category.create(name: "Science")
 subcategory1 = SubCategory.create(name: "Biology", category_id: category1.id)
 
-deck1 = Deck.create(title: "my first deck", author_id: user1.id, sub_category_id: subcategory1.id)
+deck1 = Deck.create(title: "Science", author_id: user1.id, sub_category_id: subcategory1.id)
 
-deck2 = Deck.create(title: "second deck", author_id: user1.id, sub_category_id: subcategory1.id)
+deck2 = Deck.create(title: "Anime", author_id: user1.id, sub_category_id: subcategory1.id)
 
 
 deck3 = Deck.create(title: "sanban deck", author_id: user2.id, sub_category_id: subcategory1.id)
 
-deck4 = Deck.create(title: "another deck!", author_id: user1.id, sub_category_id: subcategory1.id)
+deck4 = Deck.create(title: "Language", author_id: user1.id, sub_category_id: subcategory1.id)
 
+    #Deck 1 cards
+    d1c1 = Card.create(  
+        front_text: "What is boanthropy?",
+        back_text: "A disorder that leads people to believe they're a bovine animal",
+        front_image: "https://cdn.discordapp.com/emojis/583685356818268160.png?v=1",
+        back_image: "back image1",
+        deck_id: deck1.id,
+        author_id: user1.id
+        )
+    d1c2 = Card.create(  
+        front_text: "What is the only kind of parrot that can't fly?",
+        back_text: "The Kakapo",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck1.id,
+        author_id: user1.id
+        )
+    d1c3 = Card.create(  
+        front_text: "What is the scientific name for the fear of cooking?",
+        back_text: "Mageirocophobia",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck1.id,
+        author_id: user1.id
+        )
+    d1c4 = Card.create(  
+        front_text: "What is the driest place on Earth?",
+        back_text: "The Atacama Desert",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck1.id,
+        author_id: user1.id
+        )
+    d1c5 = Card.create(  
+        front_text: "Which country has the most fresh water?",
+        back_text: "Brazil",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck1.id,
+        author_id: user1.id
+        )
+    d1c6 = Card.create(  
+        front_text: "What animal name literally means pig-fish?",
+        back_text: "Porpoise",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck1.id,
+        author_id: user1.id
+        )
+    d1c7 = Card.create(  
+        front_text: "Approximately how much does a single cloud weigh?",
+        back_text: "1,100,000 lbs",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck1.id,
+        author_id: user1.id
+        )
+    d1c8 = Card.create(  
+        front_text: "How long was each day when the Earth first formed?",
+        back_text: "It's shorter than half the time of a modern day.",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck1.id,
+        author_id: user1.id
+        )
+    d1c9 = Card.create(  
+        front_text: "What are amorphous solids?",
+        back_text: "Any noncrystalline solid in which the atoms and molecules are not organized in a definite lattice pattern. Such solids include glass, plastic, and gel.",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck1.id,
+        author_id: user1.id
+        )
+    d1c10 = Card.create(  
+        front_text: "Why is DNA a flame retardant?",
+        back_text: "When heated, DNA's phosphate-containing backbone produces phosphoric acid, which chemically removes water. Thus, it leaves behind carbon-rich residue. Carbon suppresses flames by displacing oxygen.",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck1.id,
+        author_id: user1.id
+        )
 
-card1 = Card.create(  
-    front_text: "Lorem Ipsum",
-    back_text: "is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.",
-    front_image: "https://66.media.tumblr.com/87be4e084ef065906c9e667e972bb2b9/tumblr_nvany6VSZM1uzwbyjo3_500.gifv",
-    back_image: "back image1",
-    deck_id: deck1.id,
-    author_id: user1.id
-    )
-card2 = Card.create(  
-    front_text: "Why do we use it?",
-    back_text: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. ",
-    front_image: "front image2",
-    back_image: "back image2",
-    deck_id: deck1.id,
-    author_id: user1.id
-    )
-card3 = Card.create(  
-    front_text: "Where does it come from?",
-    back_text: "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ",
-    front_image: "front_image3",
-    back_image: "back image3",
-    deck_id: deck1.id,
-    author_id: user1.id
-    )
-
-
-    card4 = Card.create(  
-        front_text: "Charles Darwin's personal pet tortoise",
-        back_text: "She outlived her adopter by 124 years, ultimately making it to a whopping 176 years old.",
-        front_image: "https://cdn.discordapp.com/emojis/580596678462013450.gif?v=1",
+    #Deck 2 cards
+    d2c1 = Card.create(  
+        front_text: "Which pokemon was originally intended to be Ash's starting pokemon?",
+        back_text: "Clefairy",
+        front_image: "https://cdn.discordapp.com/emojis/667654955317854218.gif?v=1",
         back_image: "back image1",
         deck_id: deck2.id,
         author_id: user1.id
         )
-    card5 = Card.create(  
-        front_text: "The average person will spend six months of their life",
-        back_text: "waiting for red lights to turn green",
+    d2c2 = Card.create(  
+        front_text: "When was JoJo's Bizarre Adventure: Phandom Blood first released?",
+        back_text: "1987",
         front_image: "front image2",
         back_image: "back image2",
         deck_id: deck2.id,
         author_id: user1.id
         )
+    d2c3 = Card.create(  
+        front_text: "Who created Spirited Away(2001)?",
+        back_text: "Hayao Miyazaki",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck2.id,
+        author_id: user1.id
+        )
+    d2c4 = Card.create(  
+        front_text: "When was the first Yu-Gi-Oh manga released?",
+        back_text: "1996",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck2.id,
+        author_id: user1.id
+        )
+    d2c5 = Card.create(  
+        front_text: "What was the name of the corgi in Cowboy Bebop?",
+        back_text: "Ein (NA) /Ain (JP)",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck2.id,
+        author_id: user1.id
+        )
+    d2c6 = Card.create(  
+        front_text: "What does \"Akasha\" refer to in Nasuverse lore?",
+        back_text: "The root",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck2.id,
+        author_id: user1.id
+        )
+    d2c7 = Card.create(  
+        front_text: "In the Dragon Ball series, what is the name of Goku's brother?",
+        back_text: "Raditz",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck2.id,
+        author_id: user1.id
+        )
+    d2c8 = Card.create(  
+        front_text: "This anime studio's president stepped down following a tax evasion scandal ",
+        back_text: "Ufotable",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck2.id,
+        author_id: user1.id
+        )
+    d2c9 = Card.create(  
+        front_text: "This voice actor played Kiritsugu from Fate/Stay Night, Yoshikage Kira from Jojo's Bizarre Adventure, and Yamato from Naruto",
+        back_text: "RIKIYA KOYAMA",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck2.id,
+        author_id: user1.id
+        )
+    d2c10 = Card.create(  
+        front_text: "Who was the manga artist for Death Note?",
+        back_text: "Takeshi Obata",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck2.id,
+        author_id: user1.id
+        )
 
-        card6 = Card.create(  
-            front_text: "A bolt of lightning contains enough energy to toast ",
-            back_text: "100,000 slices of bread",
-            front_image: "https://cdn.discordapp.com/emojis/667654955317854218.gif?v=1",
-            back_image: "back image2",
-            deck_id: deck3.id,
-            author_id: user2.id
-            )
+    #Deck 2 cards
+    d3c1 = Card.create(  
+        front_text: "почемучка (Russian)",
+        back_text: "A child who asks lots of questions",
+        front_image: "https://cdn.discordapp.com/emojis/580600324595777558.gif?v=1",
+        back_image: "back image1",
+        deck_id: deck3.id,
+        author_id: user1.id
+        )
+    d3c2 = Card.create(  
+        front_text: "luftmensch (Yiddish)",
+        back_text: "A dreamer; someone with no business savvy.",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck3.id,
+        author_id: user1.id
+        )
+    d3c3 = Card.create(  
+        front_text: "撒娇 (Sājiāo) (Chinese)",
+        back_text: "To throw a fit and to act childish to show how much you love someone",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck3.id,
+        author_id: user1.id
+        )
+    d3c4 = Card.create(  
+        front_text: "Politikerleden (Danish)",
+        back_text: "Having disgust for politicians",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck3.id,
+        author_id: user1.id
+        )
+    d3c5 = Card.create(  
+        front_text: "Deppenfahrerbeaugung (German)",
+        back_text: "When you want to turn around and glare at a bad driver you’ve just overtaken",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck3.id,
+        author_id: user1.id
+        )
+    d3c6 = Card.create(  
+        front_text: "Mencolek (Indonesian)",
+        back_text: "When you tap someone on the opposite shoulder from behind to trick them",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck3.id,
+        author_id: user1.id
+        )
+    d3c7 = Card.create(  
+        front_text: "木漏れ日 (Japanese)",
+        back_text: "The sunbeam through the leaves",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck3.id,
+        author_id: user1.id
+        )
+    d3c8 = Card.create(  
+        front_text: "Dar un toque (Spanish)",
+        back_text: "To call a mobile phone and let it ring once before hanging up. Usually done to save money and signal some message.",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck3.id,
+        author_id: user1.id
+        )
+    d3c9 = Card.create(  
+        front_text: "Gigil (Tagalog)",
+        back_text: "Cuteness overload",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck3.id,
+        author_id: user1.id
+        )
+    d3c10 = Card.create(  
+        front_text: "L’esprit de l'escalier (French)",
+        back_text: "When you think of the perfect retort too late",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck3.id,
+        author_id: user1.id
+        )
 
-
-            card7 = Card.create(  
-                front_text: "Cherophobia",
-                back_text: "the irrational fear of being happy",
-                front_image: "https://cdn.discordapp.com/emojis/580600324595777558.gif?v=1", 
-                back_image: "back image2",
-                deck_id: deck4.id,
-                author_id: user1.id
-                )
-            card8 = Card.create(  
-                front_text: "There's a bridge exclusively for squirrels.",
-                back_text: "Netherlands officials built a rodent-only bridge. While it may have been a kind-hearted gesture, it might not have been the most economically sensible one: costing £120,000",
-                front_image: "https://cdn.discordapp.com/emojis/583685356818268160.png?v=1",
-                back_image: "back image2",
-                deck_id: deck4.id,
-                author_id: user1.id
-                )
+    card6 = Card.create(  
+        front_text: "A bolt of lightning contains enough energy to toast ",
+        back_text: "100,000 slices of bread",
+        front_image: "https://cdn.discordapp.com/emojis/667654955317854218.gif?v=1",
+        back_image: "back image2",
+        deck_id: deck3.id,
+        author_id: user2.id
+        )

@@ -81,7 +81,7 @@ class CardForm extends React.Component {
                 </div>
                 <div  className={`card-form-header ${this.state.hidden}`}>
                     <div className="card-form-header-label">
-                        <i className="fab fa-flipboard fa-2x"></i>
+                        <i class="fas fa-plus-square fa-2x"></i>
                     </div>
                     <div className="card-form-header-options">
                         <i onClick={this.handleSave} className="fas fa-save fa-lg"></i>

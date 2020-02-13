@@ -19,6 +19,7 @@
     width: 814px;
     padding: 40px;
     overflow: auto;
+    overflow-wrap: break-word;
     display: flex;
     flex-direction: column;
 }

@@ -60,12 +60,6 @@ class TopNav extends React.Component {
                             </div>
                         </div>
                         <div className="top-nav-vertical-divide" />
-                        <div className="top-nav-browse-wrapper">
-                            <div className="top-nav-browse">
-                                <a><i className="fas fa-book"></i>  Browse</a>
-                            </div>
-                        </div>
-                        <div className="top-nav-vertical-divide" />
                         <div className="top-nav-create-wrapper">
                             <div className="top-nav-create">
                                 <a><i className="far fa-plus-square"></i>  Create</a>
@@ -103,12 +97,6 @@ class TopNav extends React.Component {
                         <div className="top-nav-search-wrapper">
                             <div className="top-nav-search">
                                 <a><i className="fas fa-search"></i>  Search</a>
-                            </div>
-                        </div>
-                        <div className="top-nav-vertical-divide" />
-                        <div className="top-nav-browse-wrapper">
-                            <div className="top-nav-browse">
-                                <a><i className="fas fa-book"></i>  Browse</a>
                             </div>
                         </div>
                         <div className="top-nav-vertical-divide" />
