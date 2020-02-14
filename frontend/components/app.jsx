@@ -7,6 +7,7 @@ import LeftNavContainer from '../components/LeftNavContainer/left_nav_container'
 import DashboardHeaderContainer from './dashboard/dashboard_header_container';
 import DashboardBodyContainer from './dashboard/dashboard_body_container';
 import DashboardDecksContainer from './dashboard/dashboard_decks_container';
+import DashboardFolderHeaderContainer from './dashboard_folder/dashboard_folder_header_container';
 import SplashPage from './splash_page';
 import LatestContainer from './latest/latest_container';
 import FlashcardContainer from './flashcard/flashcard_container';
@@ -34,7 +35,7 @@ const App = () => (
         <ProtectedRoute exact path="/users/:userId" component={DashboardHeaderContainer} />
         <ProtectedRoute exact path="/users/:userId/folders" component={DashboardHeaderContainer} />
         <ProtectedRoute exact path="/users/:userId/decks" component={DashboardHeaderContainer} />
-        <ProtectedRoute exact path="/folders/:folderId" component={DashboardHeaderContainer} />
+        <ProtectedRoute exact path="/folders/:folderId" component={DashboardFolderHeaderContainer} />
         {/* Body */}
         <ProtectedRoute exact path="/latest" component={LatestContainer} />
         <ProtectedRoute exact path="/users/:userId/folders" component={DashboardBodyContainer} />

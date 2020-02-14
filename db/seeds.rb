@@ -23,14 +23,14 @@ folder2 = Folder.create(title: "My second folder", description:"this is from sec
 category1 = Category.create(name: "Science")
 subcategory1 = SubCategory.create(name: "Biology", category_id: category1.id)
 
+#User 1's cards
 deck1 = Deck.create(title: "Science", author_id: user1.id, sub_category_id: subcategory1.id)
-
 deck2 = Deck.create(title: "Anime", author_id: user1.id, sub_category_id: subcategory1.id)
+deck3 = Deck.create(title: "Language", author_id: user1.id, sub_category_id: subcategory1.id)
 
+#User 2's cards
+deck4 = Deck.create(title: "sanban deck", author_id: user2.id, sub_category_id: subcategory1.id)
 
-deck3 = Deck.create(title: "sanban deck", author_id: user2.id, sub_category_id: subcategory1.id)
-
-deck4 = Deck.create(title: "Language", author_id: user1.id, sub_category_id: subcategory1.id)
 
     #Deck 1 cards
     d1c1 = Card.create(  
@@ -118,7 +118,7 @@ deck4 = Deck.create(title: "Language", author_id: user1.id, sub_category_id: sub
     d2c1 = Card.create(  
         front_text: "Which pokemon was originally intended to be Ash's starting pokemon?",
         back_text: "Clefairy",
-        front_image: "https://cdn.discordapp.com/emojis/667654955317854218.gif?v=1",
+        front_image: "https://cdn.discordapp.com/emojis/580596678462013450.gif?v=1",
         back_image: "back image1",
         deck_id: deck2.id,
         author_id: user1.id
@@ -196,7 +196,7 @@ deck4 = Deck.create(title: "Language", author_id: user1.id, sub_category_id: sub
         author_id: user1.id
         )
 
-    #Deck 2 cards
+    #Deck 4 cards
     d3c1 = Card.create(  
         front_text: "почемучка (Russian)",
         back_text: "A child who asks lots of questions",

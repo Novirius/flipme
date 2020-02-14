@@ -12,6 +12,9 @@ class Api::DecksController < ApplicationController
       sub_category = SubCategory.find(params[:sub_category_id])
       @decks = sub_category.decks
       render :index
+    elsif params[:search_query]
+      @decks = Deck.where
+
     end
   end
 

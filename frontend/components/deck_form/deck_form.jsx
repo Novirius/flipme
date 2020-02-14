@@ -46,17 +46,7 @@ class DeckForm extends React.Component {
                         />
                         <span>Title</span>
                     </label>
-                    {/* <label className="deck-form-body-label" htmlFor="description">
-                        <input 
-                            className="deck-form-body-input" 
-                            type="text"
-                            placeholder="Enter a sub-category"
-                            value={this.state.sub_category_id}
-                            onChange={this.update('sub_category_id')} 
-                        />
-                        <span>Sub-category</span>
-                    </label> */}
-                    <button type="submit" value="Create Folder" disabled={!this.state.buttonStatus} >Create Deck</button>
+                    <button type="submit" value="Create Deck" disabled={!this.state.buttonStatus} >Create Deck</button>
                 </form>
 
             </div>

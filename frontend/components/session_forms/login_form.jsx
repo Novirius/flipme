@@ -32,7 +32,6 @@ class LoginForm extends React.Component {
 
   render() {
     return (
-     
       <div className="LoginModalHeader">
         <div className="LoginModalHeader-HeadingWrapper">
             <h3 className="LoginModalHeader-Heading">
@@ -91,6 +90,7 @@ class LoginForm extends React.Component {
                   </div>
               </span>
             </button>
+            <div className="login-errors">{this.props.errors}</div>
           </form>
         </div>
       </div>

@@ -32,6 +32,8 @@ class SignupForm extends React.Component {
   }
 
   render() {
+    const usernameError = this.props.errors.includes("Username can't be blank") ? 'red-border' : '';
+    const passwordError = this.props.errors.includes("Password is too short (minimum is 6 characters)") ? 'red-border' : '';
     return (
         <div className="signup-container">
             <div className="signup-sm-container">
@@ -261,7 +263,7 @@ class SignupForm extends React.Component {
                             Username
                         </span>
                     </legend>
-                    <div className="signup-form-input-wrapper">
+                    <div className={`signup-form-input-wrapper ${usernameError}`}>
                         <input 
                           className="signup-form-input" 
                           type="text"
@@ -280,7 +282,7 @@ class SignupForm extends React.Component {
                     <div className="signup-form-input-wrapper">
                         <input 
                           className="signup-form-input" 
-                          type="text"
+                          type="email"
                           placeholder="coolemail@gmail.com"
                           value={this.state.email}
                           onChange={this.update('email')} 
@@ -293,7 +295,7 @@ class SignupForm extends React.Component {
                             Password
                         </span>
                     </legend>
-                    <div className="signup-form-input-wrapper">
+                    <div className={`signup-form-input-wrapper ${passwordError}`}>
                         <input 
                           className="signup-form-input" 
                           type="password"

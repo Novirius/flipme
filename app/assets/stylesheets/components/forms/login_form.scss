@@ -93,6 +93,8 @@
 
 
   .SocialMedia-FirstButton {
+    display: flex;
+    align-items: center;
     background-color:rgb(255, 255, 255);
     border-bottom-color:rgb(218, 222, 224);
     border-bottom-left-radius:4px;
@@ -118,7 +120,6 @@
     box-sizing:border-box;
     color:rgb(69, 83, 88);
     cursor:pointer;
-    display:inline-block;
     font-family: 'Cabin', sans-serif;
     font-feature-settings:"kern", "liga", "clig", "calt";
     font-kerning:normal;
@@ -161,6 +162,8 @@
   }
   
   .SocialMedia-SecondButton {
+    display: flex;
+    align-items: center;
     margin-top:24px;
     background-color:rgb(255, 255, 255);
     border-bottom-color:rgb(218, 222, 224);
@@ -187,7 +190,6 @@
     box-sizing:border-box;
     color:rgb(69, 83, 88);
     cursor:pointer;
-    display:inline-block;
     font-family: 'Cabin', sans-serif;
     font-feature-settings:"kern", "liga", "clig", "calt";
     font-kerning:normal;
@@ -501,4 +503,8 @@
   }
 
 
- 
+ .login-errors {
+   display: flex;
+   justify-content: center;
+   color: red;
+ }
