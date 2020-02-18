@@ -14,6 +14,8 @@ import FlashcardContainer from './flashcard/flashcard_container';
 import FlashcardShowContainer from './flashcard/flashcard_show_container';
 import CardFormContainer from './card_form/card_form_container';
 import DeckShowContainer from './deck_show/deck_show_container';
+import SearchResultContainer from './search_results/search_results_container'
+
 const App = () => (
 <div>
   <div className="header-wrapper">
@@ -24,7 +26,7 @@ const App = () => (
 
   <AuthRoute exact path="/" component={SplashPage} />
   
-  <div className="site-wrapper">
+  <div id="site-wrapper" className="site-wrapper">
     <div className="site-container">
         <Modal />
         {/* LeftNav */}
@@ -40,6 +42,7 @@ const App = () => (
         <ProtectedRoute exact path="/latest" component={LatestContainer} />
         <ProtectedRoute exact path="/users/:userId/folders" component={DashboardBodyContainer} />
         <ProtectedRoute exact path="/users/:userId/decks" component={DashboardDecksContainer} />
+        <ProtectedRoute exact path="/search/:query" component={SearchResultContainer} />
     </div>
   </div>
   <ProtectedRoute exact path="/decks/:deckId/flashcard" component={FlashcardShowContainer} />

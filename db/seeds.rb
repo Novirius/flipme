@@ -90,8 +90,8 @@ deck4 = Deck.create(title: "sanban deck", author_id: user2.id, sub_category_id: 
         author_id: user1.id
         )
     d1c8 = Card.create(  
-        front_text: "How long was each day when the Earth first formed?",
-        back_text: "It's shorter than half the time of a modern day.",
+        front_text: "Which tree's bark is used to produce aspirin?",
+        back_text: "The white willow tree",
         front_image: "front image2",
         back_image: "back image2",
         deck_id: deck1.id,
@@ -238,8 +238,8 @@ deck4 = Deck.create(title: "sanban deck", author_id: user2.id, sub_category_id: 
         author_id: user1.id
         )
     d3c6 = Card.create(  
-        front_text: "Mencolek (Indonesian)",
-        back_text: "When you tap someone on the opposite shoulder from behind to trick them",
+        front_text: "마주치다 (Korean)",
+        back_text: "When you meet someone unexpectedly.",
         front_image: "front_image3",
         back_image: "back image3",
         deck_id: deck3.id,
@@ -276,13 +276,4 @@ deck4 = Deck.create(title: "sanban deck", author_id: user2.id, sub_category_id: 
         back_image: "back image3",
         deck_id: deck3.id,
         author_id: user1.id
-        )
-
-    card6 = Card.create(  
-        front_text: "A bolt of lightning contains enough energy to toast ",
-        back_text: "100,000 slices of bread",
-        front_image: "https://cdn.discordapp.com/emojis/667654955317854218.gif?v=1",
-        back_image: "back image2",
-        deck_id: deck3.id,
-        author_id: user2.id
         )

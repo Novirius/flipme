@@ -6,14 +6,16 @@ class DashboardBody extends React.Component {
     constructor(props){
         super(props);
         this.state = ({
-            sort: 'Recent'
+            sort: 'Recent',
+            filter: ''
         })
-        this.sortMethod = this.sortMethod.bind(this)
-
+        this.sortMethod = this.sortMethod.bind(this);
+        this.updateFilter = this.updateFilter.bind(this);
     }
 
     componentDidMount () {
         this.props.fetchFolders();
+        console.log("hit")
     }
 
     sortMethod (e) {
@@ -22,30 +24,39 @@ class DashboardBody extends React.Component {
         })
     }
 
+    updateFilter(e) {
+        this.setState({
+            filter: e.currentTarget.value
+        })
+    }
+
     render () {
-        // const compareDate = (a, b) => {
-        //     const idA = a.id
-        //     const idB = b.id
+        //Sort folders by most recent
+        console.log("hit")
 
-        //     let comparison = 0;
-        //     idA > idB ? comparison = -1 : comparison = 1;
-        //     return comparison;
-        // }
-        // const compareName = (a, b) => {
-        //     const titleA = a.title.toUpperCase();
-        //     const titleB = b.title.toUpperCase();
+        const sortRecent = (a, b) => {
+            const aId = a.id;
+            const bId = b.id;
 
-        //     let comparison = 0;
-        //     titleA > titleB ? comparison = 1 : comparison = -1;
-        //     return comparison;
-        // }
-        // const unsortedFolders = this.props.folders.sort(compareDate);
-        // const sortedFolders = this.props.folders.sort(compareName);
-        // let selectedFolders = (this.state.sort === 'Alphabetically') ? this.props.folders : this.props.folders;
+            return (aId < bId) ? -1 : (aId > bId) ? 1 : 0;
+        }
+
+        const recentFolders = this.props.folders.slice().sort(sortRecent)
+
+        //Sort folders by title
+        const sortAlphabetically = (a, b) => {
+            const aTitle = a.title.toUpperCase();
+            const bTitle = b.title.toUpperCase();
+            return (aTitle < bTitle) ? -1 : (aTitle > bTitle) ? 1 : 0; 
+        }
+        const alphabeticalFolders = this.props.folders.slice().sort(sortAlphabetically)
+        
+        //Return the sort order based on selected sort from dropdown menu
+        const foldersIndex = (this.state.sort === 'Recent') ? recentFolders.filter(folder => folder.title.toUpperCase().includes(this.state.filter.toUpperCase())) : alphabeticalFolders.filter(folder => folder.title.toUpperCase().includes(this.state.filter.toUpperCase()))
+
         return (
             <div className="dashboard-body-container">
                 <div className="dashboard-body-content-container">
-                        {/* Padding 40 */}
                         <div className="dashboard-body-controls-container">
                             <div className="dashboard-body-controls-sort-container">
                                 <div className="dashboard-body-controls-sort-label">
@@ -59,12 +70,17 @@ class DashboardBody extends React.Component {
                                 </div>
                             </div>
                             <div className="dashboard-body-controls-filter">
-                                <input type="text" placeholder="Type to filter" className="dashboard-body-controls-filter" />
+                                <input 
+                                    type="text" 
+                                    placeholder="Type to filter" 
+                                    className="dashboard-body-controls-filter"
+                                    onChange={this.updateFilter}
+                                    />
                             </div>
                         </div>
                         <div className="dashboard-body-feed">
                             {
-                                this.props.folders.map(folder => <DashboardFeedItem key={folder.id} folder={folder}/>)
+                                foldersIndex.map(folder => <DashboardFeedItem key={folder.id} folder={folder}/>)
                             }
                         </div>
                 </div>

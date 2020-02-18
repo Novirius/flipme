@@ -14,12 +14,13 @@ class DeckShow extends React.Component {
         // debugger;
         this.props.fetchCards(this.props.deckId);
     }
+    
 
     render () {
         if (Object.keys(this.props.cards).length === 0) return null;
         if (!this.props.cardsArray) return null;
         if (!this.props.deck) return null;
-        // debugger;
+        debugger;
         return (
             <div className="deck-show">
                 <div className="deck-show-title">

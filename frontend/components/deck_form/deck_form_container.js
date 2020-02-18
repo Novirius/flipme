@@ -4,8 +4,8 @@ import DeckForm from './deck_form'
 import {openModal, closeModal} from '../../actions/modal_actions'
 import {createDeck} from '../../actions/deck_actions'
 
-const mapState = ({ errors }) => ({
-    
+const mapState = ({ entities:{decks},errors }) => ({
+    decks: decks
 })
 
 const mapDispatch = dispatch =>  ({

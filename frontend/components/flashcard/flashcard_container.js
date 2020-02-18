@@ -10,8 +10,6 @@ const mapState = ({entities}, ownProps) => {
         deckId: ownProps.match.params.deckId,
         deck: entities.decks[ownProps.match.params.deckId],
         cards: entities.cards
-        // deckLength: entities.decks[ownProps.match.params.deckId].card_ids.length,
-        // cards: entities.decks[ownProps.match.params.deckId].card_ids.map(cardId => entities.cards[cardId])
     }
 }
 

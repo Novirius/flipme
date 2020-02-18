@@ -12,9 +12,6 @@ class Api::DecksController < ApplicationController
       sub_category = SubCategory.find(params[:sub_category_id])
       @decks = sub_category.decks
       render :index
-    elsif params[:search_query]
-      @decks = Deck.where
-
     end
   end
 
@@ -60,6 +57,13 @@ class Api::DecksController < ApplicationController
   def destroy
     @deck = current_user.decks.find(params[:id])
     @deck.destroy
+  end
+
+  #Search for decks where either the title of the deck or the card front/back text contains the search query
+  def search
+    search = "%#{params[:query].downcase}%"
+    @decks = Deck.joins(:cards).where("lower(decks.title) LIKE ? OR lower(cards.front_text) LIKE ? OR lower(cards.back_text) LIKE ?", search, search, search)
+    render 'api/decks/search'
   end
 
   def deck_params

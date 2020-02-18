@@ -29,9 +29,6 @@ export const deckErrors = errors => ({
 
 
 
-
-
-
 export const fetchUserDecks = (userid) => dispatch => (
     APIUtil.fetchUserDecks(userid)
     .then(
@@ -55,11 +52,6 @@ export const fetchSubCategoryDecks = (subCategoryId) => dispatch => (
         errors => dispatch(deckErrors(errors))
     )
 );
-
-
-
-
-
 
 export const fetchDeck = id => dispatch => (
     APIUtil.fetchDeck(id)
@@ -89,6 +81,14 @@ export const deleteDeck = deckId => dispatch => (
     APIUtil.deleteDeck(deckId)
     .then(
         () => dispatch(removeDeck(deckId)),
+        errors => dispatch(deckErrors(errors))
+    )
+)
+
+export const searchDecks = query => dispatch => (
+    APIUtil.searchDecks(query)
+    .then(
+        (decks) => dispatch(receiveDecks(decks)),
         errors => dispatch(deckErrors(errors))
     )
 )

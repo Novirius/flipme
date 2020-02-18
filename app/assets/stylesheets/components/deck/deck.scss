@@ -19,6 +19,8 @@
     // transition : border 500ms ease-out;
     // top: 0px;
     // transition: top ease 0.5s;
+    // margin-left: 20px;
+    // margin-bottom: 25px;
 
 }
 
@@ -55,6 +57,7 @@
 
 .deck-details-title {
     margin-bottom: 1rem;
+    font-weight: 700;
 }
 
 .deck-details-author {
@@ -62,8 +65,10 @@
 }
 
 .deck-image {
-    height: 56px;
     max-width: 85px;
     margin-right: 1rem;
     border-radius: 3px;
+    display: flex;
+    height: auto;
+    overflow: hidden;
 }

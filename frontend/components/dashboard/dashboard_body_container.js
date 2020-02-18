@@ -6,8 +6,6 @@ import DashboardBody from './dashboard_body'
 const mapState = ({ entities}) => ({
     folders: Object.values(entities.folders),
     foldersCount: Object.keys(entities.folders).length,
-    // sets: entities.sets,
-    // setsCount: Object.keys(entities.sets).length,
 })
 
 const mapDispatch = dispatch => {

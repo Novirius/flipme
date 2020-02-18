@@ -10,7 +10,7 @@ const mapState = (state, ownProps) => {
         deckId: ownProps.match.params.deckId,
         deck: state.entities.decks[ownProps.match.params.deckId],
         cards: state.entities.cards,
-        cardsArray: Object.values(state.entities.cards)
+        cardsArray: Object.values(state.entities.cards).filter(card => card.deck_id === parseInt(ownProps.match.params.deckId))
     }
 }
 

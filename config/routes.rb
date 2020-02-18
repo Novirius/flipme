@@ -16,7 +16,8 @@ Rails.application.routes.draw do
     resources :sub_categories do
       resources :decks, only:[:index]
     end
+    get 'decks/search/:query', :to => 'decks#search'
   end
 
-  # get 'sets/charities', :to => 'profiles#charities_index'
+  
 end
