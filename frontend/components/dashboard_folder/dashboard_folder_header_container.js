@@ -5,7 +5,6 @@ import {fetchFolder} from '../../actions/folder_actions'
 import DashboardFolderHeader from './dashboard_folder_header'
 
 const mapState = ({entities:{folders, users}, session}, ownProps) => {
-    debugger;
     return {
         folder: folders[ownProps.match.params.folderId],
         folderId: ownProps.match.params.folderId,

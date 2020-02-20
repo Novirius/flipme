@@ -124,7 +124,7 @@ deck4 = Deck.create(title: "sanban deck", author_id: user2.id, sub_category_id: 
         author_id: user1.id
         )
     d2c2 = Card.create(  
-        front_text: "When was JoJo's Bizarre Adventure: Phandom Blood first released?",
+        front_text: "When was JoJo's Bizarre Adventure: Phantom Blood first released?",
         back_text: "1987",
         front_image: "front image2",
         back_image: "back image2",

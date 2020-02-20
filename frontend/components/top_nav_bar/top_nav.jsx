@@ -28,14 +28,7 @@ class TopNav extends React.Component {
     submitSearch (e) {
         e.preventDefault();
         this.props.history.push(`/search/${this.state.searchTerm}`)
-        // this.props.history.push({
-        //     pathname: `/search`,
-        //     search: `?query=${this.state.searchTerm}`,
-        //     state: { detail: response.data }
-        //   })
         this.closeSearch();
-        // const fixedSearch = this.props.match.params.query.replace('%20',' ')
-        // this.props.searchDecks(this.state.searchTerm).then((user) => this.props.history.push(`/search?=${this.state.searchTerm}`))
     }
 
     toggleSearch (e) {
@@ -130,6 +123,7 @@ class TopNav extends React.Component {
                         placeholder="Search"
                         autoFocus={true}
                         onChange={this.updateSearch}
+                        value={this.state.searchTerm}
                     />
                     <button type="submit" style={{ display: 'none' }} />
                 </form>

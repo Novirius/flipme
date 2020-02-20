@@ -97,7 +97,6 @@ class Flashcard extends React.Component {
         let currentCard = this.props.cards[currentCardId];
         
         if(!currentCard) return null;
-        // debugger;
 
         return (
             <div className="flip-card-body">

@@ -1,0 +1,111 @@
+@import './00variables';
+
+.search-result-container {
+    // background-color: red;
+    min-height:100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+    // justify-content: center;
+    // padding: 10px;
+}
+
+.search-result-card {
+    background-color: white;
+    max-width: 800px;
+    width: 56%;
+    min-height: 250px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border-bottom: 4px solid $button;
+    filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
+    &:hover {
+        border-bottom: 4px solid $button-hover;
+        cursor: pointer;
+    }
+    .search-result-card-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 65%;
+        // background-color: lightblue;
+        .search-result-card-left-top-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            .search-result-card-left-top-terms {
+                width: auto;
+            }
+            .search-result-card-left-top-div {
+                width: auto;
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+            .search-result-card-left-top-author {
+                color: $button;
+                width: auto;
+                // &:hover{
+                //     color: $button-hover;
+                //     cursor: pointer;
+                // }
+            }
+        }
+        .search-result-card-left-bottom-container {
+            font-weight: 700;
+            font-size: 3rem;
+        }
+    }
+    .search-result-card-right {
+        position: relative;
+        width: 35%;
+        // background-color: darkblue;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        padding: 5px;
+        .search-result-card-front {
+            height: 50%;
+        }
+        .search-result-card-back {
+            height: 50%;
+        }
+        .search-result-card-right-float {
+            position: absolute;
+            // width: 35%;
+            // background-color: darkblue;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            padding: 5px;
+            height: 100%;
+            animation-name: search-slide-in;
+            animation-duration: 0.5s;
+            border-left: 1px solid lightgray;
+            padding-left: 1rem;
+            
+            .search-result-card-front-float {
+                height: 50%;
+                font-weight: 700;
+                // text-align: center;
+                word-wrap: break-word;
+            }
+            .search-result-card-back-float {
+                height: 50%;
+                width: 90%;
+                word-wrap: break-word;
+                // text-align: center;
+            }   
+        }   
+    }
+
+}
+
+
+
+
+

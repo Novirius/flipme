@@ -8,7 +8,7 @@ class DashboardDeckItem extends React.Component {
     }
 
     componentDidMount () {
-        this.props.fetchCards(this.props.id)
+        // this.props.fetchCards(this.props.id)
     }
 
     render () {

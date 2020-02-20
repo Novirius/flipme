@@ -4,6 +4,7 @@ export const RECEIVE_ALL_CARDS = 'RECEIVE_ALL_CARDS';
 export const RECEIVE_CARD = 'RECEIVE_CARD';
 export const REMOVE_CARD = 'REMOVE_CARD';
 export const RECEIVE_CARD_ERRORS = 'RECEIVE_CARD_ERRORS';
+export const CLEAR_CARDS = 'CLEAR_CARDS'
 
 
 //Sync Actions
@@ -27,6 +28,9 @@ export const cardErrors = errors => ({
     errors: errors
 })
 
+export const clearCards = () => ({
+    type: CLEAR_CARDS
+})
 
 //Async Actions
 export const fetchCards = (deckId) => dispatch => (

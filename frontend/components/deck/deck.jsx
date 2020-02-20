@@ -12,7 +12,7 @@ class Deck extends React.Component {
     }
 
     render () {
-        if (!this.props.cards) return null;
+        if (Object.keys(this.props.cards).length < 1) return null;
         let firstCardId = this.props.deck.card_ids[0];
         let firstCard = this.props.cards[firstCardId];
         return (

@@ -14,7 +14,6 @@ class LeftNav extends React.Component {
 
     componentDidMount () {
         this.props.fetchFolders();
-        // debugger;
         this.props.fetchUserDecks(this.props.currentUser.id);
             // .then(() => this.setState({foldersCount: this.props.foldersCount}));
     }
@@ -26,7 +25,7 @@ class LeftNav extends React.Component {
                 <div className="side-nav-container">
                     {/* Site Nav Start */}
                     <LeftNavItem route={'/'} icon={<i className="fas fa-home"></i>} title={'Home'} />
-                    <LeftNavItem route={'/settings'} icon={<i className="fas fa-cog"></i>} title={'Settings'} />
+                    <LeftNavItem route={'/'} icon={<i className="fas fa-cog"></i>} title={'Settings'} />
                     <div className="side-nav-divider"/>
                     {/* Site nav End */}
                     {/* User stuff Start */}
