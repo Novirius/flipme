@@ -1,0 +1,20 @@
+.dashboard-folder-body {
+    width: 100%;
+    max-width: 1028px;
+    // background: red;
+    margin-left: 273px;
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    margin-top: 40px;
+    padding: 40px;
+}
+
+.dashboard-folder-body-index {
+    display: flex;
+    justify-content: center;
+    span {
+        font-size: 2rem;
+        width: auto;
+    }
+}

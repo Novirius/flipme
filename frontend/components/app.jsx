@@ -15,6 +15,7 @@ import FlashcardShowContainer from './flashcard/flashcard_show_container';
 import CardFormContainer from './card_form/card_form_container';
 import DeckShowContainer from './deck_show/deck_show_container';
 import SearchResultContainer from './search_results/search_results_container'
+import DashboardFolderBodyContainer from './dashboard_folder/dashboard_folder_body_container';
 
 const App = () => (
 <div>
@@ -43,6 +44,7 @@ const App = () => (
         <ProtectedRoute exact path="/users/:userId/folders" component={DashboardBodyContainer} />
         <ProtectedRoute exact path="/users/:userId/decks" component={DashboardDecksContainer} />
         <ProtectedRoute exact path="/search/:query" component={SearchResultContainer} />
+        <ProtectedRoute exact path="/folders/:folderId" component={DashboardFolderBodyContainer} />
     </div>
   </div>
   <ProtectedRoute exact path="/decks/:deckId/flashcard" component={FlashcardShowContainer} />

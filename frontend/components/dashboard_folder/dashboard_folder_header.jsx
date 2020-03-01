@@ -15,7 +15,7 @@ class DashboardFolderHeader extends React.Component {
         if (!this.props.folder.title) return null;
         return (
             <div className="dashboard-header-container">
-                <i class="fas fa-folder fa-10x"></i>
+                <i className="fas fa-folder fa-10x"></i>
                 <div className="dashboard-header-profile-container">
                     <span>{this.props.folder.title}</span>
                     <div className="dashboard-header-profile-toggle-container">
