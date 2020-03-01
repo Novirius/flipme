@@ -45,7 +45,7 @@ class LoginForm extends React.Component {
               </div>
               <div className="SocialMedia-SecondButton">
               {/* <img className="niceimg" src={window.dlmnice}/>  */}
-              <p><i className="fab fa-google"></i>      Log in with Google</p>
+              <p><i className="fab fa-google"></i>      Log in with oAuth</p>
               </div>
           </div>
           <form onSubmit={this.handleSubmit}>

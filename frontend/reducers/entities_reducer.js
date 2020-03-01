@@ -9,7 +9,7 @@ const entitiesReducer = combineReducers({
   users: usersReducer,
   folders: foldersReducer,
   decks: decksReducer,
-  cards: cardsReducer
+  cards: cardsReducer,
   
 });
 

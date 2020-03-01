@@ -8,6 +8,7 @@ class Api::CardsController < ApplicationController
 
   def show
     @card = current_user.cards.find(params[:id])
+    render :show
   end
 
 

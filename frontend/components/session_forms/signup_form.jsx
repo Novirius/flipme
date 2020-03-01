@@ -39,12 +39,12 @@ class SignupForm extends React.Component {
             <div className="signup-sm-container">
                 <div className="signup-sm-wrapper">
                     <a className="signup-sm">
-                    <i className="fab fa-google"></i> Sign up with Google
+                    <i className="fab fa-google"></i> Sign up with oAuth 1
                     </a>
                 </div>
                 <div className="signup-sm-wrapper">
                     <a className="signup-sm">
-                    <i className="fab fa-facebook-square"></i> Sign up with Facebook
+                    <i className="fab fa-facebook-square"></i> Sign up with oAuth 2
                     </a>
                 </div>
             </div>

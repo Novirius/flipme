@@ -36,15 +36,15 @@
     "type": "git",
     "url": "git+https://github.com/Novirius/flipme.git"
   },
-  "engines": {
-    "node": "12.5.0",
-    "npm": "6.9.0"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/Novirius/flipme/issues"
   },
-  "homepage": "https://github.com/Novirius/flipme#readme"
+  "homepage": "https://github.com/Novirius/flipme#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-plugin-react": "^7.18.3"
+  }
 }
