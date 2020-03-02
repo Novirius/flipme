@@ -61,6 +61,10 @@
     }
 }
 
+.no-click {
+    cursor: not-allowed;
+}
+
 .flashcard-show-dashboard-display {
     display: flex;
     flex-direction: column;
