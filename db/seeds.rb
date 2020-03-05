@@ -16,20 +16,18 @@ user1 = User.create(username: "chris", email: "chris@gmail.com", password:"chris
 user2 = User.create(username: "carol", email: "carol@gmail.com", password:"carol123")
 
 
-folder1 = Folder.create(title: "My first folder", description:"this is from first title description", author_id: user1.id)
+folder1 = Folder.create(title: "Sample Folder", description:"this is how the description would look", author_id: user1.id)
 folder2 = Folder.create(title: "My second folder", description:"this is from second title description", author_id: user1.id)
 # folder3 = Folder.create(title: "third title", description:"this is from third title description", author_id: user1.id)
 
-category1 = Category.create(name: "Science")
-subcategory1 = SubCategory.create(name: "Biology", category_id: category1.id)
-
 #User 1's cards
-deck1 = Deck.create(title: "Science", author_id: user1.id, sub_category_id: subcategory1.id)
-deck2 = Deck.create(title: "Anime", author_id: user1.id, sub_category_id: subcategory1.id)
-deck3 = Deck.create(title: "Language", author_id: user1.id, sub_category_id: subcategory1.id)
+deck1 = Deck.create(title: "Science", author_id: user1.id)
+deck2 = Deck.create(title: "Anime", author_id: user1.id)
+deck3 = Deck.create(title: "Language", author_id: user1.id)
+deck4 = Deck.create(title: "Geography", author_id: user1.id)
 
 #User 2's cards
-deck4 = Deck.create(title: "sanban deck", author_id: user2.id, sub_category_id: subcategory1.id)
+deck4 = Deck.create(title: "sanban deck", author_id: user2.id)
 
 
     #Deck 1 cards

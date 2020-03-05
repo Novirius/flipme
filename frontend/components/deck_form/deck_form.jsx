@@ -5,7 +5,6 @@ class DeckForm extends React.Component {
         super(props);
         this.state = {
             title: '',
-            sub_category_id: 1
         }
         this.handleSubmit = this.handleSubmit.bind(this);
     }

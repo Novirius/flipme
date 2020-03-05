@@ -37,22 +37,6 @@ export const fetchUserDecks = (userid) => dispatch => (
     )
 );
 
-export const fetchCategoryDecks = (categoryId) => dispatch => (
-    APIUtil.fetchCategoryDecks(categoryId)
-    .then(
-        decks => dispatch(receiveDecks(decks)),
-        errors => dispatch(deckErrors(errors))
-    )
-);
-
-export const fetchSubCategoryDecks = (subCategoryId) => dispatch => (
-    APIUtil.fetchSubCategoryDecks(subCategoryId)
-    .then(
-        decks => dispatch(receiveDecks(decks)),
-        errors => dispatch(deckErrors(errors))
-    )
-);
-
 export const fetchDeck = id => dispatch => (
     APIUtil.fetchDeck(id)
     .then(

@@ -5,20 +5,6 @@ export const fetchUserDecks = (userId) => (
     })
 )
 
-export const fetchCategoryDecks = (categoryId) => (
-    $.ajax({
-        method: 'GET',
-        url: `/api/categories/${categoryId}/decks`
-    })
-)
-
-export const fetchSubCategoryDecks = (subCategoryId) => (
-    $.ajax({
-        method: 'GET',
-        url: `/api/sub_categories/${subCategoryId}/decks`
-    })
-)
-
 export const fetchDeck = (id) => (
     $.ajax({
         url: `/api/decks/${id}`,

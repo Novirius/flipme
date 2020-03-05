@@ -10,12 +10,6 @@ Rails.application.routes.draw do
       resources :cards, only: [:index, :create]
     end
     resources :cards, only: [:show, :update, :destroy]
-    resources :categories do
-      resources :decks, only:[:index]
-    end
-    resources :sub_categories do
-      resources :decks, only:[:index]
-    end
     get 'decks/search/:query', :to => 'decks#search'
   end
 
