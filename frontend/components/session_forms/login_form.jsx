@@ -9,6 +9,46 @@ class LoginForm extends React.Component {
     };
     this.handleSubmit = this.handleSubmit.bind(this);
     this.handleDemo = this.handleDemo.bind(this);
+    this.onSignIn = this.onSignIn.bind(this);
+  }
+
+  componentDidMount() {
+    // window.gapi.load('auth2', () => {
+    //   this.auth2 = gapi.auth2.init({
+    //     client_id: '680179310299-rkqqva9jq3rjp824k7bsta0u3tkg1rs2.apps.googleusercontent.com',
+    //   })
+  
+    //   window.gapi.load('signin2', function() {
+    //     // render a sign in button
+    //     // using this method will show Signed In if the user is already signed in
+    //     var opts = {
+    //       width: 400,
+    //       height: 50,
+    //       onSuccess: this.onSuccess.bind(this),
+    //     }
+    //     gapi.signin2.render('loginButton', opts)
+    //   })
+    // })
+
+    gapi.signin2.render('g-signin2', {
+      'scope': 'profile email',
+      'width': 400,
+      'height': 50,
+      'longtitle': true,
+      'theme': 'dark',
+      'onsuccess': this.onSignIn,
+    });
+  }
+
+  onSignIn(googleUser) {
+    const profile = googleUser.getBasicProfile();
+    // const user = {username: profile.getName(), password: 'blob123'}
+    // this.props.processForm(user).then((user) => this.props.history.push(`/latest`))
+
+    console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+    console.log('Name: ' + profile.getName());
+    console.log('Image URL: ' + profile.getImageUrl());
+    console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
   }
 
   update(field) {
@@ -43,10 +83,15 @@ class LoginForm extends React.Component {
               <div onClick={this.handleDemo} className="SocialMedia-FirstButton">
                 <p><i className="fas fa-id-card-alt"></i>     Log in with Demo</p>
               </div>
-              <div className="SocialMedia-SecondButton">
-              {/* <img className="niceimg" src={window.dlmnice}/>  */}
-              <p><i className="fab fa-google"></i>      Log in with oAuth</p>
+              <div className="SocialMedia-SecondButton" id="g-signin2">
+                Login with Google
+                {/* <p><i className="fab fa-google"></i>      Log in with Google</p> */}
               </div>
+
+              {/* Old Code */}
+              {/* <div className=" g-signin2 SocialMedia-SecondButton" data-onsuccess="onSignIn">
+                <p><i className="fab fa-google"></i>      Log in with Google</p>
+              </div> */}
           </div>
           <form onSubmit={this.handleSubmit}>
             <label className="LoginInput" htmlFor="username">
