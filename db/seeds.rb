@@ -11,14 +11,13 @@ Folder.destroy_all
 Deck.destroy_all
 Card.destroy_all
 
+# Demo Users
 user1 = User.create(username: "chris", email: "chris@gmail.com", password:"chris123")
-
 user2 = User.create(username: "carol", email: "carol@gmail.com", password:"carol123")
 
-
+#Demo Folders
 folder1 = Folder.create(title: "Sample Folder", description:"this is how the description would look", author_id: user1.id)
 folder2 = Folder.create(title: "My second folder", description:"this is from second title description", author_id: user1.id)
-# folder3 = Folder.create(title: "third title", description:"this is from third title description", author_id: user1.id)
 
 #User 1's cards
 deck1 = Deck.create(title: "Science", author_id: user1.id)
@@ -275,3 +274,6 @@ deck4 = Deck.create(title: "sanban deck", author_id: user2.id)
         deck_id: deck3.id,
         author_id: user1.id
         )
+
+#Demo Folders with Decks
+joins1 = DeckJoinFolder.create(deck_id: deck1.id, folder_id: folder1.id)

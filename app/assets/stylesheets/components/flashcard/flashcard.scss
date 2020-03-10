@@ -23,7 +23,6 @@
 
 /* This container is needed to position the front and back side */
 .flip-card-inner {
-  // position: relative;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -64,7 +63,7 @@
   }
 }
 
-/* Style the back side */
+/* Styles the back of the flashcard */
 .flip-card-back {
   background-color: #343434;
   color: white;
@@ -90,7 +89,6 @@
 
 .flip {
   transform: rotateY(180deg);
-
 }
 
 .move-left-front {
