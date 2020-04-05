@@ -133,6 +133,8 @@ class TopNav extends React.Component {
             </div>
         )
 
+        const createOrLoginModal = this.props.currentUser ? 'deck' : 'login'
+
         const normalbar = () => (
             <div className="top-nav-transition-container">
                 <div className="top-nav-links-container">
@@ -144,7 +146,7 @@ class TopNav extends React.Component {
                     <div className="top-nav-vertical-divide" />
                     <div className="top-nav-create-wrapper">
                         <div className="top-nav-create">
-                            <a onClick={() => this.props.openModal('deck')} ><i className="far fa-plus-square"></i>  Create</a>
+                            <a onClick={() => this.props.openModal(createOrLoginModal)} ><i className="far fa-plus-square"></i>  Create</a>
                         </div>
                     </div>
                 </div>
