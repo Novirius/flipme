@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # devise_for :users
   root "static_pages#root"
   namespace :api, defaults: {format: :json} do
     resources :users, only: [:create, :index] do
@@ -11,7 +12,11 @@ Rails.application.routes.draw do
     end
     resources :cards, only: [:show, :update, :destroy]
     get 'decks/search/:query', :to => 'decks#search'
+
+    # routes.rb
+    devise_for :users, :controllers => { :omniauth_callbacks => "omniauth_callbacks" }  
   end
+
 
   
 end
