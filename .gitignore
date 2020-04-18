@@ -32,3 +32,5 @@ bundle.js
 bundle.js.map
 
 Gemfile.lock
+# Ignore application configuration
+/config/application.yml
