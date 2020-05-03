@@ -11,6 +11,7 @@ Rails.application.routes.draw do
     end
     resources :cards, only: [:show, :update, :destroy]
     get 'decks/search/:query', :to => 'decks#search'
+    get 'decks/latest', :to => 'decks#latest'
   end
 
   

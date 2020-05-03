@@ -77,3 +77,12 @@ export const searchDecks = query => dispatch => (
     )
 )
 
+export const latestDecks = () => dispatch => (
+    APIUtil.latestDecks()
+        .then(
+            decks => dispatch(receiveDecks(decks)),
+            errors => dispatch(deckErrors(errors))
+        )
+)
+
+

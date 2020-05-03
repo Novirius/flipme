@@ -4,7 +4,7 @@ import {withRouter} from 'react-router-dom';
 
 
 import Latest from './latest';
-import {fetchUserDecks} from '../../actions/deck_actions';
+import {latestDecks} from '../../actions/deck_actions';
 
 const mapState = ({entities, session}) => {
     return {
@@ -16,7 +16,7 @@ const mapState = ({entities, session}) => {
 
 const mapDispatch = dispatch => {
     return {
-        fetchUserDecks: (userId) => dispatch(fetchUserDecks(userId))
+        latestDecks: (userId) => dispatch(latestDecks(userId))
     }
 }
 

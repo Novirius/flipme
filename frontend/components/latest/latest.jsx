@@ -10,12 +10,12 @@ class Latest extends React.Component {
     }
 
     componentDidMount () {
-        this.props.fetchUserDecks(this.props.currentUser.id);
+        this.props.latestDecks(this.props.currentUser.id);
     }
 
     render () {
         if(this.props.decks.length === 0) return null;
-        let decksArray = this.props.decks.reverse().slice(0,4);
+        let decksArray = this.props.decks
         return (
                 <div className="latest-container">
                     <div className="latest-header">

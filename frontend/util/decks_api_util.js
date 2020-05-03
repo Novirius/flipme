@@ -41,3 +41,10 @@ export const searchDecks = (query) => (
         method: 'GET'
     })
 )
+
+export const latestDecks = () => (
+    $.ajax({
+        url: `api/decks/latest`,
+        method: 'GET'
+    })
+)
