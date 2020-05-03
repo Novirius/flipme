@@ -54,8 +54,18 @@ class Api::DecksController < ApplicationController
   #Search for decks where either the title of the deck or the card front/back text contains the search query
   def search
     search = "%#{params[:query].downcase}%"
-    @decks = Deck.joins(:cards).where("lower(decks.title) LIKE ? OR lower(cards.front_text) LIKE ? OR lower(cards.back_text) LIKE ?", search, search, search).select(:id, :title, :author_id).distinct
+    @decks = Deck.joins(:cards)
+      .where("lower(decks.title) LIKE ? OR lower(cards.front_text) LIKE ? OR lower(cards.back_text) LIKE ?", search, search, search)
+      .select(:id, :title, :author_id)
+      .distinct
     render 'api/decks/search'
+  end
+
+  #Find the last four of the user's cards
+  def latest
+    @decks = current_user.decks
+            .order(created_at: :desc)
+            .limit(4)
   end
 
   def deck_params
