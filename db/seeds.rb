@@ -23,7 +23,6 @@ folder2 = Folder.create(title: "My second folder", description:"this is from sec
 deck1 = Deck.create(title: "Science", author_id: user1.id)
 deck2 = Deck.create(title: "Anime", author_id: user1.id)
 deck3 = Deck.create(title: "Language", author_id: user1.id)
-deck4 = Deck.create(title: "Geography", author_id: user1.id)
 
 #User 2's cards
 deck4 = Deck.create(title: "sanban deck", author_id: user2.id)

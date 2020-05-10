@@ -197,12 +197,12 @@
 .top-nav-dropdown {
   position: absolute;
   top: 100%;
-  left: 67%;
+  // left: 67%;
   background-color: white;
   color: $font-dark;
   filter: drop-shadow(rgba(0,0,0,.2) 0 .125rem .625rem);
-  width: 300px;
-  height: 150px;
+  width: 17%;
+  height: 125%;
   display: flex;
   flex-direction: column;
   overflow: hidden;

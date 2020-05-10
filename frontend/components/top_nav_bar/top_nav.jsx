@@ -89,7 +89,7 @@ class TopNav extends React.Component {
             { this.state.hidden &&
                 <ul id="user-dropdown" className={`top-nav-dropdown ${this.state.hidden}`}>
                     <Link onClick={this.handleProfile} to={`/users/${this.props.currentUser.id}/decks`}><li className="top-nav-dropdown-item">Your Study Sets</li></Link>
-                    <a><li className="top-nav-dropdown-item">Settings</li></a>
+                    {/* <a><li className="top-nav-dropdown-item">Settings</li></a> */}
                     <a><li className="top-nav-dropdown-item" onClick={this.handleLogout}>Log Out</li></a>
                 </ul> 
             }
