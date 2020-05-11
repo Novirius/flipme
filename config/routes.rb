@@ -13,6 +13,5 @@ Rails.application.routes.draw do
     get 'decks/search/:query', :to => 'decks#search'
     get 'decks/latest', :to => 'decks#latest'
   end
-
-  
 end
+

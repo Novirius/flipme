@@ -66,6 +66,7 @@ class Api::DecksController < ApplicationController
     @decks = current_user.decks
             .order(created_at: :desc)
             .limit(4)
+    render 'api/decks/show'
   end
 
   def deck_params
