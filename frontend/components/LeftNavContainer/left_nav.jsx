@@ -77,9 +77,9 @@ class LeftNav extends React.Component {
                     </div>
                     <div className="side-nav-contact">
                         <div className="side-nav-contact-container">
-                            <a href="https://github.com/novirius"><i className="fab fa-github fa-lg"></i></a>
-                            <a href="https://www.linkedin.com/in/david-chin-504269106/"><i className="fab fa-linkedin fa-lg"></i></a>
-                            <a href="https://pastebin.com/u/Yugl"><i className="far fa-file-code fa-lg"></i></a>
+                            <a href="https://github.com/novirius" target="_blank"><i className="fab fa-github fa-lg"></i></a>
+                            <a href="https://www.linkedin.com/in/david-chin-504269106/" target="_blank"><i className="fab fa-linkedin fa-lg"></i></a>
+                            <a href="https://modulardesign.dev/" target="_blank"><i className="far fa-file-code fa-lg"></i></a>
                         </div>
                     </div>
                     <div className="infinite-scroll" />

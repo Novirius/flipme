@@ -78,4 +78,5 @@ legend.folder-form-title {
 
 button[type=submit][disabled] {
     background-color: $font-label !important;
+    cursor: not-allowed;
   }

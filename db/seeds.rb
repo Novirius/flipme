@@ -17,15 +17,16 @@ user2 = User.create(username: "carol", email: "carol@gmail.com", password:"carol
 
 #Demo Folders
 folder1 = Folder.create(title: "Sample Folder", description:"this is how the description would look", author_id: user1.id)
-folder2 = Folder.create(title: "My second folder", description:"this is from second title description", author_id: user1.id)
 
 #User 1's cards
 deck1 = Deck.create(title: "Science", author_id: user1.id)
 deck2 = Deck.create(title: "Anime", author_id: user1.id)
 deck3 = Deck.create(title: "Language", author_id: user1.id)
+deck4 = Deck.create(title: "Food", author_id: user1.id)
+deck5 = Deck.create(title: "Tech", author_id: user1.id)
 
 #User 2's cards
-deck4 = Deck.create(title: "sanban deck", author_id: user2.id)
+deck6 = Deck.create(title: "sanban deck", author_id: user2.id)
 
 
     #Deck 1 cards
@@ -192,7 +193,7 @@ deck4 = Deck.create(title: "sanban deck", author_id: user2.id)
         author_id: user1.id
         )
 
-    #Deck 4 cards
+    #Deck 3 cards
     d3c1 = Card.create(  
         front_text: "почемучка (Russian)",
         back_text: "A child who asks lots of questions",
@@ -271,6 +272,93 @@ deck4 = Deck.create(title: "sanban deck", author_id: user2.id)
         front_image: "front_image3",
         back_image: "back image3",
         deck_id: deck3.id,
+        author_id: user1.id
+        )
+
+
+
+    #Deck 4 cards
+    d4c1 = Card.create(  
+        front_text: "A stroopwafel is a wafer cookie that originated in which European country?",
+        back_text: "Netherlands",
+        front_image: "https://cdn.discordapp.com/emojis/412748878102790155.gif?v=1",
+        back_image: "back image1",
+        deck_id: deck4.id,
+        author_id: user1.id
+        )
+    d4c2 = Card.create(  
+        front_text: "Norway was responsible for introducing what fish for raw consumption in Japan?",
+        back_text: "Salmon",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck4.id,
+        author_id: user1.id
+        )
+    d4c3 = Card.create(  
+        front_text: "The Hershey Company, commonly known as Hershey, was founded in which U.S. state?",
+        back_text: "Pennsylvania",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck4.id,
+        author_id: user1.id
+        )
+    d4c4 = Card.create(  
+        front_text: "When used in the kitchen, sodium bicarbonate is more commonly known as what?",
+        back_text: "Baking Soda",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck4.id,
+        author_id: user1.id
+        )
+    d4c5 = Card.create(  
+        front_text: "Halloumi is a brined cheese that originates from which Mediterranean island country?",
+        back_text: "Cyprus",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck4.id,
+        author_id: user1.id
+        )
+
+
+    #Deck 5 cards
+    d5c1 = Card.create(  
+        front_text: "Which company dubbed the term 'GPU'?",
+        back_text: "Nvidia",
+        front_image: "https://cdn.discordapp.com/emojis/580612633892487179.png?v=1",
+        back_image: "back image1",
+        deck_id: deck5.id,
+        author_id: user1.id
+        )
+    d5c2 = Card.create(  
+        front_text: "OLED, the screen found on TVs and many mobile devices, stands for ...?",
+        back_text: "Organic Light Emitting Diode",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck5.id,
+        author_id: user1.id
+        )
+    d5c3 = Card.create(  
+        front_text: "How did Phoenix Technologies legally steal IBM's source code?",
+        back_text: "They used a clean room design",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck5.id,
+        author_id: user1.id
+        )
+    d5c4 = Card.create(  
+        front_text: "Before making DRAM and putting RGB on everything, Corsair made this product...",
+        back_text: "Level 2 cache modules",
+        front_image: "front_image3",
+        back_image: "back image3",
+        deck_id: deck5.id,
+        author_id: user1.id
+        )
+    d5c5 = Card.create(  
+        front_text: "Why was the first webcam made?",
+        back_text: "To keep track of whether a coffee pot was empty",
+        front_image: "front image2",
+        back_image: "back image2",
+        deck_id: deck5.id,
         author_id: user1.id
         )
 

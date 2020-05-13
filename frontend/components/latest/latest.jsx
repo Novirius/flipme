@@ -15,7 +15,7 @@ class Latest extends React.Component {
 
     render () {
         if(this.props.decks.length === 0) return null;
-        let decksArray = this.props.decks
+        let decksArray = this.props.decks.reverse().slice(0,4);
         return (
                 <div className="latest-container">
                     <div className="latest-header">
