@@ -9,21 +9,19 @@ class DashboardDecks extends React.Component {
             sort: 'Recent',
             filter: ''
         })
-        this.sortMethod = this.sortMethod.bind(this);
-        this.updateFilter = this.updateFilter.bind(this);
     }
 
     componentDidMount () {
         this.props.fetchUserDecks(this.props.currentUser.id);
     }
 
-    sortMethod (e) {
+    sortMethod = (e) => {
         this.setState({
             sort: e.currentTarget.value
         })
     }
 
-    updateFilter(e) {
+    updateFilter = (e) => {
         this.setState({
             filter: e.currentTarget.value
         })

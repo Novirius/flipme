@@ -28,13 +28,13 @@ document.addEventListener("DOMContentLoaded", () => {
     //bootstrap ===================================
 
     //TEST
-    window.signup = signup;
-    window.login = login;
-    window.logout = logout;
-    window.dispatch = store.dispatch;
-    window.getState = store.getState;
-    window.fetchDeck = fetchDeck;
-    window.fetchCard = fetchCard;
+    // window.signup = signup;
+    // window.login = login;
+    // window.logout = logout;
+    // window.dispatch = store.dispatch;
+    // window.getState = store.getState;
+    // window.fetchDeck = fetchDeck;
+    // window.fetchCard = fetchCard;
     //TEST
   
     ReactDOM.render(<Root store={store} />, root);

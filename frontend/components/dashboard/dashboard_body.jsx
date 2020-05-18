@@ -9,16 +9,14 @@ class DashboardBody extends React.Component {
             sort: 'Recent',
             filter: ''
         })
-        this.sortMethod = this.sortMethod.bind(this);
         this.updateFilter = this.updateFilter.bind(this);
     }
 
     componentDidMount () {
         this.props.fetchFolders();
-        console.log("hit")
     }
 
-    sortMethod (e) {
+    sortMethod = (e) => {
         this.setState({
             sort: e.currentTarget.value
         })
@@ -32,8 +30,6 @@ class DashboardBody extends React.Component {
 
     render () {
         //Sort folders by most recent
-        console.log("hit")
-
         const sortRecent = (a, b) => {
             const aId = a.id;
             const bId = b.id;

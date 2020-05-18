@@ -363,4 +363,4 @@ deck6 = Deck.create(title: "sanban deck", author_id: user2.id)
         )
 
 #Demo Folders with Decks
-joins1 = DeckJoinFolder.create(deck_id: deck1.id, folder_id: folder1.id)
+# joins1 = DeckJoinFolder.create(deck_id: deck1.id, folder_id: folder1.id)

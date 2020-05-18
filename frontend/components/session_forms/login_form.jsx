@@ -44,7 +44,6 @@ class LoginForm extends React.Component {
                 <p><i className="fas fa-id-card-alt"></i>     Log in with Demo</p>
               </div>
               <div className="SocialMedia-SecondButton">
-              {/* <img className="niceimg" src={window.dlmnice}/>  */}
               <p><i className="fab fa-google"></i>      Log in with oAuth</p>
               </div>
           </div>
