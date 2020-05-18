@@ -5,7 +5,6 @@ import DashboardDecks from './dashboard_decks'
 
 const mapState = ({entities, session}) => ({
     decks: Object.values(entities.decks),
-    decksCount: Object.keys(entities.decks).length,
     currentUser: entities.users[session.id]
 })
 
